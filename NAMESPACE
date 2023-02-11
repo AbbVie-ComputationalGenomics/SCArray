@@ -1,0 +1,42 @@
+# Native routines that are to be used in R via .Call
+useDynLib(SCArray,
+    c_init_block, c_add_update,
+    c_rowSums, c_colSums, c_rowProds, c_colProds,
+    c_rowMeans, c_rowMeans_final, c_colMeans,
+    c_rowWMeans, c_rowWMeans_final, c_colWMeans,
+    c_rowVars, c_rowVars_final, c_colVars,
+    c_rowWVars, c_rowWVars_final, c_colWVars,
+    c_rowMeanVar_final, c_colMeanVar,
+    c_rowMins, c_colMins, c_rowMaxs, c_colMaxs, c_rowRanges, c_colRanges,
+    c_rowCollapse_init, c_rowCollapse_done, c_rowCollapse,
+    c_colCollapse_init, c_colCollapse)
+
+# Export the following names
+exportPattern("^sc*")
+exportClasses(SCArrayFileClass, SC_GDSArray, SC_GDSMatrix)
+exportMethods(
+    rowSums, colSums, rowSums2, colSums2, rowProds, colProds,
+    rowMeans, colMeans, rowMeans2, colMeans2,
+    rowWeightedMeans, colWeightedMeans,
+    rowVars, colVars, rowSds, colSds,
+    rowWeightedVars, colWeightedVars, rowWeightedSds, colWeightedSds,
+    rowMins, colMins, rowMaxs, colMaxs, rowRanges, colRanges,
+    rowCollapse, colCollapse
+)
+
+
+# Import all packages listed as Imports or Depends
+import(methods)
+import(gdsfmt)
+import(DelayedArray)
+import(DelayedMatrixStats)
+importFrom(utils, head, object.size, packageVersion, read.delim, str,
+    txtProgressBar, setTxtProgressBar)
+importFrom(Matrix, crossprod, tcrossprod, nnzero, readMM)
+importFrom(S4Vectors, DataFrame, metadata, new2)
+importFrom(BiocSingular, bsparam, runPCA)
+importFrom(BiocParallel, SerialParam, bpstart, bpstop, bpisup)
+importFrom(SummarizedExperiment, SummarizedExperiment, colData, rowData,
+    assays, "assays<-", assay, "assay<-")
+importFrom(SingleCellExperiment, SingleCellExperiment, altExp,
+    reducedDim, "reducedDim<-")
