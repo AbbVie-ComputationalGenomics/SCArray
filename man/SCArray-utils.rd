@@ -20,6 +20,17 @@
 \alias{dimnames<-}
 \alias{dimnames<-,SC_GDSArray,ANY-method}
 
+\alias{scale}
+\alias{scale,SC_GDSMatrix-method}
+\alias{pmin2}
+\alias{pmin2,SC_GDSArray,SC_GDSArray-method}
+\alias{pmin2,SC_GDSArray,vector-method}
+\alias{pmin2,vector,SC_GDSArray-method}
+\alias{pmax2}
+\alias{pmax2,SC_GDSArray,SC_GDSArray-method}
+\alias{pmax2,SC_GDSArray,vector-method}
+\alias{pmax2,vector,SC_GDSArray-method}
+
 \title{SC_GDSArray subsetting, Ops, Math}
 \description{
     Subsetting, Arith, Compare, Logic and Math operations on the SC_GDSArray
@@ -37,6 +48,16 @@ object.
 
 # names(x) <- value
 # dimnames(x) <- value
+
+# Centers and/or scales the columns of a matrix
+\S4method{scale}{SC_GDSMatrix}(x, center=TRUE, scale=TRUE)
+
+\S4method{pmin2}{SC_GDSArray,SC_GDSArray}(e1, e2)
+\S4method{pmin2}{SC_GDSArray,vector}(e1, e2)
+\S4method{pmin2}{vector,SC_GDSArray}(e1, e2)
+\S4method{pmax2}{SC_GDSArray,SC_GDSArray}(e1, e2)
+\S4method{pmax2}{SC_GDSArray,vector}(e1, e2)
+\S4method{pmax2}{vector,SC_GDSArray}(e1, e2)
 }
 
 \arguments{
@@ -47,6 +68,10 @@ object.
     \item{e1, e2}{objects}
     \item{value}{\code{NULL}, a character vector for \code{names<-} or a list
         of character vectors for \code{dimnames<-}}
+    \item{center}{either a logical value or a numeric vector (e.g., \code{FALSE}
+        or \code{0} for no centering)}
+    \item{scale}{either a logical value or a numeric vector (e.g., \code{TRUE}
+        or \code{1} for no scaling)}
 }
 \value{
     All these operations return a SC_GDSArray or SC_GDSMatrix object.
@@ -87,7 +112,17 @@ object.
 }
 
 \examples{
-1
+fn <- system.file("extdata", "example.gds", package="SCArray")
+
+x <- scArray(fn, "counts")
+
+x[1:8, 1:32]
+x > 0
+pmin2(x, 1)
+log1p(x)
+scale(x)
+
+rm(x)
 }
 
 \keyword{methods}

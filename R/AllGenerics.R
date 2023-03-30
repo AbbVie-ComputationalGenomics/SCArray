@@ -136,10 +136,73 @@ setMethod("+", c(SClass, "missing"),    # unary operators "+"
 setMethod("-", c(SClass, "missing"),    # unary operators "-"
     function(e1, e2) .sc_val_e1(callGeneric(as(e1, DClass))) )
 
+
 # Math
 setMethods("Math", SClass,
     function(x) .sc_val(callGeneric(as(x, DClass))) )
 
+# pmax2
+setMethod("pmax2", c(SClass, "vector"),
+    function(e1, e2) .sc_val_e1(callGeneric(as(e1, DClass), e2)) )
+setMethod("pmax2", c("vector", SClass),
+    function(e1, e2) .sc_val_e2(callGeneric(e1, as(e2, DClass))) )
+setMethod("pmax2", c(SClass, SClass),
+    function(e1, e2) .sc_val(callGeneric(as(e1, DClass), as(e2, DClass))) )
+
+# pmin2
+setMethod("pmin2", c(SClass, "vector"),
+    function(e1, e2) .sc_val_e1(callGeneric(as(e1, DClass), e2)) )
+setMethod("pmin2", c("vector", SClass),
+    function(e1, e2) .sc_val_e2(callGeneric(e1, as(e2, DClass))) )
+setMethod("pmin2", c(SClass, SClass),
+    function(e1, e2) .sc_val(callGeneric(as(e1, DClass), as(e2, DClass))) )
+
+
+# scale for each column
+x_scale <- function(x, center=TRUE, scale=TRUE)
+{
+    # check
+    x_check(x, "Calling SCArray:::x_scale() with %s ...")
+    stopifnot(is(x, "SC_GDSMatrix"))
+    stopifnot(is.logical(center) || is.numeric(center),
+        length(center)==1L || length(center)==ncol(x))
+    stopifnot(is.logical(scale) || is.numeric(scale),
+        length(scale)==1L || length(scale)==ncol(x))
+    # get center and/or scale
+    if (isTRUE(center) && isTRUE(scale))
+    {
+        v <- scColMeanVar(x, na.rm=TRUE)  # calculate mean and var together
+        center <- v[,1L]
+        scale <- sqrt(v[,2L])
+    } else if (isTRUE(center))
+    {
+        center <- colMeans(x)
+    } else if (isTRUE(scale))
+    {
+        scale <- rowSds(x)
+    }
+    center <- rep(as.numeric(center), length.out=ncol(x))
+    if (isFALSE(scale)) scale <- 1
+    scale <- rep(as.numeric(scale), length.out=ncol(x))
+    # do
+    x <- t(x)
+    attr_c <- !isTRUE(all(center==0))
+    attr_s <- !isTRUE(all(scale==1))
+    if (attr_c) x <- x - center
+    if (attr_s)
+    {
+        inv <- 1/scale
+        inv[!is.finite(inv)] <- 0
+        x <- x * inv
+    }
+    x <- t(x)
+    if (attr_c) attr(x, "scaled:center") <- center
+    if (attr_s) attr(x, "scaled:scale") <- scale
+    # output
+    x
+}
+
+setMethod("scale", SMatrix, x_scale)
 
 
 #######################################################################
@@ -165,10 +228,10 @@ setGeneric("scMemory", function(x, ...) x)
 
 setMethod("scMemory", "DelayedArray", function(x, ...)
 {
-    if (is_sparse(x))
+    if (is_sparse(x) && length(dim(x))==2L)
         as(x, "sparseMatrix")
     else
-        as.matrix(x)
+        as.array(x)
 })
 
 setMethod("scMemory", "SummarizedExperiment", function(x, ...)
@@ -179,9 +242,262 @@ setMethod("scMemory", "SummarizedExperiment", function(x, ...)
 })
 
 
+#######################################################################
+# Generic functions -- scMemory()
+
+scRowAutoGrid <- function(x, force=FALSE, nnzero=NULL)
+{
+    # check
+    stopifnot(is.matrix(x) || is(x, "Matrix") || is(x, "DelayedMatrix"))
+    stopifnot(is.logical(force))
+    if (!is.null(nnzero))
+    {
+        stopifnot(is.numeric(nnzero), length(nnzero)==nrow(x))
+        if (is.double(nnzero)) nnzero <- as.integer(nnzero)
+        z <- nnzero < 0L
+        if (anyNA(z)) stop("'nnzero' should have no NA.")
+        if (any(z)) stop("'nnzero' should be non-negative.")
+    }
+    # do
+    ans <- rowAutoGrid(x)
+    as.sparse <- NA
+    is_sp <- is(x, "sparseMatrix")
+    if ((is(x, SMatrix) && is_sparse(x)) || is_sp)
+    {
+        if (isTRUE(force) || is_sp || x_type(x)==1L)
+        {
+            # x_type(x)==1L (not transposed, column-oriented)
+            # the number of non-zeros for each row
+            if (is.null(nnzero))
+                nnzero <- as.integer(row_nnzero(x, na.counted=TRUE))
+            # to use SafeArrayViewport
+            bs <- .Call(c_sparse_blocksize, getAutoBlockSize(),
+                .Machine$integer.max / ncol(x), nnzero, integer(length(nnzero)))
+            v <- ArbitraryArrayGrid(list(cumsum(bs), ncol(x)))
+            as.sparse <- isTRUE(force) || length(v)<=length(ans)
+            if (as.sparse) ans <- v
+        }
+    }
+    # output
+    attr(ans, "as.sparse") <- as.sparse
+    ans
+}
+
+scColAutoGrid <- function(x, force=FALSE, nnzero=NULL)
+{
+    # check
+    stopifnot(is.matrix(x) || is(x, "Matrix") || is(x, "DelayedMatrix"))
+    stopifnot(is.logical(force))
+    if (!is.null(nnzero))
+    {
+        stopifnot(is.numeric(nnzero), length(nnzero)==ncol(x))
+        if (is.double(nnzero)) nnzero <- as.integer(nnzero)
+        z <- nnzero < 0L
+        if (anyNA(z)) stop("'nnzero' should have no NA.")
+        if (any(z)) stop("'nnzero' should be non-negative.")
+    }
+    # do
+    ans <- colAutoGrid(x)
+    as.sparse <- NA
+    is_sp <- is(x, "sparseMatrix")
+    if ((is(x, SMatrix) && is_sparse(x)) || is_sp)
+    {
+        if (isTRUE(force) || is_sp || x_type(x)==2L)
+        {
+            # x_type(x)==2L (transposed, row-oriented)
+            # the number of non-zeros for each column
+            if (is.null(nnzero))
+                nnzero <- as.integer(col_nnzero(x, na.counted=TRUE))
+            # to use SafeArrayViewport
+            bs <- .Call(c_sparse_blocksize, getAutoBlockSize(),
+                .Machine$integer.max / nrow(x), nnzero, integer(length(nnzero)))
+            v <- ArbitraryArrayGrid(list(nrow(x), cumsum(bs)))
+            as.sparse <- isTRUE(force) || length(v)<=length(ans)
+            if (as.sparse) ans <- v
+        }
+    }
+    # output
+    attr(ans, "as.sparse") <- as.sparse
+    ans
+}
+
 
 #######################################################################
 # Internal functions
+
+.get_num_worker <- function(BPPARAM)
+{
+    if (is.null(BPPARAM))
+        1L
+    else
+        bpnworkers(BPPARAM)
+}
+
+####
+
+.parallel_col_apply <- function(x, BPPARAM, Fun, as.sparse=NA, .flatten=TRUE,
+    .progress=NA, ...)
+{
+    stopifnot(is.null(BPPARAM) || is(BPPARAM, "BiocParallelParam"))
+    # progress bar
+    stopifnot(is.logical(.progress), length(.progress)==1L)
+    if (is.na(.progress)) .progress <- x_progress_verbose()
+    # split columns
+    sp <- scNumSplit(ncol(x), BPPARAM)
+    if (length(sp) > 1L)
+    {
+        x_msg(sprintf("\\=> Distributed to %d processes ...", length(sp)))
+        # distribute
+        if (!is.null(dimnames(x))) dimnames(x) <- NULL  # no need dimnames
+        lst <- bplapply(sp, function(s, Fun, x, as.sparse, ...)
+        {
+            # sub columns
+            y <- x[, seq.int(s[1L], s[2L]), drop=FALSE]
+            # reduce the sub matrix
+            blockApply(y, Fun, grid=colAutoGrid(y), BPPARAM=NULL,
+                as.sparse=as.sparse, ...)
+        }, BPPARAM=BPPARAM, Fun=Fun, x=x, as.sparse=as.sparse, ...)
+        # reduce
+        ans <- unlist(lst, recursive=FALSE, use.names=FALSE)
+    } else {
+        # sequentially
+        gd <- colAutoGrid(x)
+        if (.progress)
+        {
+            pb <- txtProgressBar(0L, length(gd), style=3L, width=64L,
+                file=stderr())
+            on.exit(close(pb))
+            ans <- blockApply(x, function(b, .fun, .pb, ...)
+                {
+                    setTxtProgressBar(.pb, currentBlockId())
+                    .fun(b, ...)
+                }, grid=gd, as.sparse=as.sparse, BPPARAM=NULL,
+                    .fun=Fun, .pb=pb, ...)
+        } else {
+            ans <- blockApply(x, Fun, grid=gd, as.sparse=as.sparse,
+                BPPARAM=NULL, ...)
+        }
+    }
+    # output
+    if (.flatten) ans <- unlist(ans, recursive=TRUE, use.names=FALSE)
+    ans
+}
+
+####
+
+.parallel_col_reduce <- function(x, BPPARAM, Fun, InitFun, ReduceFun,
+    as.sparse=NA, .progress=NA, ...)
+{
+    stopifnot(is.null(BPPARAM) || is(BPPARAM, "BiocParallelParam"))
+    # progress bar
+    stopifnot(is.logical(.progress), length(.progress)==1L)
+    if (is.na(.progress)) .progress <- x_progress_verbose()
+    # split columns
+    sp <- scNumSplit(ncol(x), BPPARAM)
+    if (length(sp) > 1L)
+    {
+        x_msg(sprintf("\\=> Distributed to %d processes ...", length(sp)))
+        # distribute
+        if (!is.null(dimnames(x))) dimnames(x) <- NULL  # no need dimnames
+        lst <- bplapply(sp, function(s, Fun, x, as.sparse, ...)
+        {
+            # sub columns
+            y <- x[, seq.int(s[1L], s[2L]), drop=FALSE]
+            attr(y, "col_range") <- s
+            # initial value
+            if (is.function(InitFun))
+                init <- InitFun(y, ...)
+            else
+                init <- InitFun
+            # reduce the sub matrix
+            blockReduce(Fun, y, init, grid=colAutoGrid(y), as.sparse=as.sparse,
+                ...)
+        }, BPPARAM=BPPARAM, Fun=Fun, x=x, as.sparse=as.sparse, ...)
+        # reduce
+        base::Reduce(ReduceFun, lst)
+    } else {
+        # sequentially
+        if (is.function(InitFun))
+            init <- InitFun(x, ...)
+        else
+            init <- InitFun
+        gd <- colAutoGrid(x)
+        if (.progress)
+        {
+            pb <- txtProgressBar(0L, length(gd), style=3L, width=64L,
+                file=stderr())
+            on.exit(close(pb))
+            blockReduce(function(b, v, .fun, .pb, ...)
+                {
+                    setTxtProgressBar(.pb, currentBlockId())
+                    .fun(b, v, ...)
+                }, x, init, grid=gd, as.sparse=as.sparse, .fun=Fun, .pb=pb, ...)
+        } else {
+            blockReduce(Fun, x, init, grid=gd, as.sparse=as.sparse, ...)
+        }
+    }
+}
+
+####
+
+.parallel_col_reduce2 <- function(x, BPPARAM, Fun, InitFun, ReduceFun,
+    as.sparse=NA, .progress=NA, ...)
+{
+    stopifnot(is.null(BPPARAM) || is(BPPARAM, "BiocParallelParam"))
+    # progress bar
+    stopifnot(is.logical(.progress), length(.progress)==1L)
+    if (is.na(.progress)) .progress <- x_progress_verbose()
+    # split columns
+    sp <- scNumSplit(ncol(x), BPPARAM)
+    if (length(sp) > 1L)
+    {
+        x_msg(sprintf("\\=> Distributed to %d processes ...", length(sp)))
+        # distribute
+        if (!is.null(dimnames(x))) dimnames(x) <- NULL  # no need dimnames
+        lst <- bplapply(sp, function(s, Fun, x, as.sparse, ...)
+        {
+            # sub columns
+            y <- x[, seq.int(s[1L], s[2L]), drop=FALSE]
+            attr(y, "col_range") <- s
+            # initial value
+            if (is.function(InitFun))
+                init <- InitFun(y, split=s, ...)
+            else
+                init <- InitFun
+            # reduce the sub matrix
+            blockReduce(Fun, y, init, grid=colAutoGrid(y), as.sparse=as.sparse,
+                split=s, ...)
+        }, BPPARAM=BPPARAM, Fun=Fun, x=x, as.sparse=as.sparse, ...)
+        # reduce
+        base::Reduce(ReduceFun, lst)
+    } else {
+        # sequentially
+        sp <- c(1L, ncol(x))
+        if (is.function(InitFun))
+            init <- InitFun(x, split=sp, ...)
+        else
+            init <- InitFun
+        gd <- colAutoGrid(x)
+        if (.progress)
+        {
+            pb <- txtProgressBar(0L, length(gd), style=3L, width=64L,
+                file=stderr())
+            on.exit(close(pb))
+            blockReduce(function(b, v, .fun, .pb, ...)
+            {
+                setTxtProgressBar(.pb, currentBlockId())
+                .fun(b, v, ...)
+            }, x, init, grid=gd, as.sparse=as.sparse, .fun=Fun, .pb=pb,
+                split=sp, ...)
+        } else {
+            blockReduce(Fun, x, init, grid=gd, as.sparse=as.sparse, split=sp,
+                ...)
+        }
+    }
+}
+
+
+################
 
 x_verbose <- function()
 {
@@ -194,9 +510,9 @@ x_progress_verbose <- function()
     isTRUE(getOption("SCArray.progress.verbose"))
 }
 
-x_progress <- function(grid)
+x_progress <- function(grid, verbose=TRUE)
 {
-    if (x_progress_verbose())
+    if (verbose && x_progress_verbose())
         txtProgressBar(0L, length(grid), style=3L, width=64L, file=stderr())
     else
         NULL

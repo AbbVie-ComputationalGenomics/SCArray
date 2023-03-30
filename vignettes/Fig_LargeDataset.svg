@@ -162,25 +162,7 @@
            transform="matrix(1,0,0,-1,0,826)"><tspan
              id="tspan22"
              y="0"
-             x="0 15.5008 31.0016 46.502399 62.003201 77.503998 93.004799 108.5056">library(</tspan></text>
-</g><g
-         transform="matrix(0.5,0,0,0.5,70.69228,-92)"
-         id="g26"><text
-           id="text30"
-           style="font-variant:normal;font-weight:normal;font-size:28px;font-family:Consolas;-inkscape-font-specification:Consolas;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-           transform="matrix(1,0,0,-1,0,826)"><tspan
-             id="tspan28"
-             y="0"
-             x="0 15.5008 31.0016 46.502399 62.003201 77.503998 93.004799">SCArray</tspan></text>
-</g><g
-         transform="matrix(0.5,0,0,0.5,124.9423,-92)"
-         id="g32"><text
-           id="text36"
-           style="font-variant:normal;font-weight:normal;font-size:28px;font-family:Consolas;-inkscape-font-specification:Consolas;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-           transform="matrix(1,0,0,-1,0,826)"><tspan
-             id="tspan34"
-             y="0"
-             x="0">)</tspan></text>
+             x="0">library(SCArray)</tspan></text>
 </g><g
          transform="matrix(0.5,0,0,0.5,8.692284,-109)"
          id="g38"><text
@@ -189,25 +171,7 @@
            transform="matrix(1,0,0,-1,0,826)"><tspan
              id="tspan40"
              y="0"
-             x="0 15.5008 31.0016 46.502399 62.003201 77.503998 93.004799 108.5056">library(</tspan></text>
-</g><g
-         transform="matrix(0.5,0,0,0.5,70.69228,-109)"
-         id="g44"><text
-           id="text48"
-           style="font-variant:normal;font-weight:normal;font-size:28px;font-family:Consolas;-inkscape-font-specification:Consolas;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-           transform="matrix(1,0,0,-1,0,826)"><tspan
-             id="tspan46"
-             y="0"
-             x="0 15.5008 31.0016 46.502399 62.003201 77.503998">scater</tspan></text>
-</g><g
-         transform="matrix(0.5,0,0,0.5,117.1923,-109)"
-         id="g50"><text
-           id="text54"
-           style="font-variant:normal;font-weight:normal;font-size:28px;font-family:Consolas;-inkscape-font-specification:Consolas;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-           transform="matrix(1,0,0,-1,0,826)"><tspan
-             id="tspan52"
-             y="0"
-             x="0">)</tspan></text>
+             x="0">library(scater)</tspan></text>
 </g><g
          transform="matrix(0.5,0,0,0.5,8.692284,-143)"
          id="g56"><text
@@ -216,7 +180,7 @@
            transform="matrix(1,0,0,-1,0,826)"><tspan
              id="tspan58"
              y="0"
-             x="0 15.5008 31.0016 46.502399 62.003201 77.503998 93.004799 108.5056 124.0064 139.5072 155.008 170.5088 186.0096 201.51041 217.0112 232.51199 248.0128 263.51361 279.0144 294.5152 310.01599 325.51682 341.01761 356.5184 372.0192 387.51999 403.02081 418.52161 434.0224"># Load the data of 1.3M cells</tspan></text>
+             x="0"># Load the data of 1.3M cells</tspan></text>
 </g><g
          transform="matrix(0.5,0,0,0.5,8.692284,-159)"
          id="g62"><text
@@ -225,61 +189,7 @@
            transform="matrix(1,0,0,-1,0,826)"><tspan
              id="tspan64"
              y="0"
-             x="0 15.5008 31.0016">sce</tspan></text>
-</g><g
-         transform="matrix(0.5,0,0,0.5,39.69228,-159)"
-         id="g68"><text
-           id="text72"
-           style="font-variant:normal;font-weight:normal;font-size:28px;font-family:Consolas;-inkscape-font-specification:Consolas;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-           transform="matrix(1,0,0,-1,0,826)"><tspan
-             id="tspan70"
-             y="0"
-             x="0">&lt;</tspan></text>
-</g><g
-         transform="matrix(0.5,0,0,0.5,47.44228,-159)"
-         id="g74"><text
-           id="text78"
-           style="font-variant:normal;font-weight:normal;font-size:28px;font-family:Consolas;-inkscape-font-specification:Consolas;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-           transform="matrix(1,0,0,-1,0,826)"><tspan
-             id="tspan76"
-             y="0"
-             x="0">-</tspan></text>
-</g><g
-         transform="matrix(0.5,0,0,0.5,62.94228,-159)"
-         id="g80"><text
-           id="text84"
-           style="font-variant:normal;font-weight:normal;font-size:28px;font-family:Consolas;-inkscape-font-specification:Consolas;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-           transform="matrix(1,0,0,-1,0,826)"><tspan
-             id="tspan82"
-             y="0"
-             x="0 15.5008 31.0016 46.502399 62.003201 77.503998 93.004799 108.5056 124.0064 139.5072 155.008 170.5088">scExperiment</tspan></text>
-</g><g
-         transform="matrix(0.5,0,0,0.5,155.9423,-159)"
-         id="g86"><text
-           id="text90"
-           style="font-variant:normal;font-weight:normal;font-size:28px;font-family:Consolas;-inkscape-font-specification:Consolas;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-           transform="matrix(1,0,0,-1,0,826)"><tspan
-             id="tspan88"
-             y="0"
-             x="0">(</tspan></text>
-</g><g
-         transform="matrix(0.5,0,0,0.5,163.6923,-159)"
-         id="g92"><text
-           id="text96"
-           style="font-variant:normal;font-weight:normal;font-size:28px;font-family:Consolas;-inkscape-font-specification:Consolas;writing-mode:lr-tb;fill:#4e9a06;fill-opacity:1;fill-rule:nonzero;stroke:none"
-           transform="matrix(1,0,0,-1,0,826)"><tspan
-             id="tspan94"
-             y="0"
-             x="0 15.5008 31.0016 46.502399 62.003201 77.503998 93.004799 108.5056 124.0064 139.5072 155.008 170.5088 186.0096 201.51041 217.0112 232.51199 248.0128 263.51361 279.0144">&quot;1M_sc_neurons.gds&quot;</tspan></text>
-</g><g
-         transform="matrix(0.5,0,0,0.5,310.9423,-159)"
-         id="g98"><text
-           id="text102"
-           style="font-variant:normal;font-weight:normal;font-size:28px;font-family:Consolas;-inkscape-font-specification:Consolas;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-           transform="matrix(1,0,0,-1,0,826)"><tspan
-             id="tspan100"
-             y="0"
-             x="0">)</tspan></text>
+             x="0">sce &lt;- scExperiment(&quot;1M_sc_neurons.gds&quot;)</tspan></text>
 </g><g
          transform="matrix(0.5,0,0,0.5,8.692284,-193)"
          id="g104"><text
@@ -288,70 +198,16 @@
            transform="matrix(1,0,0,-1,0,826)"><tspan
              id="tspan106"
              y="0"
-             x="0 15.5008 31.0016">sce</tspan></text>
+             x="0">sce &lt;- logNormCounts(sce)</tspan></text>
 </g><g
-         transform="matrix(0.5,0,0,0.5,39.69228,-193)"
-         id="g110"><text
-           id="text114"
-           style="font-variant:normal;font-weight:normal;font-size:28px;font-family:Consolas;-inkscape-font-specification:Consolas;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-           transform="matrix(1,0,0,-1,0,826)"><tspan
-             id="tspan112"
-             y="0"
-             x="0">&lt;</tspan></text>
-</g><g
-         transform="matrix(0.5,0,0,0.5,47.44228,-193)"
-         id="g116"><text
-           id="text120"
-           style="font-variant:normal;font-weight:normal;font-size:28px;font-family:Consolas;-inkscape-font-specification:Consolas;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-           transform="matrix(1,0,0,-1,0,826)"><tspan
-             id="tspan118"
-             y="0"
-             x="0">-</tspan></text>
-</g><g
-         transform="matrix(0.5,0,0,0.5,62.94228,-193)"
-         id="g122"><text
-           id="text126"
-           style="font-variant:normal;font-weight:normal;font-size:28px;font-family:Consolas;-inkscape-font-specification:Consolas;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-           transform="matrix(1,0,0,-1,0,826)"><tspan
-             id="tspan124"
-             y="0"
-             x="0 15.5008 31.0016 46.502399 62.003201 77.503998 93.004799 108.5056 124.0064 139.5072 155.008 170.5088 186.0096">logNormCounts</tspan></text>
-</g><g
-         transform="matrix(0.5,0,0,0.5,163.6923,-193)"
-         id="g128"><text
-           id="text132"
-           style="font-variant:normal;font-weight:normal;font-size:28px;font-family:Consolas;-inkscape-font-specification:Consolas;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-           transform="matrix(1,0,0,-1,0,826)"><tspan
-             id="tspan130"
-             y="0"
-             x="0">(</tspan></text>
-</g><g
-         transform="matrix(0.5,0,0,0.5,171.4423,-193)"
-         id="g134"><text
-           id="text138"
-           style="font-variant:normal;font-weight:normal;font-size:28px;font-family:Consolas;-inkscape-font-specification:Consolas;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-           transform="matrix(1,0,0,-1,0,826)"><tspan
-             id="tspan136"
-             y="0"
-             x="0 15.5008 31.0016">sce</tspan></text>
-</g><g
-         transform="matrix(0.5,0,0,0.5,194.6923,-193)"
-         id="g140"><text
-           id="text144"
-           style="font-variant:normal;font-weight:normal;font-size:28px;font-family:Consolas;-inkscape-font-specification:Consolas;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-           transform="matrix(1,0,0,-1,0,826)"><tspan
-             id="tspan142"
-             y="0"
-             x="0">)</tspan></text>
-</g><g
-         transform="matrix(0.5,0,0,0.5,217.9423,-193)"
+         transform="matrix(0.5,0,0,0.5,182.9423,-193)"
          id="g146"><text
            id="text150"
            style="font-style:italic;font-variant:normal;font-size:28px;font-family:Consolas;-inkscape-font-specification:Consolas-Italic;writing-mode:lr-tb;fill:#8f5902;fill-opacity:1;fill-rule:nonzero;stroke:none"
            transform="matrix(1,0,0,-1,0,826)"><tspan
              id="tspan148"
              y="0"
-             x="0 15.5008 31.0016 46.502399 62.003201 77.503998 93.004799 108.5056 124.0064 139.5072 155.008 170.5088 186.0096 201.51041 217.0112"># normalization</tspan></text>
+             x="0"># normalization</tspan></text>
 </g><g
          transform="matrix(0.5,0,0,0.5,8.692284,-210)"
          id="g152"><text
@@ -360,34 +216,7 @@
            transform="matrix(1,0,0,-1,0,826)"><tspan
              id="tspan154"
              y="0"
-             x="0 15.5008 31.0016 46.502399 62.003201 77.503998 93.004799 108.5056 124.0064">logcounts</tspan></text>
-</g><g
-         transform="matrix(0.5,0,0,0.5,78.44228,-210)"
-         id="g158"><text
-           id="text162"
-           style="font-variant:normal;font-weight:normal;font-size:28px;font-family:Consolas;-inkscape-font-specification:Consolas;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-           transform="matrix(1,0,0,-1,0,826)"><tspan
-             id="tspan160"
-             y="0"
-             x="0">(</tspan></text>
-</g><g
-         transform="matrix(0.5,0,0,0.5,86.19228,-210)"
-         id="g164"><text
-           id="text168"
-           style="font-variant:normal;font-weight:normal;font-size:28px;font-family:Consolas;-inkscape-font-specification:Consolas;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-           transform="matrix(1,0,0,-1,0,826)"><tspan
-             id="tspan166"
-             y="0"
-             x="0 15.5008 31.0016">sce</tspan></text>
-</g><g
-         transform="matrix(0.5,0,0,0.5,109.4423,-210)"
-         id="g170"><text
-           id="text174"
-           style="font-variant:normal;font-weight:normal;font-size:28px;font-family:Consolas;-inkscape-font-specification:Consolas;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-           transform="matrix(1,0,0,-1,0,826)"><tspan
-             id="tspan172"
-             y="0"
-             x="0">)</tspan></text>
+             x="0">logcounts(sce)</tspan></text>
 </g><g
          transform="matrix(0.5,0,0,0.5,8.692284,-243)"
          id="g176"><text
@@ -396,16 +225,7 @@
            transform="matrix(1,0,0,-1,0,826)"><tspan
              id="tspan178"
              y="0"
-             x="0 15.5008 31.0016 46.502399 62.003201 77.503998 93.004799 108.5056 124.0064 139.5072 155.008 170.5088 186.0096 201.51041 217.0112 232.51199 248.0128 263.51361 279.0144 294.5152 310.01599 325.51682 341.01761 356.5184 372.0192 387.51999 403.02081 418.52161 434.0224 449.52319 465.02399 480.52481"># Dimensionality reduction with </tspan></text>
-</g><g
-         transform="matrix(0.5,0,0,0.5,256.6923,-243)"
-         id="g182"><text
-           id="text186"
-           style="font-style:italic;font-variant:normal;font-size:28px;font-family:Consolas;-inkscape-font-specification:Consolas-Italic;writing-mode:lr-tb;fill:#8f5902;fill-opacity:1;fill-rule:nonzero;stroke:none"
-           transform="matrix(1,0,0,-1,0,826)"><tspan
-             id="tspan184"
-             y="0"
-             x="0 15.5008 31.0016 46.502399 62.003201 77.503998">scater</tspan></text>
+             x="0"># Dimensionality reduction with scater</tspan></text>
 </g><g
          transform="matrix(0.5,0,0,0.5,8.692284,-260)"
          id="g188"><text
@@ -414,34 +234,7 @@
            transform="matrix(1,0,0,-1,0,826)"><tspan
              id="tspan190"
              y="0"
-             x="0 15.5008 31.0016 46.502399 62.003201 77.503998 93.004799 108.5056"># using </tspan></text>
-</g><g
-         transform="matrix(0.5,0,0,0.5,70.69228,-260)"
-         id="g194"><text
-           id="text198"
-           style="font-style:italic;font-variant:normal;font-size:28px;font-family:Consolas;-inkscape-font-specification:Consolas-Italic;writing-mode:lr-tb;fill:#8f5902;fill-opacity:1;fill-rule:nonzero;stroke:none"
-           transform="matrix(1,0,0,-1,0,826)"><tspan
-             id="tspan196"
-             y="0"
-             x="0 15.5008 31.0016 46.502399 62.003201 77.503998 93.004799 108.5056 124.0064">logcounts</tspan></text>
-</g><g
-         transform="matrix(0.5,0,0,0.5,148.1923,-260)"
-         id="g200"><text
-           id="text204"
-           style="font-style:italic;font-variant:normal;font-size:28px;font-family:Consolas;-inkscape-font-specification:Consolas-Italic;writing-mode:lr-tb;fill:#8f5902;fill-opacity:1;fill-rule:nonzero;stroke:none"
-           transform="matrix(1,0,0,-1,0,826)"><tspan
-             id="tspan202"
-             y="0"
-             x="0 15.5008 31.0016">in </tspan></text>
-</g><g
-         transform="matrix(0.5,0,0,0.5,171.4423,-260)"
-         id="g206"><text
-           id="text210"
-           style="font-style:italic;font-variant:normal;font-size:28px;font-family:Consolas;-inkscape-font-specification:Consolas-Italic;writing-mode:lr-tb;fill:#8f5902;fill-opacity:1;fill-rule:nonzero;stroke:none"
-           transform="matrix(1,0,0,-1,0,826)"><tspan
-             id="tspan208"
-             y="0"
-             x="0 15.5008 31.0016 46.502399 62.003201 77.503998 93.004799 108.5056 124.0064 139.5072">PCA &amp; UMAP</tspan></text>
+             x="0"># using logcounts in PCA &amp; UMAP</tspan></text>
 </g><g
          transform="matrix(0.5,0,0,0.5,8.692284,-277)"
          id="g212"><text
@@ -450,61 +243,7 @@
            transform="matrix(1,0,0,-1,0,826)"><tspan
              id="tspan214"
              y="0"
-             x="0 15.5008 31.0016">sce</tspan></text>
-</g><g
-         transform="matrix(0.5,0,0,0.5,39.69228,-277)"
-         id="g218"><text
-           id="text222"
-           style="font-variant:normal;font-weight:normal;font-size:28px;font-family:Consolas;-inkscape-font-specification:Consolas;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-           transform="matrix(1,0,0,-1,0,826)"><tspan
-             id="tspan220"
-             y="0"
-             x="0">&lt;</tspan></text>
-</g><g
-         transform="matrix(0.5,0,0,0.5,47.44228,-277)"
-         id="g224"><text
-           id="text228"
-           style="font-variant:normal;font-weight:normal;font-size:28px;font-family:Consolas;-inkscape-font-specification:Consolas;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-           transform="matrix(1,0,0,-1,0,826)"><tspan
-             id="tspan226"
-             y="0"
-             x="0">-</tspan></text>
-</g><g
-         transform="matrix(0.5,0,0,0.5,62.94228,-277)"
-         id="g230"><text
-           id="text234"
-           style="font-variant:normal;font-weight:normal;font-size:28px;font-family:Consolas;-inkscape-font-specification:Consolas;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-           transform="matrix(1,0,0,-1,0,826)"><tspan
-             id="tspan232"
-             y="0"
-             x="0 15.5008 31.0016 46.502399 62.003201">scObj</tspan></text>
-</g><g
-         transform="matrix(0.5,0,0,0.5,101.6923,-277)"
-         id="g236"><text
-           id="text240"
-           style="font-variant:normal;font-weight:normal;font-size:28px;font-family:Consolas;-inkscape-font-specification:Consolas;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-           transform="matrix(1,0,0,-1,0,826)"><tspan
-             id="tspan238"
-             y="0"
-             x="0">(</tspan></text>
-</g><g
-         transform="matrix(0.5,0,0,0.5,109.4423,-277)"
-         id="g242"><text
-           id="text246"
-           style="font-variant:normal;font-weight:normal;font-size:28px;font-family:Consolas;-inkscape-font-specification:Consolas;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-           transform="matrix(1,0,0,-1,0,826)"><tspan
-             id="tspan244"
-             y="0"
-             x="0 15.5008 31.0016">sce</tspan></text>
-</g><g
-         transform="matrix(0.5,0,0,0.5,132.6923,-277)"
-         id="g248"><text
-           id="text252"
-           style="font-variant:normal;font-weight:normal;font-size:28px;font-family:Consolas;-inkscape-font-specification:Consolas;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-           transform="matrix(1,0,0,-1,0,826)"><tspan
-             id="tspan250"
-             y="0"
-             x="0">)</tspan></text>
+             x="0">sce &lt;- scObj(sce)</tspan></text>
 </g><g
          transform="matrix(0.5,0,0,0.5,8.692284,-294)"
          id="g254"><text
@@ -513,115 +252,7 @@
            transform="matrix(1,0,0,-1,0,826)"><tspan
              id="tspan256"
              y="0"
-             x="0 15.5008 31.0016">sce</tspan></text>
-</g><g
-         transform="matrix(0.5,0,0,0.5,39.69228,-294)"
-         id="g260"><text
-           id="text264"
-           style="font-variant:normal;font-weight:normal;font-size:28px;font-family:Consolas;-inkscape-font-specification:Consolas;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-           transform="matrix(1,0,0,-1,0,826)"><tspan
-             id="tspan262"
-             y="0"
-             x="0">&lt;</tspan></text>
-</g><g
-         transform="matrix(0.5,0,0,0.5,47.44228,-294)"
-         id="g266"><text
-           id="text270"
-           style="font-variant:normal;font-weight:normal;font-size:28px;font-family:Consolas;-inkscape-font-specification:Consolas;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-           transform="matrix(1,0,0,-1,0,826)"><tspan
-             id="tspan268"
-             y="0"
-             x="0">-</tspan></text>
-</g><g
-         transform="matrix(0.5,0,0,0.5,62.94228,-294)"
-         id="g272"><text
-           id="text276"
-           style="font-variant:normal;font-weight:normal;font-size:28px;font-family:Consolas;-inkscape-font-specification:Consolas;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-           transform="matrix(1,0,0,-1,0,826)"><tspan
-             id="tspan274"
-             y="0"
-             x="0 15.5008 31.0016 46.502399 62.003201 77.503998">runPCA</tspan></text>
-</g><g
-         transform="matrix(0.5,0,0,0.5,109.4423,-294)"
-         id="g278"><text
-           id="text282"
-           style="font-variant:normal;font-weight:normal;font-size:28px;font-family:Consolas;-inkscape-font-specification:Consolas;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-           transform="matrix(1,0,0,-1,0,826)"><tspan
-             id="tspan280"
-             y="0"
-             x="0">(</tspan></text>
-</g><g
-         transform="matrix(0.5,0,0,0.5,117.1923,-294)"
-         id="g284"><text
-           id="text288"
-           style="font-variant:normal;font-weight:normal;font-size:28px;font-family:Consolas;-inkscape-font-specification:Consolas;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-           transform="matrix(1,0,0,-1,0,826)"><tspan
-             id="tspan286"
-             y="0"
-             x="0 15.5008 31.0016">sce</tspan></text>
-</g><g
-         transform="matrix(0.5,0,0,0.5,140.4423,-294)"
-         id="g290"><text
-           id="text294"
-           style="font-variant:normal;font-weight:normal;font-size:28px;font-family:Consolas;-inkscape-font-specification:Consolas;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-           transform="matrix(1,0,0,-1,0,826)"><tspan
-             id="tspan292"
-             y="0"
-             x="0 15.5008">, </tspan></text>
-</g><g
-         transform="matrix(0.5,0,0,0.5,155.9423,-294)"
-         id="g296"><text
-           id="text300"
-           style="font-variant:normal;font-weight:normal;font-size:28px;font-family:Consolas;-inkscape-font-specification:Consolas;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-           transform="matrix(1,0,0,-1,0,826)"><tspan
-             id="tspan298"
-             y="0"
-             x="0 15.5008 31.0016 46.502399">ntop</tspan></text>
-</g><g
-         transform="matrix(0.5,0,0,0.5,186.9423,-294)"
-         id="g302"><text
-           id="text306"
-           style="font-variant:normal;font-weight:normal;font-size:28px;font-family:Consolas;-inkscape-font-specification:Consolas;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-           transform="matrix(1,0,0,-1,0,826)"><tspan
-             id="tspan304"
-             y="0"
-             x="0">=</tspan></text>
-</g><g
-         transform="matrix(0.5,0,0,0.5,194.6923,-294)"
-         id="g308"><text
-           id="text312"
-           style="font-variant:normal;font-weight:normal;font-size:28px;font-family:Consolas;-inkscape-font-specification:Consolas;writing-mode:lr-tb;fill:#0432ff;fill-opacity:1;fill-rule:nonzero;stroke:none"
-           transform="matrix(1,0,0,-1,0,826)"><tspan
-             id="tspan310"
-             y="0"
-             x="0 15.5008 31.0016">500</tspan></text>
-</g><g
-         transform="matrix(0.5,0,0,0.5,217.9423,-294)"
-         id="g314"><text
-           id="text318"
-           style="font-variant:normal;font-weight:normal;font-size:28px;font-family:Consolas;-inkscape-font-specification:Consolas;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-           transform="matrix(1,0,0,-1,0,826)"><tspan
-             id="tspan316"
-             y="0"
-             x="0 15.5008 31.0016 46.502399 62.003201 77.503998 93.004799 108.5056 124.0064 139.5072">, BSPARAM=</tspan></text>
-</g><g
-         transform="matrix(0.5,0,0,0.5,295.4423,-294)"
-         id="g320"><text
-           id="text324"
-           style="font-variant:normal;font-weight:normal;font-size:28px;font-family:Consolas;-inkscape-font-specification:Consolas;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-           transform="matrix(1,0,0,-1,0,826)"><tspan
-             id="tspan322"
-             y="0"
-             x="0 15.5008 31.0016 46.502399 62.003201 77.503998 93.004799 108.5056 124.0064 139.5072 155.008">RandomParam</tspan></text>
-</g><g
-         transform="matrix(0.5,0,0,0.5,380.6923,-294)"
-         id="g326"><text
-           id="text330"
-           style="font-variant:normal;font-weight:normal;font-size:28px;font-family:Consolas;-inkscape-font-specification:Consolas;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-           transform="matrix(1,0,0,-1,0,826)"><tspan
-             id="tspan328"
-             y="0"
-             x="0 15.5008 31.0016">())</tspan></text>
+             x="0">sce &lt;- runPCA(sce, ntop=500, BSPARAM=RandomParam())</tspan></text>
 </g><g
          transform="matrix(0.5,0,0,0.5,8.692284,-311)"
          id="g332"><text
@@ -630,106 +261,7 @@
            transform="matrix(1,0,0,-1,0,826)"><tspan
              id="tspan334"
              y="0"
-             x="0 15.5008 31.0016">sce</tspan></text>
-</g><g
-         transform="matrix(0.5,0,0,0.5,39.69228,-311)"
-         id="g338"><text
-           id="text342"
-           style="font-variant:normal;font-weight:normal;font-size:28px;font-family:Consolas;-inkscape-font-specification:Consolas;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-           transform="matrix(1,0,0,-1,0,826)"><tspan
-             id="tspan340"
-             y="0"
-             x="0">&lt;</tspan></text>
-</g><g
-         transform="matrix(0.5,0,0,0.5,47.44228,-311)"
-         id="g344"><text
-           id="text348"
-           style="font-variant:normal;font-weight:normal;font-size:28px;font-family:Consolas;-inkscape-font-specification:Consolas;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-           transform="matrix(1,0,0,-1,0,826)"><tspan
-             id="tspan346"
-             y="0"
-             x="0">-</tspan></text>
-</g><g
-         transform="matrix(0.5,0,0,0.5,62.94228,-311)"
-         id="g350"><text
-           id="text354"
-           style="font-variant:normal;font-weight:normal;font-size:28px;font-family:Consolas;-inkscape-font-specification:Consolas;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-           transform="matrix(1,0,0,-1,0,826)"><tspan
-             id="tspan352"
-             y="0"
-             x="0 15.5008 31.0016 46.502399 62.003201 77.503998 93.004799">runUMAP</tspan></text>
-</g><g
-         transform="matrix(0.5,0,0,0.5,117.1923,-311)"
-         id="g356"><text
-           id="text360"
-           style="font-variant:normal;font-weight:normal;font-size:28px;font-family:Consolas;-inkscape-font-specification:Consolas;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-           transform="matrix(1,0,0,-1,0,826)"><tspan
-             id="tspan358"
-             y="0"
-             x="0">(</tspan></text>
-</g><g
-         transform="matrix(0.5,0,0,0.5,124.9423,-311)"
-         id="g362"><text
-           id="text366"
-           style="font-variant:normal;font-weight:normal;font-size:28px;font-family:Consolas;-inkscape-font-specification:Consolas;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-           transform="matrix(1,0,0,-1,0,826)"><tspan
-             id="tspan364"
-             y="0"
-             x="0 15.5008 31.0016">sce</tspan></text>
-</g><g
-         transform="matrix(0.5,0,0,0.5,148.1923,-311)"
-         id="g368"><text
-           id="text372"
-           style="font-variant:normal;font-weight:normal;font-size:28px;font-family:Consolas;-inkscape-font-specification:Consolas;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-           transform="matrix(1,0,0,-1,0,826)"><tspan
-             id="tspan370"
-             y="0"
-             x="0 15.5008">, </tspan></text>
-</g><g
-         transform="matrix(0.5,0,0,0.5,163.6923,-311)"
-         id="g374"><text
-           id="text378"
-           style="font-variant:normal;font-weight:normal;font-size:28px;font-family:Consolas;-inkscape-font-specification:Consolas;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-           transform="matrix(1,0,0,-1,0,826)"><tspan
-             id="tspan376"
-             y="0"
-             x="0 15.5008 31.0016 46.502399">ntop</tspan></text>
-</g><g
-         transform="matrix(0.5,0,0,0.5,194.6923,-311)"
-         id="g380"><text
-           id="text384"
-           style="font-variant:normal;font-weight:normal;font-size:28px;font-family:Consolas;-inkscape-font-specification:Consolas;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-           transform="matrix(1,0,0,-1,0,826)"><tspan
-             id="tspan382"
-             y="0"
-             x="0">=</tspan></text>
-</g><g
-         transform="matrix(0.5,0,0,0.5,202.4423,-311)"
-         id="g386"><text
-           id="text390"
-           style="font-variant:normal;font-weight:normal;font-size:28px;font-family:Consolas;-inkscape-font-specification:Consolas;writing-mode:lr-tb;fill:#0432ff;fill-opacity:1;fill-rule:nonzero;stroke:none"
-           transform="matrix(1,0,0,-1,0,826)"><tspan
-             id="tspan388"
-             y="0"
-             x="0 15.5008 31.0016">500</tspan></text>
-</g><g
-         transform="matrix(0.5,0,0,0.5,225.6923,-311)"
-         id="g392"><text
-           id="text396"
-           style="font-variant:normal;font-weight:normal;font-size:28px;font-family:Consolas;-inkscape-font-specification:Consolas;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-           transform="matrix(1,0,0,-1,0,826)"><tspan
-             id="tspan394"
-             y="0"
-             x="0 15.5008">) </tspan></text>
-</g><g
-         transform="matrix(0.5,0,0,0.5,241.1923,-311)"
-         id="g398"><text
-           id="text402"
-           style="font-variant:normal;font-weight:bold;font-size:28px;font-family:Consolas;-inkscape-font-specification:Consolas-Bold;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-           transform="matrix(1,0,0,-1,0,826)"><tspan
-             id="tspan400"
-             y="0"
-             x="0 15.5008">})</tspan></text>
+             x="0">sce &lt;- runUMAP(sce)</tspan></text>
 </g><g
          transform="matrix(0.5,0,0,0.5,8.692284,-344)"
          id="g404"><text
@@ -738,34 +270,7 @@
            transform="matrix(1,0,0,-1,0,826)"><tspan
              id="tspan406"
              y="0"
-             x="0 15.5008 31.0016 46.502399 62.003201 77.503998 93.004799 108.5056 124.0064 139.5072 155.008">reducedDims</tspan></text>
-</g><g
-         transform="matrix(0.5,0,0,0.5,93.94228,-344)"
-         id="g410"><text
-           id="text414"
-           style="font-variant:normal;font-weight:normal;font-size:28px;font-family:Consolas;-inkscape-font-specification:Consolas;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-           transform="matrix(1,0,0,-1,0,826)"><tspan
-             id="tspan412"
-             y="0"
-             x="0">(</tspan></text>
-</g><g
-         transform="matrix(0.5,0,0,0.5,101.6923,-344)"
-         id="g416"><text
-           id="text420"
-           style="font-variant:normal;font-weight:normal;font-size:28px;font-family:Consolas;-inkscape-font-specification:Consolas;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-           transform="matrix(1,0,0,-1,0,826)"><tspan
-             id="tspan418"
-             y="0"
-             x="0 15.5008 31.0016">sce</tspan></text>
-</g><g
-         transform="matrix(0.5,0,0,0.5,124.9423,-344)"
-         id="g422"><text
-           id="text426"
-           style="font-variant:normal;font-weight:normal;font-size:28px;font-family:Consolas;-inkscape-font-specification:Consolas;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-           transform="matrix(1,0,0,-1,0,826)"><tspan
-             id="tspan424"
-             y="0"
-             x="0">)</tspan></text>
+             x="0">reducedDims(sce)</tspan></text>
 </g><g
          transform="matrix(0.5,0,0,0.5,8.692284,-361)"
          id="g428"><text
@@ -774,7 +279,7 @@
            transform="matrix(1,0,0,-1,0,826)"><tspan
              id="tspan430"
              y="0"
-             x="0 15.5008 31.0016 46.502399 62.003201 77.503998 93.004799 108.5056 124.0064 139.5072 155.008 170.5088 186.0096 201.51041 217.0112 232.51199 248.0128 263.51361 279.0144">## List of length 2</tspan></text>
+             x="0">## List of length 2</tspan></text>
 </g><g
          transform="matrix(0.5,0,0,0.5,8.692284,-378)"
          id="g434"><text
@@ -783,7 +288,7 @@
            transform="matrix(1,0,0,-1,0,826)"><tspan
              id="tspan436"
              y="0"
-             x="0 15.5008 31.0016 46.502399 62.003201 77.503998 93.004799 108.5056 124.0064 139.5072 155.008 170.5088 186.0096 201.51041 217.0112 232.51199 248.0128 263.51361 279.0144 294.5152 310.01599">## names(2): PCA UMAP</tspan></text>
+             x="0">## names(2): PCA UMAP</tspan></text>
 </g><path
          id="path440"
          style="fill:#4472c4;fill-opacity:1;fill-rule:evenodd;stroke:none"
@@ -892,7 +397,7 @@
              transform="matrix(1,0,0,-1,0,826)"><tspan
                id="tspan522"
                y="0"
-               x="0 15 21.75 38.009998 47.52 54.27 68.190002 83.190002 99.18 114.18"># of genes</tspan></text>
+               x="0"># of genes</tspan></text>
 </g></g></g><g
        id="g526"><g
          clip-path="url(#clipPath532)"
@@ -904,7 +409,7 @@
              transform="matrix(1,0,0,-1,0,826)"><tspan
                id="tspan536"
                y="0"
-               x="0 15 21.75 38.009998 47.52 54.27 66.779999 81.779999 89.040001 96.300003"># of cells</tspan></text>
+               x="0"># of cells</tspan></text>
 </g></g></g><g
        id="g540"><g
          clip-path="url(#clipPath546)"
@@ -916,7 +421,7 @@
              transform="matrix(1,0,0,-1,0,826)"><tspan
                id="tspan550"
                y="0"
-               x="0 21.75 28.5 44.759998 54.27 61.02 77.010002 93.269997 109.26 120.69 135.69 146.07001">% of nonzero</tspan></text>
+               x="0">% of nonzero</tspan></text>
 </g></g></g><g
        id="g554"><g
          clip-path="url(#clipPath560)"
@@ -928,7 +433,7 @@
              transform="matrix(1,0,0,-1,0,826)"><tspan
                id="tspan564"
                y="0"
-               x="0 14.25 21.51 32.939999 47.939999 54.689999 63.93 75.93 91.919998 106.68 117.06 129.06 144.06">Size (sparse,</tspan></text>
+               x="0">Size (sparse,</tspan></text>
 </g></g></g><g
        id="g568"><g
          clip-path="url(#clipPath574)"
@@ -940,27 +445,9 @@
              transform="matrix(1,0,0,-1,0,826)"><tspan
                id="tspan578"
                y="0"
-               x="0 7.2509999">in</tspan></text>
+               x="0 7.2509999">in-memory)</tspan></text>
 </g></g></g><g
-       id="g582"><g
-         transform="matrix(0.5,0,0,0.5,376.7815,-37)"
-         id="g584"><text
-           id="text588"
-           style="font-variant:normal;font-weight:bold;font-size:30px;font-family:Calibri;-inkscape-font-specification:Calibri-Bold;writing-mode:lr-tb;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
-           transform="matrix(1,0,0,-1,0,826)"><tspan
-             id="tspan586"
-             y="0"
-             x="0">-</tspan></text>
-</g><g
-         transform="matrix(0.5,0,0,0.5,381.4065,-37)"
-         id="g590"><text
-           id="text594"
-           style="font-variant:normal;font-weight:bold;font-size:30px;font-family:Calibri;-inkscape-font-specification:Calibri-Bold;writing-mode:lr-tb;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
-           transform="matrix(1,0,0,-1,0,826)"><tspan
-             id="tspan592"
-             y="0"
-             x="0 24.500999 39.492001 63.993 80.244003 91.125 105.366">memory)</tspan></text>
-</g></g><g
+       id="g582"></g><g
        id="g596"><g
          clip-path="url(#clipPath602)"
          id="g598"><g
@@ -971,7 +458,7 @@
              transform="matrix(1,0,0,-1,0,826)"><tspan
                id="tspan606"
                y="0"
-               x="0 18.999001 37.998001 52.257">GDS </tspan></text>
+               x="0">GDS </tspan></text>
 </g></g></g><g
        id="g610"><g
          clip-path="url(#clipPath616)"
@@ -983,7 +470,7 @@
              transform="matrix(1,0,0,-1,0,826)"><tspan
                id="tspan620"
                y="0"
-               x="0 9.2489996 21.587999 37.827 62.316002 78.315002 88.734001 103.743 115.752 127.761 142.77 158.769">(compressed)</tspan></text>
+               x="0">(compressed)</tspan></text>
 </g></g></g><g
        id="g624"><g
          clip-path="url(#clipPath630)"
@@ -995,7 +482,7 @@
              transform="matrix(1,0,0,-1,0,826)"><tspan
                id="tspan634"
                y="0"
-               x="0 18.999001 37.998001 52.257 59.015999 68.264999 84.264 100.503">GDS (no </tspan></text>
+               x="0">GDS (no </tspan></text>
 </g></g></g><g
        id="g638"><g
          clip-path="url(#clipPath644)"
@@ -1007,7 +494,7 @@
              transform="matrix(1,0,0,-1,0,826)"><tspan
                id="tspan648"
                y="0"
-               x="0 12.351 28.601999 53.103001 69.113998 79.514999 94.505997 106.497 118.488 125.739 141.99001 158.00101">compression)</tspan></text>
+               x="0">compression)</tspan></text>
 </g></g></g><g
        id="g652"><g
          clip-path="url(#clipPath658)"
@@ -1019,7 +506,7 @@
              transform="matrix(1,0,0,-1,0,826)"><tspan
                id="tspan662"
                y="0"
-               x="0 15.999 23.238001 33.446999 47.916 58.424999 65.664001 81.903">Citation</tspan></text>
+               x="0">Citation</tspan></text>
 </g></g></g><g
        id="g666"><g
          clip-path="url(#clipPath672)"
@@ -1031,7 +518,7 @@
              transform="matrix(1,0,0,-1,0,826)"><tspan
                id="tspan676"
                y="0"
-               x="0 15.249 30.497999 37.998001 53.247002 68.496002">27,998</tspan></text>
+               x="0">27,998</tspan></text>
 </g></g></g><g
        id="g680"><g
          clip-path="url(#clipPath686)"
@@ -1043,7 +530,7 @@
              transform="matrix(1,0,0,-1,0,826)"><tspan
                id="tspan690"
                y="0"
-               x="0 15.249 22.749001 37.998001 53.247002 68.496002 75.996002 91.245003 106.494">1,306,127</tspan></text>
+               x="0">1,306,127</tspan></text>
 </g></g></g><g
        id="g694"><g
          clip-path="url(#clipPath700)"
@@ -1055,7 +542,7 @@
              transform="matrix(1,0,0,-1,0,826)"><tspan
                id="tspan704"
                y="0"
-               x="0 15.249 22.757999 38.007">7.2%</tspan></text>
+               x="0">7.2%</tspan></text>
 </g></g></g><g
        id="g708"><g
          clip-path="url(#clipPath714)"
@@ -1089,7 +576,7 @@
              transform="matrix(1,0,0,-1,0,826)"><tspan
                id="tspan740"
                y="0"
-               x="0 15.249 22.757999 38.007 57.006001">2.7GB</tspan></text>
+               x="0">2.7GB</tspan></text>
 </g></g></g><g
        id="g744"><g
          clip-path="url(#clipPath750)"
@@ -1101,7 +588,7 @@
              transform="matrix(1,0,0,-1,0,826)"><tspan
                id="tspan754"
                y="0"
-               x="0 15.249 30.497999 38.007 53.256001 72.254997">19.0GB</tspan></text>
+               x="0">19.0GB</tspan></text>
 </g></g></g><g
        id="g758"><g
          clip-path="url(#clipPath764)"
@@ -1113,10 +600,10 @@
              transform="matrix(1,0,0,-1,0,826)"><tspan
                id="tspan768"
                y="0"
-               x="0 18.999001 25.749001 39.75 55.5 70.5 86.25 100.59 108.09">G Zheng, </tspan></text>
+               x="0">Zheng, </tspan></text>
 </g></g></g><g
        id="g772"><g
-         transform="matrix(0.5,0,0,0.5,734.0868,-61.5)"
+         transform="matrix(0.5,0,0,0.5,724.0868,-61.5)"
          id="g774"><text
            id="text778"
            style="font-style:italic;font-variant:normal;font-size:30px;font-family:Calibri;-inkscape-font-specification:Calibri-Italic;writing-mode:lr-tb;fill:#081538;fill-opacity:1;fill-rule:nonzero;stroke:none"
@@ -1125,7 +612,7 @@
              y="0"
              x="0 14.091 24.101999 30.843 46.344002">et al</tspan></text>
 </g><g
-         transform="matrix(0.5,0,0,0.5,760.7568,-61.5)"
+         transform="matrix(0.5,0,0,0.5,750.7568,-61.5)"
          id="g780"><text
            id="text784"
            style="font-variant:normal;font-weight:normal;font-size:30px;font-family:Calibri;-inkscape-font-specification:Calibri;writing-mode:lr-tb;fill:#081538;fill-opacity:1;fill-rule:nonzero;stroke:none"
@@ -1173,52 +660,16 @@
            transform="matrix(1,0,0,-1,0,826)"><tspan
              id="tspan826"
              y="0"
-             x="0 14.2506 28.5012 42.751801 57.002399 71.252998 85.503601 99.754204 114.0048">logcounts</tspan></text>
+             x="0">logcounts(sce)</tspan></text>
 </g><g
-         transform="matrix(0.5,0,0,0.5,430.9804,-185)"
-         id="g830"><text
-           id="text834"
-           style="font-variant:normal;font-weight:normal;font-size:26px;font-family:Consolas;-inkscape-font-specification:Consolas;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-           transform="matrix(1,0,0,-1,0,826)"><tspan
-             id="tspan832"
-             y="0"
-             x="0">(</tspan></text>
-</g><g
-         transform="matrix(0.5,0,0,0.5,438.1054,-185)"
-         id="g836"><text
-           id="text840"
-           style="font-variant:normal;font-weight:normal;font-size:26px;font-family:Consolas;-inkscape-font-specification:Consolas;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-           transform="matrix(1,0,0,-1,0,826)"><tspan
-             id="tspan838"
-             y="0"
-             x="0 14.2506 28.5012">sce</tspan></text>
-</g><g
-         transform="matrix(0.5,0,0,0.5,459.4804,-185)"
-         id="g842"><text
-           id="text846"
-           style="font-variant:normal;font-weight:normal;font-size:26px;font-family:Consolas;-inkscape-font-specification:Consolas;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-           transform="matrix(1,0,0,-1,0,826)"><tspan
-             id="tspan844"
-             y="0"
-             x="0 14.2506">) </tspan></text>
-</g><g
-         transform="matrix(0.5,0,0,0.5,480.3554,-185)"
+         transform="matrix(0.5,0,0,0.5,460.3554,-185)"
          id="g848"><text
            id="text852"
            style="font-style:italic;font-variant:normal;font-size:24px;font-family:Consolas;-inkscape-font-specification:Consolas-Italic;writing-mode:lr-tb;fill:#8f5902;fill-opacity:1;fill-rule:nonzero;stroke:none"
            transform="matrix(1,0,0,-1,0,826)"><tspan
              id="tspan850"
              y="0"
-             x="0 13.2504"># </tspan></text>
-</g><g
-         transform="matrix(0.5,0,0,0.5,493.6054,-185)"
-         id="g854"><text
-           id="text858"
-           style="font-style:italic;font-variant:normal;font-size:24px;font-family:Calibri;-inkscape-font-specification:Calibri-Italic;writing-mode:lr-tb;fill:#8f5902;fill-opacity:1;fill-rule:nonzero;stroke:none"
-           transform="matrix(1,0,0,-1,0,826)"><tspan
-             id="tspan856"
-             y="0"
-             x="0 12.2496 24.499201 30.004801 35.510399 47.759998 60.009602 65.515198 75.508797 87.7584 100.008 112.2576 120.2592 125.7648 138.0144 150.26401 158.26559 170.5152 176.0208 181.5264 190.776 196.2816 205.5312 213.53281 225.78239 234.024 245.5296 257.77921 263.28479 268.79041 281.04001 286.54559 305.53922 317.0448 336.03839 348.28799 356.5296 367.2912 372.79681 385.04639 393.28799 398.79361 411.04321 416.5488 423.8064 429.31201 434.8176">no log count data is stored in memory or a file</tspan></text>
+             x="0 13.2504"># no log count data is stored in memory or a file</tspan></text>
 </g><g
          transform="matrix(0.5,0,0,0.5,366.8554,-209)"
          id="g860"><text
@@ -1227,30 +678,12 @@
            transform="matrix(1,0,0,-1,0,826)"><tspan
              id="tspan862"
              y="0"
-             x="0 12.001 24.002001 36.002998 48.004002 60.005001 72.005997 84.007004 96.008003 108.009 120.01 132.011 144.01199 156.013 168.01401 180.015 192.01601 204.017 216.01801 228.019 240.02 252.021 264.022 276.02301 288.02399 300.02499 312.026 324.02701 336.02802 348.02899 360.03 372.03101 384.03201 396.03299 408.034 420.035 432.03601 444.03699 456.03799 468.039 480.04001 492.04099 504.04199 516.04303">## &lt;27998 x 1306127&gt; sparse matrix of class </tspan></text>
-</g><g
-         transform="matrix(0.5,0,0,0.5,630.8554,-209)"
-         id="g866"><text
-           id="text870"
-           style="font-variant:normal;font-weight:normal;font-size:22px;font-family:Consolas;-inkscape-font-specification:Consolas;writing-mode:lr-tb;fill:#7f7f7f;fill-opacity:1;fill-rule:nonzero;stroke:none"
-           transform="matrix(1,0,0,-1,0,826)"><tspan
-             id="tspan868"
-             y="0"
-             x="0 12.001 24.002001 36.002998 48.004002 60.005001 72.005997 84.007004 96.008003 108.009 120.01 132.011 144.01199">DelayedMatrix</tspan></text>
-</g><g
-         transform="matrix(0.5,0,0,0.5,714.8554,-209)"
-         id="g872"><text
-           id="text876"
-           style="font-variant:normal;font-weight:normal;font-size:22px;font-family:Consolas;-inkscape-font-specification:Consolas;writing-mode:lr-tb;fill:#7f7f7f;fill-opacity:1;fill-rule:nonzero;stroke:none"
-           transform="matrix(1,0,0,-1,0,826)"><tspan
-             id="tspan874"
-             y="0"
-             x="0 12.001 24.002001 36.002998 48.004002 60.005001 72.005997 84.007004 96.008003 108.009 120.01 132.011 144.01199 156.013 168.01401 180.015 192.01601 204.017">and type &quot;double&quot;:</tspan></text>
+             x="0">## &lt;27998 x 1306127&gt; sparse matrix of class SC_GDSMatrix and type &quot;double&quot;:</tspan></text>
 </g><g
          transform="matrix(0.5,0,0,0.5,366.8554,-222)"
          id="g878"><text
            id="text882"
-           style="font-variant:normal;font-weight:normal;font-size:22px;font-family:Consolas;-inkscape-font-specification:Consolas;writing-mode:lr-tb;fill:#7f7f7f;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           style="font-variant:normal;font-weight:normal;font-size:18px;font-family:Consolas;-inkscape-font-specification:Consolas;writing-mode:lr-tb;fill:#7f7f7f;fill-opacity:1;fill-rule:nonzero;stroke:none"
            transform="matrix(1,0,0,-1,0,826)"><tspan
              id="tspan880"
              y="0"
@@ -1259,7 +692,7 @@
          transform="matrix(0.5,0,0,0.5,606.8554,-222)"
          id="g884"><text
            id="text888"
-           style="font-variant:normal;font-weight:normal;font-size:22px;font-family:Consolas;-inkscape-font-specification:Consolas;writing-mode:lr-tb;fill:#7f7f7f;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           style="font-variant:normal;font-weight:normal;font-size:18px;font-family:Consolas;-inkscape-font-specification:Consolas;writing-mode:lr-tb;fill:#7f7f7f;fill-opacity:1;fill-rule:nonzero;stroke:none"
            transform="matrix(1,0,0,-1,0,826)"><tspan
              id="tspan886"
              y="0"
@@ -1268,7 +701,7 @@
          transform="matrix(0.5,0,0,0.5,612.8554,-222)"
          id="g890"><text
            id="text894"
-           style="font-variant:normal;font-weight:normal;font-size:22px;font-family:Consolas;-inkscape-font-specification:Consolas;writing-mode:lr-tb;fill:#7f7f7f;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           style="font-variant:normal;font-weight:normal;font-size:18px;font-family:Consolas;-inkscape-font-specification:Consolas;writing-mode:lr-tb;fill:#7f7f7f;fill-opacity:1;fill-rule:nonzero;stroke:none"
            transform="matrix(1,0,0,-1,0,826)"><tspan
              id="tspan892"
              y="0"
@@ -1277,7 +710,7 @@
          transform="matrix(0.5,0,0,0.5,744.8554,-222)"
          id="g896"><text
            id="text900"
-           style="font-variant:normal;font-weight:normal;font-size:22px;font-family:Consolas;-inkscape-font-specification:Consolas;writing-mode:lr-tb;fill:#7f7f7f;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           style="font-variant:normal;font-weight:normal;font-size:18px;font-family:Consolas;-inkscape-font-specification:Consolas;writing-mode:lr-tb;fill:#7f7f7f;fill-opacity:1;fill-rule:nonzero;stroke:none"
            transform="matrix(1,0,0,-1,0,826)"><tspan
              id="tspan898"
              y="0"
@@ -1286,7 +719,7 @@
          transform="matrix(0.5,0,0,0.5,750.8554,-222)"
          id="g902"><text
            id="text906"
-           style="font-variant:normal;font-weight:normal;font-size:22px;font-family:Consolas;-inkscape-font-specification:Consolas;writing-mode:lr-tb;fill:#7f7f7f;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           style="font-variant:normal;font-weight:normal;font-size:18px;font-family:Consolas;-inkscape-font-specification:Consolas;writing-mode:lr-tb;fill:#7f7f7f;fill-opacity:1;fill-rule:nonzero;stroke:none"
            transform="matrix(1,0,0,-1,0,826)"><tspan
              id="tspan904"
              y="0"
@@ -1295,7 +728,7 @@
          transform="matrix(0.5,0,0,0.5,366.8554,-235)"
          id="g908"><text
            id="text912"
-           style="font-variant:normal;font-weight:normal;font-size:22px;font-family:Consolas;-inkscape-font-specification:Consolas;writing-mode:lr-tb;fill:#7f7f7f;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           style="font-variant:normal;font-weight:normal;font-size:18px;font-family:Consolas;-inkscape-font-specification:Consolas;writing-mode:lr-tb;fill:#7f7f7f;fill-opacity:1;fill-rule:nonzero;stroke:none"
            transform="matrix(1,0,0,-1,0,826)"><tspan
              id="tspan910"
              y="0"
@@ -1304,7 +737,7 @@
          transform="matrix(0.5,0,0,0.5,366.8554,-249)"
          id="g914"><text
            id="text918"
-           style="font-variant:normal;font-weight:normal;font-size:22px;font-family:Consolas;-inkscape-font-specification:Consolas;writing-mode:lr-tb;fill:#7f7f7f;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           style="font-variant:normal;font-weight:normal;font-size:18px;font-family:Consolas;-inkscape-font-specification:Consolas;writing-mode:lr-tb;fill:#7f7f7f;fill-opacity:1;fill-rule:nonzero;stroke:none"
            transform="matrix(1,0,0,-1,0,826)"><tspan
              id="tspan916"
              y="0"
@@ -1313,7 +746,7 @@
          transform="matrix(0.5,0,0,0.5,366.8554,-262)"
          id="g920"><text
            id="text924"
-           style="font-variant:normal;font-weight:normal;font-size:22px;font-family:Consolas;-inkscape-font-specification:Consolas;writing-mode:lr-tb;fill:#7f7f7f;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           style="font-variant:normal;font-weight:normal;font-size:18px;font-family:Consolas;-inkscape-font-specification:Consolas;writing-mode:lr-tb;fill:#7f7f7f;fill-opacity:1;fill-rule:nonzero;stroke:none"
            transform="matrix(1,0,0,-1,0,826)"><tspan
              id="tspan922"
              y="0"
@@ -1322,7 +755,7 @@
          transform="matrix(0.5,0,0,0.5,366.8554,-275)"
          id="g926"><text
            id="text930"
-           style="font-variant:normal;font-weight:normal;font-size:22px;font-family:Consolas;-inkscape-font-specification:Consolas;writing-mode:lr-tb;fill:#7f7f7f;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           style="font-variant:normal;font-weight:normal;font-size:18px;font-family:Consolas;-inkscape-font-specification:Consolas;writing-mode:lr-tb;fill:#7f7f7f;fill-opacity:1;fill-rule:nonzero;stroke:none"
            transform="matrix(1,0,0,-1,0,826)"><tspan
              id="tspan928"
              y="0"
@@ -1367,7 +800,7 @@
            transform="matrix(1,0,0,-1,0,826)"><tspan
              id="tspan972"
              y="0"
-             x="0 13.2504 26.500799 39.751202 53.001598 66.251999 79.502403 92.7528 106.0032 119.2536 132.504 145.75439 159.00481 172.2552 185.5056 198.756 212.00639 225.25681 238.5072 251.7576 265.008 278.25839 291.50879 304.75919 318.00961 331.26001 344.51041 357.7608 371.0112 384.2616">File: 1M_sc_neurons.gds (2.7G)</tspan></text>
+             x="0">File: 1M_sc_neurons.gds (2.7G)</tspan></text>
 </g><g
          transform="matrix(0.5,0,0,0.5,366.8555,-112)"
          id="g976"><text
@@ -1412,7 +845,7 @@
            transform="matrix(1,0,0,-1,0,826)"><tspan
              id="tspan1002"
              y="0"
-             x="0 13.2504 26.500799 39.751202 53.001598 66.251999 79.502403 92.7528 106.0032 119.2536">feature.id</tspan></text>
+             x="0">feature.id</tspan></text>
 </g><g
          transform="matrix(0.5,0,0,0.5,479.4805,-126)"
          id="g1006"><text
@@ -1421,25 +854,7 @@
            transform="matrix(1,0,0,-1,0,826)"><tspan
              id="tspan1008"
              y="0"
-             x="0 13.2504 26.500799 39.751202 53.001598 66.251999 79.502403 92.7528 106.0032 119.2536 132.504 145.75439 159.00481">{ Str8 27998 </tspan></text>
-</g><g
-         transform="matrix(0.5,0,0,0.5,565.6055,-126)"
-         id="g1012"><text
-           id="text1016"
-           style="font-variant:normal;font-weight:normal;font-size:24px;font-family:Consolas;-inkscape-font-specification:Consolas;writing-mode:lr-tb;fill:#7f7f7f;fill-opacity:1;fill-rule:nonzero;stroke:none"
-           transform="matrix(1,0,0,-1,0,826)"><tspan
-             id="tspan1014"
-             y="0"
-             x="0 13.2504 26.500799 39.751202 53.001598 66.251999 79.502403">LZMA_ra</tspan></text>
-</g><g
-         transform="matrix(0.5,0,0,0.5,611.9805,-126)"
-         id="g1018"><text
-           id="text1022"
-           style="font-variant:normal;font-weight:normal;font-size:24px;font-family:Consolas;-inkscape-font-specification:Consolas;writing-mode:lr-tb;fill:#7f7f7f;fill-opacity:1;fill-rule:nonzero;stroke:none"
-           transform="matrix(1,0,0,-1,0,826)"><tspan
-             id="tspan1020"
-             y="0"
-             x="0 13.2504 26.500799 39.751202 53.001598 66.251999 79.502403 92.7528 106.0032 119.2536 132.504 145.75439 159.00481 172.2552 185.5056 198.756">(12.4%), 64.5K }</tspan></text>
+             x="0">{ Str8 27998 LZMA_ra(12.4%), 64.5K }</tspan></text>
 </g><g
          transform="matrix(0.5,0,0,0.5,366.8555,-141)"
          id="g1024"><text
@@ -1475,7 +890,7 @@
            transform="matrix(1,0,0,-1,0,826)"><tspan
              id="tspan1044"
              y="0"
-             x="0 13.2504 26.500799 39.751202 53.001598 66.251999 79.502403 92.7528 106.0032">sample.id</tspan></text>
+             x="0">sample.id</tspan></text>
 </g><g
          transform="matrix(0.5,0,0,0.5,479.4805,-141)"
          id="g1048"><text
@@ -1484,25 +899,7 @@
            transform="matrix(1,0,0,-1,0,826)"><tspan
              id="tspan1050"
              y="0"
-             x="0 13.2504 26.500799 39.751202 53.001598 66.251999 79.502403 92.7528 106.0032 119.2536 132.504 145.75439 159.00481 172.2552 185.5056">{ Str8 1306127 </tspan></text>
-</g><g
-         transform="matrix(0.5,0,0,0.5,578.8555,-141)"
-         id="g1054"><text
-           id="text1058"
-           style="font-variant:normal;font-weight:normal;font-size:24px;font-family:Consolas;-inkscape-font-specification:Consolas;writing-mode:lr-tb;fill:#7f7f7f;fill-opacity:1;fill-rule:nonzero;stroke:none"
-           transform="matrix(1,0,0,-1,0,826)"><tspan
-             id="tspan1056"
-             y="0"
-             x="0 13.2504 26.500799 39.751202 53.001598 66.251999 79.502403">LZMA_ra</tspan></text>
-</g><g
-         transform="matrix(0.5,0,0,0.5,625.2305,-141)"
-         id="g1060"><text
-           id="text1064"
-           style="font-variant:normal;font-weight:normal;font-size:24px;font-family:Consolas;-inkscape-font-specification:Consolas;writing-mode:lr-tb;fill:#7f7f7f;fill-opacity:1;fill-rule:nonzero;stroke:none"
-           transform="matrix(1,0,0,-1,0,826)"><tspan
-             id="tspan1062"
-             y="0"
-             x="0 13.2504 26.500799 39.751202 53.001598 66.251999 79.502403 92.7528 106.0032 119.2536 132.504 145.75439 159.00481 172.2552 185.5056">(10.8%), 2.7M }</tspan></text>
+             x="0">{ Str8 1306127 LZMA_ra(10.8%), 2.7M }</tspan></text>
 </g><g
          transform="matrix(0.5,0,0,0.5,366.8555,-155)"
          id="g1066"><text
@@ -1529,7 +926,7 @@
            transform="matrix(1,0,0,-1,0,826)"><tspan
              id="tspan1080"
              y="0"
-             x="0 13.2504 26.500799 39.751202 53.001598 66.251999 79.502403 92.7528 106.0032">+ counts </tspan></text>
+             x="0 13.2504 26.500799">+ counts </tspan></text>
 </g><g
          transform="matrix(0.5,0,0,0.5,459.6055,-155)"
          id="g1084"><text
@@ -1538,25 +935,7 @@
            transform="matrix(1,0,0,-1,0,826)"><tspan
              id="tspan1086"
              y="0"
-             x="0 13.2504 26.500799 39.751202 53.001598 66.251999 79.502403 92.7528 106.0032 119.2536 132.504 145.75439 159.00481 172.2552 185.5056 198.756 212.00639 225.25681 238.5072 251.7576 265.008 278.25839 291.50879 304.75919 318.00961 331.26001 344.51041 357.7608 371.0112">{ SparseReal32 27998x1306127 </tspan></text>
-</g><g
-         transform="matrix(0.5,0,0,0.5,651.7305,-155)"
-         id="g1090"><text
-           id="text1094"
-           style="font-variant:normal;font-weight:normal;font-size:24px;font-family:Consolas;-inkscape-font-specification:Consolas;writing-mode:lr-tb;fill:#7f7f7f;fill-opacity:1;fill-rule:nonzero;stroke:none"
-           transform="matrix(1,0,0,-1,0,826)"><tspan
-             id="tspan1092"
-             y="0"
-             x="0 13.2504 26.500799 39.751202 53.001598 66.251999 79.502403">LZMA_ra</tspan></text>
-</g><g
-         transform="matrix(0.5,0,0,0.5,698.1055,-155)"
-         id="g1096"><text
-           id="text1100"
-           style="font-variant:normal;font-weight:normal;font-size:24px;font-family:Consolas;-inkscape-font-specification:Consolas;writing-mode:lr-tb;fill:#7f7f7f;fill-opacity:1;fill-rule:nonzero;stroke:none"
-           transform="matrix(1,0,0,-1,0,826)"><tspan
-             id="tspan1098"
-             y="0"
-             x="0 13.2504 26.500799 39.751202 53.001598 66.251999 79.502403 92.7528 106.0032 119.2536 132.504 145.75439 159.00481 172.2552 185.5056">(14.4%), 2.7G }</tspan></text>
+             x="0">{ SparseReal32 27998x1306127 LZMA_ra(14.4%), 2.7G }</tspan></text>
 </g><path
          id="path1102"
          style="fill:#7f7f7f;fill-opacity:1;fill-rule:nonzero;stroke:none"
@@ -1567,20 +946,20 @@
          transform="matrix(0.5,0,0,0.5,311.2186,-360.5)"
          id="g1106"><text
            id="text1110"
-           style="font-style:italic;font-variant:normal;font-size:30px;font-family:Calibri;-inkscape-font-specification:Calibri-Italic;writing-mode:lr-tb;fill:#7f7f7f;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           style="font-style:italic;font-variant:normal;font-size:28px;font-family:Calibri;-inkscape-font-specification:Calibri-Italic;writing-mode:lr-tb;fill:#7f7f7f;fill-opacity:1;fill-rule:nonzero;stroke:none"
            transform="matrix(1,0,0,-1,0,826)"><tspan
              id="tspan1108"
              y="0"
-             x="0 15 21.75 37.259998 46.5 53.25 68.760002 83.010002 98.519997 112.77 124.53 131.28 152.78999 159.78 169.77 185.28 192.03 202.02 217.53 231.78 238.53 254.03999 261.03 276.54001 292.04999 306.29999 317.70001 327.69"># of genes with the highest </tspan></text>
+             x="0"># of genes with the highest </tspan></text>
 </g><g
          transform="matrix(0.5,0,0,0.5,311.2186,-378.5)"
          id="g1112"><text
            id="text1116"
-           style="font-style:italic;font-variant:normal;font-size:30px;font-family:Calibri;-inkscape-font-specification:Calibri-Italic;writing-mode:lr-tb;fill:#7f7f7f;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           style="font-style:italic;font-variant:normal;font-size:28px;font-family:Calibri;-inkscape-font-specification:Calibri-Italic;writing-mode:lr-tb;fill:#7f7f7f;fill-opacity:1;fill-rule:nonzero;stroke:none"
            transform="matrix(1,0,0,-1,0,826)"><tspan
              id="tspan1114"
              y="0"
-             x="0 13.251 28.752001 39.002998 46.014 61.514999 77.015999 89.336998 103.578 115.329 122.07 137.571 149.32201 163.563 179.064 185.80499 192.81599 208.317 215.058 230.55901 246.3 263.54099 275.29199 294.543 320.30399 337.54501">variances used in PCA/UMAP</tspan></text>
+             x="0">variances used in PCA/UMAP</tspan></text>
 </g><path
          id="path1118"
          style="fill:#7f7f7f;fill-opacity:1;fill-rule:nonzero;stroke:none"
@@ -1588,48 +967,39 @@
          transform="matrix(0.5,0,0,0.5,510.4313,-321)"
          id="g1120"><text
            id="text1124"
-           style="font-style:italic;font-variant:normal;font-size:30px;font-family:Calibri;-inkscape-font-specification:Calibri-Italic;writing-mode:lr-tb;fill:#7f7f7f;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           style="font-style:italic;font-variant:normal;font-size:28px;font-family:Calibri;-inkscape-font-specification:Calibri-Italic;writing-mode:lr-tb;fill:#7f7f7f;fill-opacity:1;fill-rule:nonzero;stroke:none"
            transform="matrix(1,0,0,-1,0,826)"><tspan
              id="tspan1122"
              y="0"
-             x="0 15.501 27.252001 41.493 48.234001 63.735001 70.475998 80.726997 96.227997 111.729 127.23 142.731 166.48199 173.493 184.82401 199.065 214.56599">use a randomized </tspan></text>
+             x="0">use a randomized </tspan></text>
 </g><g
          transform="matrix(0.5,0,0,0.5,510.4313,-339)"
          id="g1126"><text
            id="text1130"
-           style="font-style:italic;font-variant:normal;font-size:30px;font-family:Calibri;-inkscape-font-specification:Calibri-Italic;writing-mode:lr-tb;fill:#7f7f7f;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           style="font-style:italic;font-variant:normal;font-size:28px;font-family:Calibri;-inkscape-font-specification:Calibri-Italic;writing-mode:lr-tb;fill:#7f7f7f;fill-opacity:1;fill-rule:nonzero;stroke:none"
            transform="matrix(1,0,0,-1,0,826)"><tspan
              id="tspan1128"
              y="0"
-             x="0 15.501 31.242001 48.483002 55.223999 70.724998 77.736 93.237 108.738 118.989 126 136.011 151.51199">PCA algorithm</tspan></text>
+             x="0">PCA algorithm</tspan></text>
 </g><path
          id="path1132"
          style="fill:#7f7f7f;fill-opacity:1;fill-rule:nonzero;stroke:none"
          d="M 391.2819,110.329 503.4494,88.28632 503.1602,86.81447 390.9927,108.8571 Z m -0.1445,-0.736 2.9608,-5.6774 -8.8482,6.8344 10.7765,2.9779 z" /><g
-         transform="matrix(0.5,0,0,0.5,450.4034,-397.5)"
+         transform="matrix(0.5,0,0,0.5,400.4034,-397.5)"
          id="g1134"><text
            id="text1138"
-           style="font-variant:normal;font-weight:normal;font-size:22px;font-family:Calibri;-inkscape-font-specification:Calibri;writing-mode:lr-tb;fill:#ff0000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           style="font-variant:normal;font-weight:normal;font-size:20px;font-family:Calibri;-inkscape-font-specification:Calibri;writing-mode:lr-tb;fill:#ff0000;fill-opacity:1;fill-rule:nonzero;stroke:none"
            transform="matrix(1,0,0,-1,0,826)"><tspan
              id="tspan1136"
              y="0"
              x="0">a</tspan></text>
 </g><g
-         transform="matrix(0.5,0,0,0.5,458.1534,-402.5)"
+         transform="matrix(0.5,0,0,0.5,408.1534,-402.5)"
          id="g1140"><text
            id="text1144"
            style="font-variant:normal;font-weight:normal;font-size:22px;font-family:Calibri;-inkscape-font-specification:Calibri;writing-mode:lr-tb;fill:#ff0000;fill-opacity:1;fill-rule:nonzero;stroke:none"
            transform="matrix(1,0,0,-1,0,826)"><tspan
              id="tspan1142"
              y="0"
-             x="0 12.2496 23.245199 35.2528 47.260399 59.509998 67.249603 72.503197 77.756798 90.006401 101.002 113.0096 118.2632 123.5168 135.5244 143.26401 155.5136 160.7672 179.0228 190.5244 208.78 221.0296 229.0332 239.5448 244.7984 256.806 265.79959 271.05319 283.06079 293.81439 299.06799 318.81961 329.81519 337.55481 345.55841 350.81201 360.8176 367.06119">Cannot load into memory using Matrix::</tspan></text>
-</g><g
-         transform="matrix(0.5,0,0,0.5,644.7783,-402.5)"
-         id="g1146"><text
-           id="text1150"
-           style="font-variant:normal;font-weight:normal;font-size:22px;font-family:Calibri;-inkscape-font-specification:Calibri;writing-mode:lr-tb;fill:#ff0000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-           transform="matrix(1,0,0,-1,0,826)"><tspan
-             id="tspan1148"
-             y="0"
-             x="0 12.001 22.747999 34.991001 54.736 65.747002 73.501999 81.499001 86.746002">dgCMatrix</tspan></text>
+             x="0">Cannot load the sparse form into memory using Matrix::dgCMatrix</tspan></text>
 </g></g></g></svg>

@@ -2,7 +2,7 @@
 title: "SCArray -- Large-scale single-cell RNA-seq data manipulation with GDS files"
 author:
     - Dr. Xiuwen Zheng
-    - Computational Genomics, Genomics Research Center, AbbVie
+    - Genomics Research Center, AbbVie
 date: "Aug, 2021"
 output: slidy_presentation
 vignette: >
@@ -16,7 +16,7 @@ vignette: >
 
 - Single-cell technology development
     * larger and larger numbers of cells assayed per experiment
-    * the scalability leveraging on-disk data processing (avoid out of memory)
+    * the scalability leveraging on-disk data processing (avoid "out-of-memory")
 - Genomic Data Structure (GDS) files
     * an alternative to HDF5 & TileDB
     * hierarchical structure to store array-oriented data sets
@@ -24,7 +24,7 @@ vignette: >
     * out-of-memory data storage and manipulation in R
 - SCArray
     * applies GDS to single-cell data manipulation & analysis
-    * utilizes DelayedArray & SingleCellExperiment in BioC
+    * utilizes DelayedArray & SingleCellExperiment in Bioconductor
     * reuse existing analysis packages efficiently (e.g., scater) via internal "seed-aware" functions
 
 

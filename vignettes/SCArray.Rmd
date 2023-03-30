@@ -46,7 +46,7 @@ converting it to multiple vectors.
 ## Installation
 
 * Requires R (>= v3.5.0),
-[gdsfmt](http://www.bioconductor.org/packages/gdsfmt) (>= v1.24.0)
+[gdsfmt](http://www.bioconductor.org/packages/gdsfmt) (>= v1.35.4)
 
 * Bioconductor repository
 
@@ -207,6 +207,23 @@ in the SingleCellExperiment object:
 
 ```{r fig.align="center",fig.width=4,fig.height=3}
 plotReducedDim(sce, dimred="UMAP")
+```
+
+~
+
+~
+
+## Miscellaneous
+
+### Debugging
+
+`options(SCArray.verbose=TRUE)` is used to enable displaying debug information when calling the functions in the SCArray packages. For example,
+
+```{r}
+options(SCArray.verbose=TRUE)
+
+m <- rowMeans(logcnt)
+str(m)
 ```
 
 ~

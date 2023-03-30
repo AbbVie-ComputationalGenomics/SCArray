@@ -181,7 +181,7 @@
              transform="matrix(1,0,0,-1,0,814)"><tspan
                id="tspan102"
                y="0"
-               x="0 12.4992 25.9904 43.001598 60.012798 76.223999 90.739197 110.9824 130.74561">scConvGDS</tspan></text>
+               x="0">scConvGDS()</tspan></text>
 </g></g></g><g
        id="g106"><g
          clip-path="url(#clipPath112)"
@@ -193,27 +193,9 @@
              transform="matrix(1,0,0,-1,0,814)"><tspan
                id="tspan116"
                y="0"
-               x="0 14.7488 29.465599 43.638401 59.635201 72.143997 79.4048 94.665604">Saves a </tspan></text>
+               x="0">Saves a SingleCellExperiment object to a GDS file</tspan></text>
 </g></g></g><g
-       id="g120"><g
-         transform="matrix(0.5,0,0,0.5,216.5929,-49.5)"
-         id="g122"><text
-           id="text126"
-           style="font-variant:normal;font-weight:normal;font-size:32px;font-family:Calibri;-inkscape-font-specification:Calibri;writing-mode:lr-tb;fill:#081538;fill-opacity:1;fill-rule:nonzero;stroke:none"
-           transform="matrix(1,0,0,-1,0,814)"><tspan
-             id="tspan124"
-             y="0"
-             x="0 14.7488 22.0096 38.742401 53.7472 61.007999 77.004799 93.993599 109.9904 117.2512 124.512 140.25281 154.0096 170.7424 186.7392 198 205.2608 230.7616 246.75841 263.20319">SingleCellExperiment</tspan></text>
-</g><g
-         transform="matrix(0.5,0,0,0.5,357.1929,-49.5)"
-         id="g128"><text
-           id="text132"
-           style="font-variant:normal;font-weight:normal;font-size:32px;font-family:Calibri;-inkscape-font-specification:Calibri;writing-mode:lr-tb;fill:#081538;fill-opacity:1;fill-rule:nonzero;stroke:none"
-           transform="matrix(1,0,0,-1,0,814)"><tspan
-             id="tspan130"
-             y="0"
-             x="0 17.0016 33.7472 41.500801 57.510399 71.024002 81.785599 89.027199 99.468803 116.4704 123.712 138.9536 146.19521 166.4288 186.1824 200.944 208.18559 217.9232 225.16479 232.4064">object to a GDS file</tspan></text>
-</g></g><g
+       id="g120"></g><g
        id="g134"><g
          clip-path="url(#clipPath140)"
          id="g136"><g
@@ -224,7 +206,7 @@
              transform="matrix(1,0,0,-1,0,814)"><tspan
                id="tspan144"
                y="0"
-               x="0 12.4992 25.9904 41.753601 55.500801 72.255997 88.243202 99.4944 106.7456 132.2368 148.224 164.65919">scExperiment</tspan></text>
+               x="0">scExperiment()</tspan></text>
 </g></g></g><g
        id="g148"><g
          clip-path="url(#clipPath154)"
@@ -236,36 +218,9 @@
              transform="matrix(1,0,0,-1,0,814)"><tspan
                id="tspan158"
                y="0"
-               x="0 16.9408 32.7616 43.526402 60.2752 71.519997 88.268799 100.7616 108.0064 123.2512 140 147.2448 154.48959 171.2384 183.3792 193.728 208.97279 225.7216 239.2384 255.25121 262.496 279.50079 289.24161">Returns an instance of </tspan></text>
+               x="0">Returns an instance of SingleCellExperiment from a GDS file</tspan></text>
 </g></g></g><g
-       id="g162"><g
-         transform="matrix(0.5,0,0,0.5,313.8979,-78.5)"
-         id="g164"><text
-           id="text168"
-           style="font-variant:normal;font-weight:normal;font-size:32px;font-family:Calibri;-inkscape-font-specification:Calibri;writing-mode:lr-tb;fill:#081538;fill-opacity:1;fill-rule:nonzero;stroke:none"
-           transform="matrix(1,0,0,-1,0,814)"><tspan
-             id="tspan166"
-             y="0"
-             x="0 14.7488 22.0096 38.742401 53.7472 61.007999 77.004799 93.993599 109.9904 117.2512 124.512 140.25281 154.0096 170.7424 186.7392 198 205.2608 230.7616 246.75841 263.20319">SingleCellExperiment</tspan></text>
-</g><g
-         transform="matrix(0.5,0,0,0.5,454.4979,-78.5)"
-         id="g170"><text
-           id="text174"
-           style="font-variant:normal;font-weight:normal;font-size:32px;font-family:Calibri;-inkscape-font-specification:Calibri;writing-mode:lr-tb;fill:#081538;fill-opacity:1;fill-rule:nonzero;stroke:none"
-           transform="matrix(1,0,0,-1,0,814)"><tspan
-             id="tspan172"
-             y="0"
-             x="0 9.7503996 20.4928 37.507198 63.001598 70.255997 85.510399 92.764801 113.0112 132.7776 147.52 154.7744 164.5248 171.77921 179.0336 195.024 202.2784 219.0368 231.5392 238.79359 255.552 270.55042">from a GDS file using </tspan></text>
-</g><g
-         transform="matrix(0.5,0,0,0.5,593.3629,-78.5)"
-         id="g176"><text
-           id="text180"
-           style="font-variant:normal;font-weight:normal;font-size:32px;font-family:Calibri;-inkscape-font-specification:Calibri;writing-mode:lr-tb;fill:#081538;fill-opacity:1;fill-rule:nonzero;stroke:none"
-           transform="matrix(1,0,0,-1,0,814)"><tspan
-             id="tspan178"
-             y="0"
-             x="0 19.750401 35.756802 42.995201 57.6576 71.776001 87.782402 104.5248 131.7632 146.71359 157.472 168.7104 175.94881">DelayedMatrix</tspan></text>
-</g></g><g
+       id="g162"></g><g
        id="g182"><g
          clip-path="url(#clipPath188)"
          id="g184"><g
@@ -276,7 +231,7 @@
              transform="matrix(1,0,0,-1,0,814)"><tspan
                id="tspan192"
                y="0"
-               x="0 12.4992 25.9904 44.473598 55.7248 66.304001 80.947197">scArray</tspan></text>
+               x="0">scArray()</tspan></text>
 </g></g></g><g
        id="g196"><g
          clip-path="url(#clipPath202)"
@@ -288,27 +243,9 @@
              transform="matrix(1,0,0,-1,0,814)"><tspan
                id="tspan206"
                y="0"
-               x="0 20.249599 36.083199 46.8288 59.3344 66.592003 81.849602 98.611198">Gets an </tspan></text>
+               x="0">Gets a DelayedArray instance from a GDS file</tspan></text>
 </g></g></g><g
        id="g210"><g
-         transform="matrix(0.5,0,0,0.5,218.5529,-108)"
-         id="g212"><text
-           id="text216"
-           style="font-variant:normal;font-weight:normal;font-size:32px;font-family:Calibri;-inkscape-font-specification:Calibri;writing-mode:lr-tb;fill:#081538;fill-opacity:1;fill-rule:nonzero;stroke:none"
-           transform="matrix(1,0,0,-1,0,814)"><tspan
-             id="tspan214"
-             y="0"
-             x="0 19.750401 35.756802 42.995201 57.6576 71.776001 87.782402 104.5248 123.0272 134.26559 144.864 159.5264">DelayedArray</tspan></text>
-</g><g
-         transform="matrix(0.5,0,0,0.5,309.1879,-108)"
-         id="g218"><text
-           id="text222"
-           style="font-variant:normal;font-weight:normal;font-size:32px;font-family:Calibri;-inkscape-font-specification:Calibri;writing-mode:lr-tb;fill:#081538;fill-opacity:1;fill-rule:nonzero;stroke:none"
-           transform="matrix(1,0,0,-1,0,814)"><tspan
-             id="tspan220"
-             y="0"
-             x="0 7.2512002 24.006399 36.153599 46.508801 61.759998 78.515198 92.006401 107.9936 115.2448 124.992 135.7312 152.7424 178.2336 185.4848 200.73599 207.9872 228.23039 247.99361 262.73279 269.98401 279.7312 286.98239 294.23361">instance from a GDS file</tspan></text>
-</g><g
          transform="matrix(7.874016e-5,0,0,-7.874016e-5,23,280)"
          id="g224"><path
            id="path226"
@@ -321,25 +258,7 @@
            transform="matrix(1,0,0,-1,0,814)"><tspan
              id="tspan230"
              y="0"
-             x="0 13.2504 26.500799 39.751202 53.001598 66.251999 79.502403 92.7528">library(</tspan></text>
-</g><g
-         transform="matrix(0.5,0,0,0.5,83.33173,-141.5)"
-         id="g234"><text
-           id="text238"
-           style="font-variant:normal;font-weight:normal;font-size:24px;font-family:Consolas;-inkscape-font-specification:Consolas;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-           transform="matrix(1,0,0,-1,0,814)"><tspan
-             id="tspan236"
-             y="0"
-             x="0 13.2504 26.500799 39.751202 53.001598 66.251999 79.502403 92.7528">scRNAseq</tspan></text>
-</g><g
-         transform="matrix(0.5,0,0,0.5,136.3317,-141.5)"
-         id="g240"><text
-           id="text244"
-           style="font-variant:normal;font-weight:normal;font-size:24px;font-family:Consolas;-inkscape-font-specification:Consolas;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-           transform="matrix(1,0,0,-1,0,814)"><tspan
-             id="tspan242"
-             y="0"
-             x="0">)</tspan></text>
+             x="0">library(scRNAseq)</tspan></text>
 </g><g
          transform="matrix(0.5,0,0,0.5,30.33173,-156.5)"
          id="g246"><text
@@ -348,25 +267,7 @@
            transform="matrix(1,0,0,-1,0,814)"><tspan
              id="tspan248"
              y="0"
-             x="0 13.2504 26.500799 39.751202 53.001598 66.251999 79.502403 92.7528">library(</tspan></text>
-</g><g
-         transform="matrix(0.5,0,0,0.5,83.33173,-156.5)"
-         id="g252"><text
-           id="text256"
-           style="font-variant:normal;font-weight:normal;font-size:24px;font-family:Consolas;-inkscape-font-specification:Consolas;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-           transform="matrix(1,0,0,-1,0,814)"><tspan
-             id="tspan254"
-             y="0"
-             x="0 13.2504 26.500799 39.751202 53.001598 66.251999 79.502403">SCArray</tspan></text>
-</g><g
-         transform="matrix(0.5,0,0,0.5,129.7067,-156.5)"
-         id="g258"><text
-           id="text262"
-           style="font-variant:normal;font-weight:normal;font-size:24px;font-family:Consolas;-inkscape-font-specification:Consolas;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-           transform="matrix(1,0,0,-1,0,814)"><tspan
-             id="tspan260"
-             y="0"
-             x="0">)</tspan></text>
+             x="0">library(SCArray)</tspan></text>
 </g><g
          transform="matrix(0.5,0,0,0.5,30.33173,-185.5)"
          id="g264"><text
@@ -375,70 +276,16 @@
            transform="matrix(1,0,0,-1,0,814)"><tspan
              id="tspan266"
              y="0"
-             x="0 13.2504 26.500799">sce</tspan></text>
+             x="0">sce &lt;- MacoskoRetinaData()</tspan></text>
 </g><g
-         transform="matrix(0.5,0,0,0.5,56.83173,-185.5)"
-         id="g270"><text
-           id="text274"
-           style="font-variant:normal;font-weight:normal;font-size:24px;font-family:Consolas;-inkscape-font-specification:Consolas;writing-mode:lr-tb;fill:#8f5902;fill-opacity:1;fill-rule:nonzero;stroke:none"
-           transform="matrix(1,0,0,-1,0,814)"><tspan
-             id="tspan272"
-             y="0"
-             x="0">&lt;</tspan></text>
-</g><g
-         transform="matrix(0.5,0,0,0.5,63.45673,-185.5)"
-         id="g276"><text
-           id="text280"
-           style="font-variant:normal;font-weight:normal;font-size:24px;font-family:Consolas;-inkscape-font-specification:Consolas;writing-mode:lr-tb;fill:#8f5902;fill-opacity:1;fill-rule:nonzero;stroke:none"
-           transform="matrix(1,0,0,-1,0,814)"><tspan
-             id="tspan278"
-             y="0"
-             x="0">-</tspan></text>
-</g><g
-         transform="matrix(0.5,0,0,0.5,76.70673,-185.5)"
-         id="g282"><text
-           id="text286"
-           style="font-variant:normal;font-weight:normal;font-size:24px;font-family:Consolas;-inkscape-font-specification:Consolas;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-           transform="matrix(1,0,0,-1,0,814)"><tspan
-             id="tspan284"
-             y="0"
-             x="0 13.2504 26.500799 39.751202 53.001598 66.251999 79.502403 92.7528 106.0032 119.2536 132.504 145.75439 159.00481 172.2552 185.5056 198.756 212.00639">MacoskoRetinaData</tspan></text>
-</g><g
-         transform="matrix(0.5,0,0,0.5,189.3317,-185.5)"
-         id="g288"><text
-           id="text292"
-           style="font-variant:normal;font-weight:normal;font-size:24px;font-family:Consolas;-inkscape-font-specification:Consolas;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-           transform="matrix(1,0,0,-1,0,814)"><tspan
-             id="tspan290"
-             y="0"
-             x="0 13.2504 26.500799">() </tspan></text>
-</g><g
-         transform="matrix(0.5,0,0,0.5,215.8317,-185.5)"
+         transform="matrix(0.5,0,0,0.5,185.8317,-185.5)"
          id="g294"><text
            id="text298"
            style="font-style:italic;font-variant:normal;font-size:24px;font-family:Consolas;-inkscape-font-specification:Consolas-Italic;writing-mode:lr-tb;fill:#8f5902;fill-opacity:1;fill-rule:nonzero;stroke:none"
            transform="matrix(1,0,0,-1,0,814)"><tspan
              id="tspan296"
              y="0"
-             x="0 13.2504"># </tspan></text>
-</g><g
-         transform="matrix(0.5,0,0,0.5,229.0817,-185.5)"
-         id="g300"><text
-           id="text304"
-           style="font-style:italic;font-variant:normal;font-size:24px;font-family:Consolas;-inkscape-font-specification:Consolas-Italic;writing-mode:lr-tb;fill:#8f5902;fill-opacity:1;fill-rule:nonzero;stroke:none"
-           transform="matrix(1,0,0,-1,0,814)"><tspan
-             id="tspan302"
-             y="0"
-             x="0 13.2504 26.500799 39.751202 53.001598 66.251999 79.502403">Macosko</tspan></text>
-</g><g
-         transform="matrix(0.5,0,0,0.5,282.0817,-185.5)"
-         id="g306"><text
-           id="text310"
-           style="font-style:italic;font-variant:normal;font-size:24px;font-family:Consolas;-inkscape-font-specification:Consolas-Italic;writing-mode:lr-tb;fill:#8f5902;fill-opacity:1;fill-rule:nonzero;stroke:none"
-           transform="matrix(1,0,0,-1,0,814)"><tspan
-             id="tspan308"
-             y="0"
-             x="0 13.2504 26.500799 39.751202 53.001598 66.251999 79.502403 92.7528 106.0032 119.2536 132.504 145.75439 159.00481">et al. (2016)</tspan></text>
+             x="0"># Macosko et al. (2016)</tspan></text>
 </g><g
          transform="matrix(0.5,0,0,0.5,30.33173,-213.5)"
          id="g312"><text
@@ -447,70 +294,7 @@
            transform="matrix(1,0,0,-1,0,814)"><tspan
              id="tspan314"
              y="0"
-             x="0 13.2504 26.500799 39.751202 53.001598 66.251999 79.502403 92.7528 106.0032">scConvGDS</tspan></text>
-</g><g
-         transform="matrix(0.5,0,0,0.5,89.95673,-213.5)"
-         id="g318"><text
-           id="text322"
-           style="font-variant:normal;font-weight:normal;font-size:24px;font-family:Consolas;-inkscape-font-specification:Consolas;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-           transform="matrix(1,0,0,-1,0,814)"><tspan
-             id="tspan320"
-             y="0"
-             x="0">(</tspan></text>
-</g><g
-         transform="matrix(0.5,0,0,0.5,96.58173,-213.5)"
-         id="g324"><text
-           id="text328"
-           style="font-variant:normal;font-weight:normal;font-size:24px;font-family:Consolas;-inkscape-font-specification:Consolas;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-           transform="matrix(1,0,0,-1,0,814)"><tspan
-             id="tspan326"
-             y="0"
-             x="0 13.2504 26.500799">sce</tspan></text>
-</g><g
-         transform="matrix(0.5,0,0,0.5,116.4567,-213.5)"
-         id="g330"><text
-           id="text334"
-           style="font-variant:normal;font-weight:normal;font-size:24px;font-family:Consolas;-inkscape-font-specification:Consolas;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-           transform="matrix(1,0,0,-1,0,814)"><tspan
-             id="tspan332"
-             y="0"
-             x="0 13.2504">, </tspan></text>
-</g><g
-         transform="matrix(0.5,0,0,0.5,129.7067,-213.5)"
-         id="g336"><text
-           id="text340"
-           style="font-variant:normal;font-weight:normal;font-size:24px;font-family:Consolas;-inkscape-font-specification:Consolas;writing-mode:lr-tb;fill:#4e9a06;fill-opacity:1;fill-rule:nonzero;stroke:none"
-           transform="matrix(1,0,0,-1,0,814)"><tspan
-             id="tspan338"
-             y="0"
-             x="0">&quot;</tspan></text>
-</g><g
-         transform="matrix(0.5,0,0,0.5,136.3317,-213.5)"
-         id="g342"><text
-           id="text346"
-           style="font-variant:normal;font-weight:normal;font-size:24px;font-family:Consolas;-inkscape-font-specification:Consolas;writing-mode:lr-tb;fill:#4e9a06;fill-opacity:1;fill-rule:nonzero;stroke:none"
-           transform="matrix(1,0,0,-1,0,814)"><tspan
-             id="tspan344"
-             y="0"
-             x="0 13.2504 26.500799 39.751202 53.001598 66.251999 79.502403 92.7528 106.0032 119.2536 132.504 145.75439 159.00481 172.2552 185.5056 198.756 212.00639 225.25681 238.5072 251.7576 265.008 278.25839 291.50879">macosko_retina_data.gds</tspan></text>
-</g><g
-         transform="matrix(0.5,0,0,0.5,288.7067,-213.5)"
-         id="g348"><text
-           id="text352"
-           style="font-variant:normal;font-weight:normal;font-size:24px;font-family:Consolas;-inkscape-font-specification:Consolas;writing-mode:lr-tb;fill:#4e9a06;fill-opacity:1;fill-rule:nonzero;stroke:none"
-           transform="matrix(1,0,0,-1,0,814)"><tspan
-             id="tspan350"
-             y="0"
-             x="0">&quot;</tspan></text>
-</g><g
-         transform="matrix(0.5,0,0,0.5,295.3317,-213.5)"
-         id="g354"><text
-           id="text358"
-           style="font-variant:normal;font-weight:normal;font-size:24px;font-family:Consolas;-inkscape-font-specification:Consolas;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-           transform="matrix(1,0,0,-1,0,814)"><tspan
-             id="tspan356"
-             y="0"
-             x="0">)</tspan></text>
+             x="0">scConvGDS(sce, &quot;macosko_retina_data.gds&quot;)</tspan></text>
 </g><g
          transform="matrix(0.5,0,0,0.5,30.33173,-238.5)"
          id="g360"><text
@@ -519,70 +303,7 @@
            transform="matrix(1,0,0,-1,0,814)"><tspan
              id="tspan362"
              y="0"
-             x="0 13.2504 26.500799 39.751202 53.001598 66.251999">sce2 &lt;</tspan></text>
-</g><g
-         transform="matrix(0.5,0,0,0.5,70.08173,-238.5)"
-         id="g366"><text
-           id="text370"
-           style="font-variant:normal;font-weight:normal;font-size:24px;font-family:Consolas;-inkscape-font-specification:Consolas;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-           transform="matrix(1,0,0,-1,0,814)"><tspan
-             id="tspan368"
-             y="0"
-             x="0">-</tspan></text>
-</g><g
-         transform="matrix(0.5,0,0,0.5,83.33173,-238.5)"
-         id="g372"><text
-           id="text376"
-           style="font-variant:normal;font-weight:normal;font-size:24px;font-family:Consolas;-inkscape-font-specification:Consolas;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-           transform="matrix(1,0,0,-1,0,814)"><tspan
-             id="tspan374"
-             y="0"
-             x="0 13.2504 26.500799 39.751202 53.001598 66.251999 79.502403 92.7528 106.0032 119.2536 132.504 145.75439">scExperiment</tspan></text>
-</g><g
-         transform="matrix(0.5,0,0,0.5,162.8317,-238.5)"
-         id="g378"><text
-           id="text382"
-           style="font-variant:normal;font-weight:normal;font-size:24px;font-family:Consolas;-inkscape-font-specification:Consolas;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-           transform="matrix(1,0,0,-1,0,814)"><tspan
-             id="tspan380"
-             y="0"
-             x="0">(</tspan></text>
-</g><g
-         transform="matrix(0.5,0,0,0.5,169.4567,-238.5)"
-         id="g384"><text
-           id="text388"
-           style="font-variant:normal;font-weight:normal;font-size:24px;font-family:Consolas;-inkscape-font-specification:Consolas;writing-mode:lr-tb;fill:#4e9a06;fill-opacity:1;fill-rule:nonzero;stroke:none"
-           transform="matrix(1,0,0,-1,0,814)"><tspan
-             id="tspan386"
-             y="0"
-             x="0">&quot;</tspan></text>
-</g><g
-         transform="matrix(0.5,0,0,0.5,176.0817,-238.5)"
-         id="g390"><text
-           id="text394"
-           style="font-variant:normal;font-weight:normal;font-size:24px;font-family:Consolas;-inkscape-font-specification:Consolas;writing-mode:lr-tb;fill:#4e9a06;fill-opacity:1;fill-rule:nonzero;stroke:none"
-           transform="matrix(1,0,0,-1,0,814)"><tspan
-             id="tspan392"
-             y="0"
-             x="0 13.2504 26.500799 39.751202 53.001598 66.251999 79.502403 92.7528 106.0032 119.2536 132.504 145.75439 159.00481 172.2552 185.5056 198.756 212.00639 225.25681 238.5072 251.7576 265.008 278.25839 291.50879">macosko_retina_data.gds</tspan></text>
-</g><g
-         transform="matrix(0.5,0,0,0.5,328.4567,-238.5)"
-         id="g396"><text
-           id="text400"
-           style="font-variant:normal;font-weight:normal;font-size:24px;font-family:Consolas;-inkscape-font-specification:Consolas;writing-mode:lr-tb;fill:#4e9a06;fill-opacity:1;fill-rule:nonzero;stroke:none"
-           transform="matrix(1,0,0,-1,0,814)"><tspan
-             id="tspan398"
-             y="0"
-             x="0">&quot;</tspan></text>
-</g><g
-         transform="matrix(0.5,0,0,0.5,335.0817,-238.5)"
-         id="g402"><text
-           id="text406"
-           style="font-variant:normal;font-weight:normal;font-size:24px;font-family:Consolas;-inkscape-font-specification:Consolas;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-           transform="matrix(1,0,0,-1,0,814)"><tspan
-             id="tspan404"
-             y="0"
-             x="0">)</tspan></text>
+             x="0">sce2 &lt;- scExperiment(&quot;macosko_retina_data.gds&quot;)</tspan></text>
 </g><g
          transform="matrix(0.5,0,0,0.5,30.33173,-252.5)"
          id="g408"><text
@@ -591,7 +312,7 @@
            transform="matrix(1,0,0,-1,0,814)"><tspan
              id="tspan410"
              y="0"
-             x="0 13.2504 26.500799 39.751202">sce2</tspan></text>
+             x="0">sce2</tspan></text>
 </g><g
          transform="matrix(0.5,0,0,0.5,30.33173,-267.5)"
          id="g414"><text
@@ -600,16 +321,7 @@
            transform="matrix(1,0,0,-1,0,814)"><tspan
              id="tspan416"
              y="0"
-             x="0 13.2504 26.500799 39.751202 53.001598 66.251999 79.502403 92.7528 106.0032 119.2536">## class: </tspan></text>
-</g><g
-         transform="matrix(0.5,0,0,0.5,96.58173,-267.5)"
-         id="g420"><text
-           id="text424"
-           style="font-variant:normal;font-weight:normal;font-size:24px;font-family:Consolas;-inkscape-font-specification:Consolas;writing-mode:lr-tb;fill:#7f7f7f;fill-opacity:1;fill-rule:nonzero;stroke:none"
-           transform="matrix(1,0,0,-1,0,814)"><tspan
-             id="tspan422"
-             y="0"
-             x="0 13.2504 26.500799 39.751202 53.001598 66.251999 79.502403 92.7528 106.0032 119.2536 132.504 145.75439 159.00481 172.2552 185.5056 198.756 212.00639 225.25681 238.5072 251.7576">SingleCellExperiment</tspan></text>
+             x="0">## class: SingleCellExperiment</tspan></text>
 </g><g
          transform="matrix(0.5,0,0,0.5,30.33173,-281.5)"
          id="g426"><text
@@ -618,7 +330,7 @@
            transform="matrix(1,0,0,-1,0,814)"><tspan
              id="tspan428"
              y="0"
-             x="0 13.2504 26.500799 39.751202 53.001598 66.251999 79.502403 92.7528 106.0032 119.2536 132.504 145.75439 159.00481 172.2552 185.5056 198.756 212.00639 225.25681 238.5072 251.7576">## dim: 24658 49300 </tspan></text>
+             x="0">## dim: 24658 49300</tspan></text>
 </g><g
          transform="matrix(0.5,0,0,0.5,30.33173,-295.5)"
          id="g432"><text
@@ -627,7 +339,7 @@
            transform="matrix(1,0,0,-1,0,814)"><tspan
              id="tspan434"
              y="0"
-             x="0 13.2504 26.500799 39.751202 53.001598 66.251999 79.502403 92.7528 106.0032 119.2536 132.504 145.75439 159.00481 172.2552 185.5056 198.756 212.00639 225.25681 238.5072 251.7576">## assays(1): counts</tspan></text>
+             x="0">## assays(1): counts</tspan></text>
 </g><g
          transform="matrix(0.5,0,0,0.5,30.33173,-310.5)"
          id="g438"><text
@@ -636,25 +348,7 @@
            transform="matrix(1,0,0,-1,0,814)"><tspan
              id="tspan440"
              y="0"
-             x="0 13.2504 26.500799">## </tspan></text>
-</g><g
-         transform="matrix(0.5,0,0,0.5,50.20673,-310.5)"
-         id="g444"><text
-           id="text448"
-           style="font-variant:normal;font-weight:normal;font-size:24px;font-family:Consolas;-inkscape-font-specification:Consolas;writing-mode:lr-tb;fill:#7f7f7f;fill-opacity:1;fill-rule:nonzero;stroke:none"
-           transform="matrix(1,0,0,-1,0,814)"><tspan
-             id="tspan446"
-             y="0"
-             x="0 13.2504 26.500799 39.751202 53.001598 66.251999 79.502403 92.7528">rownames</tspan></text>
-</g><g
-         transform="matrix(0.5,0,0,0.5,103.2067,-310.5)"
-         id="g450"><text
-           id="text454"
-           style="font-variant:normal;font-weight:normal;font-size:24px;font-family:Consolas;-inkscape-font-specification:Consolas;writing-mode:lr-tb;fill:#7f7f7f;fill-opacity:1;fill-rule:nonzero;stroke:none"
-           transform="matrix(1,0,0,-1,0,814)"><tspan
-             id="tspan452"
-             y="0"
-             x="0 13.2504 26.500799 39.751202 53.001598 66.251999 79.502403 92.7528 106.0032 119.2536 132.504 145.75439 159.00481 172.2552 185.5056 198.756 212.00639 225.25681 238.5072 251.7576 265.008 278.25839 291.50879 304.75919 318.00961 331.26001 344.51041 357.7608 371.0112 384.2616 397.51199 410.76239 424.01279 437.26321 450.51361 463.76401 477.0144 490.2648 503.5152 516.76562 530.01599 543.26642 556.51678 569.76721 583.01758">(24658): KITL TMTC3 ... 1110059M19RIK GM20861</tspan></text>
+             x="0">## rownames(24658): KITL TMTC3 ... 1110059M19RIK GM20861</tspan></text>
 </g><g
          transform="matrix(0.5,0,0,0.5,30.33173,-324.5)"
          id="g456"><text
@@ -663,25 +357,7 @@
            transform="matrix(1,0,0,-1,0,814)"><tspan
              id="tspan458"
              y="0"
-             x="0 13.2504 26.500799">## </tspan></text>
-</g><g
-         transform="matrix(0.5,0,0,0.5,50.20673,-324.5)"
-         id="g462"><text
-           id="text466"
-           style="font-variant:normal;font-weight:normal;font-size:24px;font-family:Consolas;-inkscape-font-specification:Consolas;writing-mode:lr-tb;fill:#7f7f7f;fill-opacity:1;fill-rule:nonzero;stroke:none"
-           transform="matrix(1,0,0,-1,0,814)"><tspan
-             id="tspan464"
-             y="0"
-             x="0 13.2504 26.500799 39.751202 53.001598 66.251999 79.502403">rowData</tspan></text>
-</g><g
-         transform="matrix(0.5,0,0,0.5,103.2067,-324.5)"
-         id="g468"><text
-           id="text472"
-           style="font-variant:normal;font-weight:normal;font-size:24px;font-family:Consolas;-inkscape-font-specification:Consolas;writing-mode:lr-tb;fill:#7f7f7f;fill-opacity:1;fill-rule:nonzero;stroke:none"
-           transform="matrix(1,0,0,-1,0,814)"><tspan
-             id="tspan470"
-             y="0"
-             x="0 13.2504 26.500799 39.751202 53.001598 66.251999 79.502403 92.7528 106.0032">names(0):</tspan></text>
+             x="0">## rowData names(0):</tspan></text>
 </g><g
          transform="matrix(0.5,0,0,0.5,30.33173,-339.5)"
          id="g474"><text
@@ -690,25 +366,7 @@
            transform="matrix(1,0,0,-1,0,814)"><tspan
              id="tspan476"
              y="0"
-             x="0 13.2504 26.500799">## </tspan></text>
-</g><g
-         transform="matrix(0.5,0,0,0.5,50.20673,-339.5)"
-         id="g480"><text
-           id="text484"
-           style="font-variant:normal;font-weight:normal;font-size:24px;font-family:Consolas;-inkscape-font-specification:Consolas;writing-mode:lr-tb;fill:#7f7f7f;fill-opacity:1;fill-rule:nonzero;stroke:none"
-           transform="matrix(1,0,0,-1,0,814)"><tspan
-             id="tspan482"
-             y="0"
-             x="0 13.2504 26.500799 39.751202 53.001598 66.251999 79.502403 92.7528">colnames</tspan></text>
-</g><g
-         transform="matrix(0.5,0,0,0.5,103.2067,-339.5)"
-         id="g486"><text
-           id="text490"
-           style="font-variant:normal;font-weight:normal;font-size:24px;font-family:Consolas;-inkscape-font-specification:Consolas;writing-mode:lr-tb;fill:#7f7f7f;fill-opacity:1;fill-rule:nonzero;stroke:none"
-           transform="matrix(1,0,0,-1,0,814)"><tspan
-             id="tspan488"
-             y="0"
-             x="0 13.2504 26.500799 39.751202 53.001598 66.251999 79.502403 92.7528 106.0032 119.2536 132.504 145.75439 159.00481 172.2552 185.5056 198.756 212.00639 225.25681 238.5072 251.7576 265.008 278.25839 291.50879 304.75919 318.00961 331.26001 344.51041 357.7608 371.0112 384.2616 397.51199 410.76239 424.01279 437.26321 450.51361 463.76401 477.0144 490.2648 503.5152 516.76562 530.01599 543.26642 556.51678 569.76721 583.01758 596.26801 609.51837 622.7688 636.01923 649.26959 662.52002 675.77039 689.02081 702.27118 715.52161 728.77197 742.0224 755.27283 768.52319 781.77362">(49300): r1_GGCCGCAGTCCG r1_CTTGTGCGGGAA ... p1_TAACGCGCTCCT</tspan></text>
+             x="0">## colnames(49300): r1_GGCCGCAGTCCG r1_CTTGTGCGGGAA ... p1_TAACGCGCTCCT</tspan></text>
 </g><g
          transform="matrix(0.5,0,0,0.5,30.33173,-353.5)"
          id="g492"><text
@@ -717,43 +375,7 @@
            transform="matrix(1,0,0,-1,0,814)"><tspan
              id="tspan494"
              y="0"
-             x="0 13.2504 26.500799">## </tspan></text>
-</g><g
-         transform="matrix(0.5,0,0,0.5,50.20673,-353.5)"
-         id="g498"><text
-           id="text502"
-           style="font-variant:normal;font-weight:normal;font-size:24px;font-family:Consolas;-inkscape-font-specification:Consolas;writing-mode:lr-tb;fill:#7f7f7f;fill-opacity:1;fill-rule:nonzero;stroke:none"
-           transform="matrix(1,0,0,-1,0,814)"><tspan
-             id="tspan500"
-             y="0"
-             x="0 13.2504 26.500799 39.751202 53.001598 66.251999 79.502403">colData</tspan></text>
-</g><g
-         transform="matrix(0.5,0,0,0.5,103.2067,-353.5)"
-         id="g504"><text
-           id="text508"
-           style="font-variant:normal;font-weight:normal;font-size:24px;font-family:Consolas;-inkscape-font-specification:Consolas;writing-mode:lr-tb;fill:#7f7f7f;fill-opacity:1;fill-rule:nonzero;stroke:none"
-           transform="matrix(1,0,0,-1,0,814)"><tspan
-             id="tspan506"
-             y="0"
-             x="0 13.2504 26.500799 39.751202 53.001598 66.251999 79.502403 92.7528 106.0032 119.2536">names(2): </tspan></text>
-</g><g
-         transform="matrix(0.5,0,0,0.5,169.4567,-353.5)"
-         id="g510"><text
-           id="text514"
-           style="font-variant:normal;font-weight:normal;font-size:24px;font-family:Consolas;-inkscape-font-specification:Consolas;writing-mode:lr-tb;fill:#7f7f7f;fill-opacity:1;fill-rule:nonzero;stroke:none"
-           transform="matrix(1,0,0,-1,0,814)"><tspan
-             id="tspan512"
-             y="0"
-             x="0 13.2504 26.500799 39.751202 53.001598 66.251999 79.502403">cell.id</tspan></text>
-</g><g
-         transform="matrix(0.5,0,0,0.5,222.4567,-353.5)"
-         id="g516"><text
-           id="text520"
-           style="font-variant:normal;font-weight:normal;font-size:24px;font-family:Consolas;-inkscape-font-specification:Consolas;writing-mode:lr-tb;fill:#7f7f7f;fill-opacity:1;fill-rule:nonzero;stroke:none"
-           transform="matrix(1,0,0,-1,0,814)"><tspan
-             id="tspan518"
-             y="0"
-             x="0 13.2504 26.500799 39.751202 53.001598 66.251999 79.502403">cluster</tspan></text>
+             x="0">## colData names(2): cell.id cluster</tspan></text>
 </g><g
          transform="matrix(0.5,0,0,0.5,30.33173,-367.5)"
          id="g522"><text
@@ -762,25 +384,7 @@
            transform="matrix(1,0,0,-1,0,814)"><tspan
              id="tspan524"
              y="0"
-             x="0 13.2504 26.500799">## </tspan></text>
-</g><g
-         transform="matrix(0.5,0,0,0.5,50.20673,-367.5)"
-         id="g528"><text
-           id="text532"
-           style="font-variant:normal;font-weight:normal;font-size:24px;font-family:Consolas;-inkscape-font-specification:Consolas;writing-mode:lr-tb;fill:#7f7f7f;fill-opacity:1;fill-rule:nonzero;stroke:none"
-           transform="matrix(1,0,0,-1,0,814)"><tspan
-             id="tspan530"
-             y="0"
-             x="0 13.2504 26.500799 39.751202 53.001598 66.251999 79.502403 92.7528 106.0032 119.2536 132.504 145.75439 159.00481 172.2552 185.5056">reducedDimNames</tspan></text>
-</g><g
-         transform="matrix(0.5,0,0,0.5,149.5817,-367.5)"
-         id="g534"><text
-           id="text538"
-           style="font-variant:normal;font-weight:normal;font-size:24px;font-family:Consolas;-inkscape-font-specification:Consolas;writing-mode:lr-tb;fill:#7f7f7f;fill-opacity:1;fill-rule:nonzero;stroke:none"
-           transform="matrix(1,0,0,-1,0,814)"><tspan
-             id="tspan536"
-             y="0"
-             x="0 13.2504 26.500799 39.751202">(0):</tspan></text>
+             x="0">## reducedDimNames(0):</tspan></text>
 </g><g
          transform="matrix(0.5,0,0,0.5,30.33173,-382.5)"
          id="g540"><text
@@ -789,25 +393,7 @@
            transform="matrix(1,0,0,-1,0,814)"><tspan
              id="tspan542"
              y="0"
-             x="0 13.2504 26.500799">## </tspan></text>
-</g><g
-         transform="matrix(0.5,0,0,0.5,50.20673,-382.5)"
-         id="g546"><text
-           id="text550"
-           style="font-variant:normal;font-weight:normal;font-size:24px;font-family:Consolas;-inkscape-font-specification:Consolas;writing-mode:lr-tb;fill:#7f7f7f;fill-opacity:1;fill-rule:nonzero;stroke:none"
-           transform="matrix(1,0,0,-1,0,814)"><tspan
-             id="tspan548"
-             y="0"
-             x="0 13.2504 26.500799 39.751202 53.001598 66.251999 79.502403 92.7528 106.0032 119.2536 132.504">mainExpName</tspan></text>
-</g><g
-         transform="matrix(0.5,0,0,0.5,123.0817,-382.5)"
-         id="g552"><text
-           id="text556"
-           style="font-variant:normal;font-weight:normal;font-size:24px;font-family:Consolas;-inkscape-font-specification:Consolas;writing-mode:lr-tb;fill:#7f7f7f;fill-opacity:1;fill-rule:nonzero;stroke:none"
-           transform="matrix(1,0,0,-1,0,814)"><tspan
-             id="tspan554"
-             y="0"
-             x="0 13.2504 26.500799 39.751202 53.001598 66.251999">: NULL</tspan></text>
+             x="0">## mainExpName: NULL</tspan></text>
 </g><g
          transform="matrix(0.5,0,0,0.5,30.33173,-396.5)"
          id="g558"><text
@@ -816,25 +402,7 @@
            transform="matrix(1,0,0,-1,0,814)"><tspan
              id="tspan560"
              y="0"
-             x="0 13.2504 26.500799">## </tspan></text>
-</g><g
-         transform="matrix(0.5,0,0,0.5,50.20673,-396.5)"
-         id="g564"><text
-           id="text568"
-           style="font-variant:normal;font-weight:normal;font-size:24px;font-family:Consolas;-inkscape-font-specification:Consolas;writing-mode:lr-tb;fill:#7f7f7f;fill-opacity:1;fill-rule:nonzero;stroke:none"
-           transform="matrix(1,0,0,-1,0,814)"><tspan
-             id="tspan566"
-             y="0"
-             x="0 13.2504 26.500799 39.751202 53.001598 66.251999 79.502403 92.7528 106.0032 119.2536 132.504">altExpNames</tspan></text>
-</g><g
-         transform="matrix(0.5,0,0,0.5,123.0817,-396.5)"
-         id="g570"><text
-           id="text574"
-           style="font-variant:normal;font-weight:normal;font-size:24px;font-family:Consolas;-inkscape-font-specification:Consolas;writing-mode:lr-tb;fill:#7f7f7f;fill-opacity:1;fill-rule:nonzero;stroke:none"
-           transform="matrix(1,0,0,-1,0,814)"><tspan
-             id="tspan572"
-             y="0"
-             x="0 13.2504 26.500799 39.751202">(0):</tspan></text>
+             x="0">## altExpNames(0):</tspan></text>
 </g></g><g
        id="g576"><g
          clip-path="url(#clipPath582)"
@@ -875,25 +443,7 @@
            transform="matrix(1,0,0,-1,0,814)"><tspan
              id="tspan616"
              y="0"
-             x="0 13.2504 26.500799 39.751202 53.001598 66.251999">File: </tspan></text>
-</g><g
-         transform="matrix(0.5,0,0,0.5,457.6328,-149.5)"
-         id="g620"><text
-           id="text624"
-           style="font-variant:normal;font-weight:normal;font-size:24px;font-family:Consolas;-inkscape-font-specification:Consolas;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-           transform="matrix(1,0,0,-1,0,814)"><tspan
-             id="tspan622"
-             y="0"
-             x="0 13.2504 26.500799 39.751202 53.001598 66.251999 79.502403 92.7528 106.0032 119.2536 132.504 145.75439 159.00481 172.2552 185.5056 198.756 212.00639 225.25681 238.5072 251.7576 265.008 278.25839 291.50879">macosko_retina_data.gds</tspan></text>
-</g><g
-         transform="matrix(0.5,0,0,0.5,616.6328,-149.5)"
-         id="g626"><text
-           id="text630"
-           style="font-variant:normal;font-weight:normal;font-size:24px;font-family:Consolas;-inkscape-font-specification:Consolas;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-           transform="matrix(1,0,0,-1,0,814)"><tspan
-             id="tspan628"
-             y="0"
-             x="0 13.2504 26.500799 39.751202 53.001598 66.251999 79.502403">(40.4M)</tspan></text>
+             x="0">File: macosko_retina_data.gds (40.4M)</tspan></text>
 </g><g
          transform="matrix(0.5,0,0,0.5,417.8828,-164.5)"
          id="g632"><text
@@ -938,7 +488,7 @@
            transform="matrix(1,0,0,-1,0,814)"><tspan
              id="tspan658"
              y="0"
-             x="0 13.2504 26.500799 39.751202 53.001598 66.251999 79.502403 92.7528 106.0032 119.2536">feature.id</tspan></text>
+             x="0">feature.id</tspan></text>
 </g><g
          transform="matrix(0.5,0,0,0.5,537.1328,-178.5)"
          id="g662"><text
@@ -947,25 +497,7 @@
            transform="matrix(1,0,0,-1,0,814)"><tspan
              id="tspan664"
              y="0"
-             x="0 13.2504 26.500799 39.751202 53.001598 66.251999 79.502403 92.7528 106.0032 119.2536 132.504 145.75439 159.00481">{ Str8 24658 </tspan></text>
-</g><g
-         transform="matrix(0.5,0,0,0.5,623.2578,-178.5)"
-         id="g668"><text
-           id="text672"
-           style="font-variant:normal;font-weight:normal;font-size:24px;font-family:Consolas;-inkscape-font-specification:Consolas;writing-mode:lr-tb;fill:#7f7f7f;fill-opacity:1;fill-rule:nonzero;stroke:none"
-           transform="matrix(1,0,0,-1,0,814)"><tspan
-             id="tspan670"
-             y="0"
-             x="0 13.2504 26.500799 39.751202 53.001598 66.251999 79.502403">LZMA_ra</tspan></text>
-</g><g
-         transform="matrix(0.5,0,0,0.5,669.6328,-178.5)"
-         id="g674"><text
-           id="text678"
-           style="font-variant:normal;font-weight:normal;font-size:24px;font-family:Consolas;-inkscape-font-specification:Consolas;writing-mode:lr-tb;fill:#7f7f7f;fill-opacity:1;fill-rule:nonzero;stroke:none"
-           transform="matrix(1,0,0,-1,0,814)"><tspan
-             id="tspan676"
-             y="0"
-             x="0 13.2504 26.500799 39.751202 53.001598 66.251999 79.502403 92.7528 106.0032 119.2536 132.504 145.75439 159.00481 172.2552 185.5056 198.756">(46.2%), 82.0K }</tspan></text>
+             x="0">{ Str8 24658 LZMA_ra(46.2%), 82.0K }</tspan></text>
 </g><g
          transform="matrix(0.5,0,0,0.5,417.8828,-193.5)"
          id="g680"><text
@@ -1001,7 +533,7 @@
            transform="matrix(1,0,0,-1,0,814)"><tspan
              id="tspan700"
              y="0"
-             x="0 13.2504 26.500799 39.751202 53.001598 66.251999 79.502403 92.7528 106.0032">sample.id</tspan></text>
+             x="0">sample.id</tspan></text>
 </g><g
          transform="matrix(0.5,0,0,0.5,530.5078,-193.5)"
          id="g704"><text
@@ -1010,25 +542,7 @@
            transform="matrix(1,0,0,-1,0,814)"><tspan
              id="tspan706"
              y="0"
-             x="0 13.2504 26.500799 39.751202 53.001598 66.251999 79.502403 92.7528 106.0032 119.2536 132.504 145.75439 159.00481">{ Str8 49300 </tspan></text>
-</g><g
-         transform="matrix(0.5,0,0,0.5,616.6328,-193.5)"
-         id="g710"><text
-           id="text714"
-           style="font-variant:normal;font-weight:normal;font-size:24px;font-family:Consolas;-inkscape-font-specification:Consolas;writing-mode:lr-tb;fill:#7f7f7f;fill-opacity:1;fill-rule:nonzero;stroke:none"
-           transform="matrix(1,0,0,-1,0,814)"><tspan
-             id="tspan712"
-             y="0"
-             x="0 13.2504 26.500799 39.751202 53.001598 66.251999 79.502403">LZMA_ra</tspan></text>
-</g><g
-         transform="matrix(0.5,0,0,0.5,663.0078,-193.5)"
-         id="g716"><text
-           id="text720"
-           style="font-variant:normal;font-weight:normal;font-size:24px;font-family:Consolas;-inkscape-font-specification:Consolas;writing-mode:lr-tb;fill:#7f7f7f;fill-opacity:1;fill-rule:nonzero;stroke:none"
-           transform="matrix(1,0,0,-1,0,814)"><tspan
-             id="tspan718"
-             y="0"
-             x="0 13.2504 26.500799 39.751202 53.001598 66.251999 79.502403 92.7528 106.0032 119.2536 132.504 145.75439 159.00481 172.2552 185.5056 198.756 212.00639">(22.5%), 173.6K }</tspan></text>
+             x="0">{ Str8 49300 LZMA_ra(22.5%), 173.6K }</tspan></text>
 </g><g
          transform="matrix(0.5,0,0,0.5,417.8828,-207.5)"
          id="g722"><text
@@ -1055,7 +569,7 @@
            transform="matrix(1,0,0,-1,0,814)"><tspan
              id="tspan736"
              y="0"
-             x="0 13.2504 26.500799 39.751202 53.001598 66.251999 79.502403 92.7528 106.0032">+ counts </tspan></text>
+             x="0 13.2504 26.500799">+ counts </tspan></text>
 </g><g
          transform="matrix(0.5,0,0,0.5,510.6328,-207.5)"
          id="g740"><text
@@ -1064,25 +578,7 @@
            transform="matrix(1,0,0,-1,0,814)"><tspan
              id="tspan742"
              y="0"
-             x="0 13.2504 26.500799 39.751202 53.001598 66.251999 79.502403 92.7528 106.0032 119.2536 132.504 145.75439 159.00481 172.2552 185.5056 198.756 212.00639 225.25681 238.5072 251.7576 265.008 278.25839 291.50879 304.75919 318.00961 331.26001 344.51041">{ SparseReal32 24658x49300 </tspan></text>
-</g><g
-         transform="matrix(0.5,0,0,0.5,689.5078,-207.5)"
-         id="g746"><text
-           id="text750"
-           style="font-variant:normal;font-weight:normal;font-size:24px;font-family:Consolas;-inkscape-font-specification:Consolas;writing-mode:lr-tb;fill:#7f7f7f;fill-opacity:1;fill-rule:nonzero;stroke:none"
-           transform="matrix(1,0,0,-1,0,814)"><tspan
-             id="tspan748"
-             y="0"
-             x="0 13.2504 26.500799 39.751202 53.001598 66.251999 79.502403">LZMA_ra</tspan></text>
-</g><g
-         transform="matrix(0.5,0,0,0.5,735.8828,-207.5)"
-         id="g752"><text
-           id="text756"
-           style="font-variant:normal;font-weight:normal;font-size:24px;font-family:Consolas;-inkscape-font-specification:Consolas;writing-mode:lr-tb;fill:#7f7f7f;fill-opacity:1;fill-rule:nonzero;stroke:none"
-           transform="matrix(1,0,0,-1,0,814)"><tspan
-             id="tspan754"
-             y="0"
-             x="0 13.2504 26.500799 39.751202 53.001598 66.251999 79.502403 92.7528 106.0032 119.2536 132.504 145.75439 159.00481 172.2552 185.5056 198.756">(14.1%), 40.0M }</tspan></text>
+             x="0">{ SparseReal32 24658x49300 LZMA_ra(14.1%), 40.0M }</tspan></text>
 </g><g
          transform="matrix(0.5,0,0,0.5,417.8828,-221.5)"
          id="g758"><text
@@ -1118,7 +614,7 @@
            transform="matrix(1,0,0,-1,0,814)"><tspan
              id="tspan778"
              y="0"
-             x="0 13.2504 26.500799 39.751202 53.001598 66.251999 79.502403 92.7528 106.0032 119.2536 132.504 145.75439">feature.data</tspan></text>
+             x="0">feature.data</tspan></text>
 </g><g
          transform="matrix(0.5,0,0,0.5,550.3828,-221.5)"
          id="g782"><text
@@ -1163,7 +659,7 @@
            transform="matrix(1,0,0,-1,0,814)"><tspan
              id="tspan808"
              y="0"
-             x="0 13.2504 26.500799 39.751202 53.001598 66.251999 79.502403 92.7528 106.0032 119.2536 132.504">sample.data</tspan></text>
+             x="0">sample.data</tspan></text>
 </g><g
          transform="matrix(0.5,0,0,0.5,543.7578,-236.5)"
          id="g812"><text
@@ -1208,7 +704,7 @@
            transform="matrix(1,0,0,-1,0,814)"><tspan
              id="tspan838"
              y="0"
-             x="0 13.2504 26.500799 39.751202 53.001598 66.251999 79.502403">cell.id</tspan></text>
+             x="0">cell.id</tspan></text>
 </g><g
          transform="matrix(0.5,0,0,0.5,537.1328,-250.5)"
          id="g842"><text
@@ -1217,25 +713,7 @@
            transform="matrix(1,0,0,-1,0,814)"><tspan
              id="tspan844"
              y="0"
-             x="0 13.2504 26.500799 39.751202 53.001598 66.251999 79.502403 92.7528 106.0032 119.2536 132.504 145.75439 159.00481">{ Str8 49300 </tspan></text>
-</g><g
-         transform="matrix(0.5,0,0,0.5,623.2578,-250.5)"
-         id="g848"><text
-           id="text852"
-           style="font-variant:normal;font-weight:normal;font-size:24px;font-family:Consolas;-inkscape-font-specification:Consolas;writing-mode:lr-tb;fill:#7f7f7f;fill-opacity:1;fill-rule:nonzero;stroke:none"
-           transform="matrix(1,0,0,-1,0,814)"><tspan
-             id="tspan850"
-             y="0"
-             x="0 13.2504 26.500799 39.751202 53.001598 66.251999 79.502403">LZMA_ra</tspan></text>
-</g><g
-         transform="matrix(0.5,0,0,0.5,669.6328,-250.5)"
-         id="g854"><text
-           id="text858"
-           style="font-variant:normal;font-weight:normal;font-size:24px;font-family:Consolas;-inkscape-font-specification:Consolas;writing-mode:lr-tb;fill:#7f7f7f;fill-opacity:1;fill-rule:nonzero;stroke:none"
-           transform="matrix(1,0,0,-1,0,814)"><tspan
-             id="tspan856"
-             y="0"
-             x="0 13.2504 26.500799 39.751202 53.001598 66.251999 79.502403 92.7528 106.0032 119.2536 132.504 145.75439 159.00481 172.2552 185.5056 198.756 212.00639">(22.5%), 173.6K }</tspan></text>
+             x="0">{ Str8 49300 LZMA_ra(22.5%), 173.6K }</tspan></text>
 </g><g
          transform="matrix(0.5,0,0,0.5,417.8828,-265.5)"
          id="g860"><text
@@ -1271,7 +749,7 @@
            transform="matrix(1,0,0,-1,0,814)"><tspan
              id="tspan880"
              y="0"
-             x="0 13.2504 26.500799 39.751202 53.001598 66.251999 79.502403 92.7528 106.0032 119.2536">+ cluster </tspan></text>
+             x="0 13.2504 26.500799">+ cluster </tspan></text>
 </g><g
          transform="matrix(0.5,0,0,0.5,537.1328,-265.5)"
          id="g884"><text
@@ -1280,25 +758,7 @@
            transform="matrix(1,0,0,-1,0,814)"><tspan
              id="tspan886"
              y="0"
-             x="0 13.2504 26.500799 39.751202 53.001598 66.251999 79.502403 92.7528 106.0032 119.2536 132.504 145.75439 159.00481 172.2552">{ Int32 49300 </tspan></text>
-</g><g
-         transform="matrix(0.5,0,0,0.5,629.8828,-265.5)"
-         id="g890"><text
-           id="text894"
-           style="font-variant:normal;font-weight:normal;font-size:24px;font-family:Consolas;-inkscape-font-specification:Consolas;writing-mode:lr-tb;fill:#7f7f7f;fill-opacity:1;fill-rule:nonzero;stroke:none"
-           transform="matrix(1,0,0,-1,0,814)"><tspan
-             id="tspan892"
-             y="0"
-             x="0 13.2504 26.500799 39.751202 53.001598 66.251999 79.502403">LZMA_ra</tspan></text>
-</g><g
-         transform="matrix(0.5,0,0,0.5,676.2578,-265.5)"
-         id="g896"><text
-           id="text900"
-           style="font-variant:normal;font-weight:normal;font-size:24px;font-family:Consolas;-inkscape-font-specification:Consolas;writing-mode:lr-tb;fill:#7f7f7f;fill-opacity:1;fill-rule:nonzero;stroke:none"
-           transform="matrix(1,0,0,-1,0,814)"><tspan
-             id="tspan898"
-             y="0"
-             x="0 13.2504 26.500799 39.751202 53.001598 66.251999 79.502403 92.7528 106.0032 119.2536 132.504 145.75439 159.00481 172.2552 185.5056 198.756">(10.1%), 19.5K }</tspan></text>
+             x="0">{ Int32 49300 LZMA_ra(10.1%), 19.5K }</tspan></text>
 </g><g
          transform="matrix(0.5,0,0,0.5,417.8828,-279.5)"
          id="g902"><text
@@ -1334,7 +794,7 @@
            transform="matrix(1,0,0,-1,0,814)"><tspan
              id="tspan922"
              y="0"
-             x="0 13.2504 26.500799 39.751202 53.001598 66.251999 79.502403 92.7528 106.0032">meta.data</tspan></text>
+             x="0">meta.data</tspan></text>
 </g><g
          transform="matrix(0.5,0,0,0.5,530.5078,-279.5)"
          id="g926"><text

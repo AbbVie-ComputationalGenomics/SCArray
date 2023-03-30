@@ -31,22 +31,23 @@ x_num_col_mean_var <- function(x, na.rm=FALSE, useNames=FALSE, ...)
     v
 }
 
-.x_row_mean_var <- function(x, na.rm)
+.x_row_mean_var <- function(x, na.rm, BPPARAM=getAutoBPPARAM())
 {
     # block read
-    v <- blockReduce(function(bk, v, na.rm) {
-        .Call(c_rowVars, bk, v, na.rm, NULL)
-    }, x, double(nrow(x)*3L), grid=colAutoGrid(x), as.sparse=NA, na.rm=na.rm)
+    lst <- .parallel_col_reduce(x, BPPARAM,
+        Fun = function(bk, v, na.rm) .Call(c_rowVars, bk, v, na.rm, NULL),
+        InitFun = .double_nrow3,
+        ReduceFun=`+`, na.rm=na.rm)
     # finally
-    .Call(c_rowMeanVar_final, v)
+    .Call(c_rowMeanVar_final, lst)
 }
 
-.x_col_mean_var <- function(x, na.rm, ...)
+.x_col_mean_var <- function(x, na.rm, BPPARAM=getAutoBPPARAM())
 {
     # block read
-    lst <- blockApply(x, function(bk, na.rm) {
-        .Call(c_colMeanVar, bk, na.rm)
-    }, grid=colAutoGrid(x), as.sparse=NA, na.rm=na.rm, ...)
+    lst <- .parallel_col_apply(x, BPPARAM,
+        Fun = function(bk, na.rm) .Call(c_colMeanVar, bk, na.rm),
+        .flatten=FALSE, na.rm=na.rm)
     # finally
     do.call(rbind, lst)
 }
@@ -54,15 +55,15 @@ x_num_col_mean_var <- function(x, na.rm=FALSE, useNames=FALSE, ...)
 x_sc_row_mean_var <- function(x, na.rm=FALSE, useNames=FALSE, ...)
 {
     stopifnot(is(x, "SC_GDSMatrix"))
-    stopifnot(is.logical(na.rm), length(na.rm)==1L)
     x_check(x, "Calling SCArray::scRowMeanVar() with %s ...")
+    stopifnot(is.logical(na.rm), length(na.rm)==1L)
     k <- x_type(x)
     if (k == 1L)
     {
-        v <- .x_row_mean_var(x, na.rm)
+        v <- .x_row_mean_var(x, na.rm, ...)
     } else if (k == 2L)
     {
-        v <- .x_col_mean_var(t(x), na.rm)
+        v <- .x_col_mean_var(t(x), na.rm, ...)
     } else {
         v <- cbind(rowMeans(x, na.rm=na.rm), rowVars(x, na.rm=na.rm))
     }
@@ -74,15 +75,15 @@ x_sc_row_mean_var <- function(x, na.rm=FALSE, useNames=FALSE, ...)
 x_sc_col_mean_var <- function(x, na.rm=FALSE, useNames=FALSE, ...)
 {
     stopifnot(is(x, "SC_GDSMatrix"))
-    stopifnot(is.logical(na.rm), length(na.rm)==1L)
     x_check(x, "Calling SCArray::scColMeanVar() with %s ...")
+    stopifnot(is.logical(na.rm), length(na.rm)==1L)
     k <- x_type(x)
     if (k == 1L)
     {
-        v <- .x_col_mean_var(x, na.rm)
+        v <- .x_col_mean_var(x, na.rm, ...)
     } else if (k == 2L)
     {
-        v <- .x_row_mean_var(t(x), na.rm)
+        v <- .x_row_mean_var(t(x), na.rm, ...)
     } else {
         v <- cbind(colMeans(x, na.rm=na.rm), colVars(x, na.rm=na.rm))
     }
@@ -103,9 +104,101 @@ setMethod("scColMeanVar", "matrix", x_num_col_mean_var)
 setMethod("scRowMeanVar", "Matrix", x_num_row_mean_var)
 setMethod("scColMeanVar", "Matrix", x_num_col_mean_var)
 
-setMethod("scRowMeanVar", "SC_GDSMatrix", x_sc_row_mean_var)
-setMethod("scColMeanVar", "SC_GDSMatrix", x_sc_col_mean_var)
+setMethod("scRowMeanVar", SMatrix, x_sc_row_mean_var)
+setMethod("scColMeanVar", SMatrix, x_sc_col_mean_var)
 
+
+#######################################################################
+
+x_num_row_nnzero <- function(x, na.counted=NA, ...)
+{
+    stopifnot(is.logical(na.counted), length(na.counted)==1L)
+    x <- x != 0L
+    if (isTRUE(na.counted))
+    {
+        rowSums(x, na.rm=TRUE) + rowSums(is.na(x))
+    } else if (isFALSE(na.counted))
+    {
+        rowSums(x, na.rm=TRUE)
+    } else {
+        rowSums(x)
+    }
+}
+
+x_num_col_nnzero <- function(x, na.counted=NA, ...)
+{
+    stopifnot(is.logical(na.counted), length(na.counted)==1L)
+    x <- x != 0L
+    if (isTRUE(na.counted))
+    {
+        colSums(x, na.rm=TRUE) + colSums(is.na(x))
+    } else if (isFALSE(na.counted))
+    {
+        colSums(x, na.rm=TRUE)
+    } else {
+        colSums(x)
+    }
+}
+
+
+.x_row_nnzero <- function(x, na.counted=NA, BPPARAM=getAutoBPPARAM())
+{
+    .parallel_col_reduce(x, BPPARAM,
+        Fun = function(bk, v, na) .Call(c_row_nnzero, bk, v, na),
+        InitFun = function(x, ...) integer(nrow(x)),
+        ReduceFun=`+`, na=na.counted)
+}
+
+.x_col_nnzero <- function(x, na.counted=NA, BPPARAM=getAutoBPPARAM())
+{
+    .parallel_col_apply(x, BPPARAM,
+        Fun = function(bk, na) .Call(c_col_nnzero, bk, na),
+        na=na.counted)
+}
+
+x_sc_row_nnzero <- function(x, na.counted=NA, ...)
+{
+    stopifnot(is(x, "SC_GDSMatrix"))
+    x_check(x, "Calling SCArray::row_nnzero() with %s ...")
+    stopifnot(is.logical(na.counted), length(na.counted)==1L)
+    if (x_type(x) == 2L)
+    {
+        .x_col_nnzero(t(x), na.counted, ...)
+    } else {
+        .x_row_nnzero(x, na.counted, ...)
+    }
+}
+
+x_sc_col_nnzero <- function(x, na.counted=NA, ...)
+{
+    stopifnot(is(x, "SC_GDSMatrix"))
+    x_check(x, "Calling SCArray::col_nnzero() with %s ...")
+    stopifnot(is.logical(na.counted), length(na.counted)==1L)
+    if (x_type(x) == 2L)
+    {
+        .x_row_nnzero(t(x), na.counted, ...)
+    } else {
+        .x_col_nnzero(x, na.counted, ...)
+    }
+}
+
+
+setGeneric("row_nnzero",
+    function(x, na.counted=NA, ...) standardGeneric("row_nnzero"))
+setGeneric("col_nnzero",
+    function(x, na.counted=NA, ...) standardGeneric("col_nnzero"))
+
+setMethod("row_nnzero", "matrix", x_num_row_nnzero)
+setMethod("col_nnzero", "matrix", x_num_col_nnzero)
+
+setMethod("row_nnzero", "Matrix", x_num_row_nnzero)
+setMethod("col_nnzero", "Matrix", x_num_col_nnzero)
+
+setMethod("row_nnzero", "DelayedMatrix", x_num_row_nnzero)
+setMethod("col_nnzero", "DelayedMatrix", x_num_col_nnzero)
+
+setMethod("row_nnzero", SMatrix, x_sc_row_nnzero)
+setMethod("col_nnzero", SMatrix, x_sc_col_nnzero)
 
 
 #######################################################################

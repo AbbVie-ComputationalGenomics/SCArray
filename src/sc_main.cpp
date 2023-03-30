@@ -98,18 +98,10 @@ static inline double sum(const double x[], size_t n)
 	return s;
 }
 
-static int block_idx_st = 0;
-
-SEXP c_init_block()
-{
-	block_idx_st = 0;
-	return R_NilValue;
-}
-
 
 // ====  a += b  ====
 
-SEXP c_add_update(SEXP a, SEXP b)
+SEXP c_add(SEXP a, SEXP b)
 {
 	// 'a' should be a real vector or dense real matrix
 	static const char *err_len = "a and b should have the same length.";
@@ -360,8 +352,7 @@ SEXP c_rowMeans(SEXP mat, SEXP val, SEXP narm)
 	const bool na_rm = (Rf_asLogical(narm) == TRUE);
 	int nrow, ncol;
 	get_mat_size(mat, nrow, ncol);
-	double *pv = REAL(val);
-	int *pn = (int*)&pv[nrow];
+	double *pv = REAL(val), *pn = pv + nrow;
 	// do
 	if (TYPEOF(mat) == REALSXP)
 	{
@@ -424,7 +415,7 @@ SEXP c_rowMeans_final(SEXP val)
 {
 	const size_t n = Rf_xlength(val) / 2;
 	const double *sv = REAL(val);
-	const int *sn = (int*)&sv[n];
+	const double *sn = sv + n;
 	SEXP ans = NEW_NUMERIC(n);
 	double *p = REAL(ans);
 	for (size_t i=0; i < n; i++) p[i] = sv[i] / sn[i];
@@ -519,10 +510,12 @@ SEXP c_colMeans(SEXP mat, SEXP narm)
 
 // ====  rowWeightedMeans & colWeightedMeans  ====
 
-SEXP c_rowWMeans(SEXP mat, SEXP val, SEXP w, SEXP narm)
+SEXP c_rowWMeans(SEXP mat, SEXP val, SEXP split, SEXP w, SEXP st, SEXP narm)
 {
 	const bool na_rm = (Rf_asLogical(narm) == TRUE);
-	const double *pw = REAL(w) + block_idx_st;
+	const int col_st = INTEGER(split)[0];
+	const int start = INTEGER(st)[1];
+	const double *pw = REAL(w) + (col_st - 1) + (start - 1);
 	int nrow, ncol;
 	get_mat_size(mat, nrow, ncol);
 	double *pv = REAL(val), *pn = pv+nrow;
@@ -583,7 +576,6 @@ SEXP c_rowWMeans(SEXP mat, SEXP val, SEXP w, SEXP narm)
 			}
 		}
 	}
-	block_idx_st += ncol;
 	// output
 	return val;
 }
@@ -700,8 +692,7 @@ SEXP c_rowVars(SEXP mat, SEXP val, SEXP narm, SEXP center)
 	const bool no_center = (Rf_isNull(center) == TRUE);
 	int nrow, ncol;
 	get_mat_size(mat, nrow, ncol);
-	double *pS = REAL(val), *pS2 = pS+nrow;
-	int *pN = (int*)&pS[2*nrow];
+	double *pS = REAL(val), *pS2 = pS+nrow, *pN = pS+2*nrow;
 	// do
 	if (TYPEOF(mat) == REALSXP)
 	{
@@ -839,8 +830,7 @@ SEXP c_rowVars_final(SEXP val, SEXP center)
 {
 	const bool no_center = Rf_isNull(center) == TRUE;
 	const size_t n = Rf_xlength(val) / 3;
-	const double *pS = REAL(val), *pS2 = pS+n;
-	const int *pN = (const int*)&pS[2*n];
+	const double *pS = REAL(val), *pS2 = pS+n, *pN = pS+2*n;
 	SEXP ans = NEW_NUMERIC(n);
 	double *p = REAL(ans);
 	if (no_center)
@@ -1053,14 +1043,15 @@ SEXP c_colVars(SEXP mat, SEXP narm, SEXP center)
 
 // ====  rowWeightedVars & colWeightedVars  ====
 
-SEXP c_rowWVars(SEXP mat, SEXP val, SEXP w, SEXP narm)
+SEXP c_rowWVars(SEXP mat, SEXP val, SEXP split, SEXP w, SEXP st, SEXP narm)
 {
 	const bool na_rm = (Rf_asLogical(narm) == TRUE);
-	const double *pw = REAL(w) + block_idx_st;
+	const int col_st = INTEGER(split)[0];
+	const int start = INTEGER(st)[1];
+	const double *pw = REAL(w) + (col_st - 1) + (start - 1);
 	int nrow, ncol;
 	get_mat_size(mat, nrow, ncol);
-	double *pS = REAL(val), *pS2 = pS+nrow, *pSW = pS+2*nrow;
-	int *pN = (int*)&pS[3*nrow];
+	double *pS = REAL(val), *pS2 = pS+nrow, *pSW = pS+2*nrow, *pN = pS+3*nrow;
 	// do
 	if (TYPEOF(mat) == REALSXP)
 	{
@@ -1153,15 +1144,13 @@ SEXP c_rowWVars(SEXP mat, SEXP val, SEXP w, SEXP narm)
 		}
 	}
 	// output
-	block_idx_st += ncol;
 	return val;
 }
 
 SEXP c_rowWVars_final(SEXP val)
 {
 	const size_t n = Rf_xlength(val) / 4;
-	const double *pS = REAL(val), *pS2 = pS+n, *pSW = pS+2*n;
-	const int *pN = (const int*)&pS[3*n];
+	const double *pS = REAL(val), *pS2 = pS+n, *pSW = pS+2*n, *pN = pS+3*n;
 	SEXP ans = NEW_NUMERIC(n);
 	double *p = REAL(ans);
 	for (size_t i=0; i < n; i++)
@@ -1318,8 +1307,7 @@ SEXP c_colWVars(SEXP mat, SEXP w, SEXP narm)
 SEXP c_rowMeanVar_final(SEXP val)
 {
 	const size_t n = Rf_xlength(val) / 3;
-	const double *pS = REAL(val), *pS2 = pS+n;
-	const int *pN = (const int*)&pS[2*n];
+	const double *pS = REAL(val), *pS2 = pS+n, *pN = pS+2*n;
 	SEXP ans = Rf_allocMatrix(REALSXP, n, 2);
 	double *pM = REAL(ans), *pV = pM + n;
 	for (size_t i=0; i < n; i++)

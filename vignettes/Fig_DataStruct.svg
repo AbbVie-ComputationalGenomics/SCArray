@@ -34,7 +34,7 @@
            transform="matrix(1,0,0,-1,0,790)"><tspan
              id="tspan24"
              y="0"
-             x="0 22.7484 44.992802 61.4772 69.717598 80.730003 88.970398 97.2108 115.2072">GDS files</tspan></text>
+             x="0">GDS files</tspan></text>
 </g><path
          id="path28"
          style="fill:#4472c4;fill-opacity:1;fill-rule:evenodd;stroke:none"
@@ -51,7 +51,7 @@
            transform="matrix(1,0,0,-1,0,790)"><tspan
              id="tspan36"
              y="0"
-             x="0 16.4988 24.753599 43.7724 60.7752 69.029999 87.040802 106.2756 124.2864 132.5412 140.79601 158.3028 173.79359 192.81239 210.8232 223.326 231.5808 260.31961 278.33041 297.34921">SingleCellExperiment</tspan></text>
+             x="0">SingleCellExperiment</tspan></text>
 </g><path
          id="path40"
          style="fill:#b4c7e7;fill-opacity:1;fill-rule:evenodd;stroke:none"
@@ -61,32 +61,14 @@
            id="path44"
            style="fill:none;stroke:#4472c4;stroke-width:12700;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:8;stroke-dasharray:none;stroke-opacity:1"
            d="M 0,68792.11 C 0,30799.28 30799.23,0 68792,0 h 2300816 c 37993,0 68792,30799.28 68792,68792.11 V 343957.9 c 0,37992.9 -30799,68792.1 -68792,68792.1 H 68792 C 30799.23,412750 0,381950.8 0,343957.9 Z" /></g><g
-         transform="matrix(0.5,0,0,0.5,53.45067,-244)"
+         transform="matrix(0.5,0,0,0.5,48.45067,-244)"
          id="g46"><text
            id="text50"
            style="font-variant:normal;font-weight:normal;font-size:36px;font-family:Calibri;-inkscape-font-specification:Calibri;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
            transform="matrix(1,0,0,-1,0,790)"><tspan
              id="tspan48"
              y="0"
-             x="0 16.4988 35.733601 56.4804 68.9832 81.486 98.740799">SCArray</tspan></text>
-</g><g
-         transform="matrix(0.5,0,0,0.5,115.0757,-244)"
-         id="g52"><text
-           id="text56"
-           style="font-variant:normal;font-weight:normal;font-size:36px;font-family:Calibri;-inkscape-font-specification:Calibri;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-           transform="matrix(1,0,0,-1,0,790)"><tspan
-             id="tspan54"
-             y="0"
-             x="0 14.0004">/ </tspan></text>
-</g><g
-         transform="matrix(0.5,0,0,0.5,126.2007,-244)"
-         id="g58"><text
-           id="text62"
-           style="font-variant:normal;font-weight:normal;font-size:36px;font-family:Calibri;-inkscape-font-specification:Calibri;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-           transform="matrix(1,0,0,-1,0,790)"><tspan
-             id="tspan60"
-             y="0"
-             x="0 22.7484 44.992802 61.4772 82.209602 94.697998 107.1864 124.4268">GDSArray</tspan></text>
+             x="0">SCArray / GDSArray</tspan></text>
 </g><path
          id="path64"
          style="fill:#4472c4;fill-opacity:1;fill-rule:evenodd;stroke:none"
@@ -103,7 +85,7 @@
            transform="matrix(1,0,0,-1,0,790)"><tspan
              id="tspan72"
              y="0"
-             x="0 22.2516 40.255199 48.5028 65.750397 81.989998 99.993599 119.0052 149.75281 167.0004 178.992 191.48759 199.7352">DelayedMatrix</tspan></text>
+             x="0">DelayedMatrix</tspan></text>
 </g><path
          id="path76"
          style="fill:#b4c7e7;fill-opacity:1;fill-rule:evenodd;stroke:none"
@@ -120,7 +102,7 @@
            transform="matrix(1,0,0,-1,0,790)"><tspan
              id="tspan84"
              y="0"
-             x="0 14.0004 29.260799 46.501202 58.4856 76.482002">scater</tspan></text>
+             x="0">scater</tspan></text>
 </g><path
          id="path88"
          style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
@@ -149,7 +131,7 @@
            transform="matrix(1,0,0,-1,0,790)"><tspan
              id="tspan104"
              y="0"
-             x="0 16.999201 36.0144 50.0256 61.012798 89.748001">gdsfmt</tspan></text>
+             x="0">gdsfmt</tspan></text>
 </g><path
          id="path108"
          style="fill:#e7e6e6;fill-opacity:1;fill-rule:nonzero;stroke:none"
@@ -174,7 +156,7 @@
            transform="matrix(1,0,0,-1,0,790)"><tspan
              id="tspan122"
              y="0"
-             x="0 5.5 17.006001 28.511999 40.018002 47.256001 52.25 59.004002 63.998001 68.991997">Input file</tspan></text>
+             x="0">Input file</tspan></text>
 </g><path
          id="path126"
          style="fill:#b4c7e7;fill-opacity:1;fill-rule:evenodd;stroke:none"
@@ -191,7 +173,7 @@
            transform="matrix(1,0,0,-1,0,790)"><tspan
              id="tspan134"
              y="0"
-             x="0 12.001 17.006001 28.500999 39.006001 48.257 58.256001 68.761002 79.001999">R package</tspan></text>
+             x="0">R package</tspan></text>
 </g><path
          id="path138"
          style="fill:#4472c4;fill-opacity:1;fill-rule:evenodd;stroke:none"
@@ -208,7 +190,7 @@
            transform="matrix(1,0,0,-1,0,790)"><tspan
              id="tspan146"
              y="0"
-             x="0 12.001 17.006001 28.500999 39.995998 45.243 56.231998 65.483002">R object</tspan></text>
+             x="0">R object</tspan></text>
 </g><path
          id="path150"
          style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
@@ -235,7 +217,7 @@
            transform="matrix(1,0,0,-1,0,790)"><tspan
              id="tspan164"
              y="0"
-             x="0 17.2512 24.9984 36.489601 48.868801 58.368 63.8592 75.350403 87.849602">wraps an </tspan></text>
+             x="0">wraps an </tspan></text>
 </g><g
          transform="matrix(0.5,0,0,0.5,237.6876,-187.5)"
          id="g168"><text
@@ -244,25 +226,7 @@
            transform="matrix(1,0,0,-1,0,790)"><tspan
              id="tspan170"
              y="0"
-             x="0 12.7512">on</tspan></text>
-</g><g
-         transform="matrix(0.5,0,0,0.5,250.3126,-187.5)"
-         id="g174"><text
-           id="text178"
-           style="font-variant:normal;font-weight:normal;font-size:24px;font-family:Calibri;-inkscape-font-specification:Calibri;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-           transform="matrix(1,0,0,-1,0,790)"><tspan
-             id="tspan176"
-             y="0"
-             x="0">-</tspan></text>
-</g><g
-         transform="matrix(0.5,0,0,0.5,253.9376,-187.5)"
-         id="g180"><text
-           id="text184"
-           style="font-variant:normal;font-weight:normal;font-size:24px;font-family:Calibri;-inkscape-font-specification:Calibri;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-           transform="matrix(1,0,0,-1,0,790)"><tspan
-             id="tspan182"
-             y="0"
-             x="0 12.4992 17.9904 27.489599 38.500801 43.992001 63.235199 74.510399 82.521599 90.772797 96.264 106.7712 112.2624 123.7536 136.25281 148.752 154.24319 165.73441 171.2256 176.7168 189.384 206.4192 215.9184">disk matrix and allows </tspan></text>
+             x="0">on-disk matrix and allows</tspan></text>
 </g><g
          transform="matrix(0.5,0,0,0.5,237.6876,-201.5)"
          id="g186"><text
@@ -271,7 +235,7 @@
            transform="matrix(1,0,0,-1,0,790)"><tspan
              id="tspan188"
              y="0"
-             x="0 10.0512 22.7904 42.0336 61.276798 74.040001 86.5392 92.030403 104.7936 117.2928 129.28799 137.0352 148.31039 156.32159 161.81281 174.576 187.0752 196.5744 202.0656 214.8288 227.328 232.8192 238.31039 246.32159">common operations on it </tspan></text>
+             x="0">common operations on it </tspan></text>
 </g><g
          transform="matrix(0.5,0,0,0.5,237.6876,-215.5)"
          id="g192"><text
@@ -280,7 +244,7 @@
            transform="matrix(1,0,0,-1,0,790)"><tspan
              id="tspan194"
              y="0"
-             x="0 17.2512 22.742399 30.729601 43.228802 55.992001 68.491203 76.478401 81.969597 87.4608 100.224 111.7152 124.2144 129.7056 142.2048 153.45599 158.9472 166.9344 179.43359 191.4288 196.92 214.1712 226.67039 239.43359 244.9248 256.92001">without loading the whole </tspan></text>
+             x="0">without loading the whole </tspan></text>
 </g><g
          transform="matrix(0.5,0,0,0.5,237.6876,-230.5)"
          id="g198"><text
@@ -289,7 +253,7 @@
            transform="matrix(1,0,0,-1,0,790)"><tspan
              id="tspan200"
              y="0"
-             x="0 12.7512 25.2384 30.9816 42.9888 53.243999 61.243198 66.746399 72.249603 84.520798 92.279999 105.0312 110.5344 129.7896 141.7968 161.052 173.80321 182.1624 191.3376">object into memory.</tspan></text>
+             x="0">object into memory.</tspan></text>
 </g><path
          id="path204"
          style="fill:#7f7f7f;fill-opacity:1;fill-rule:nonzero;stroke:none"
@@ -310,7 +274,7 @@
            transform="matrix(1,0,0,-1,0,790)"><tspan
              id="tspan214"
              y="0"
-             x="0 9.2519999 30.252001 39.251999 64.503998 89.003998 107.504 116.504 128.756 148.756 159.18401 177.93201 187.93201 197.93201 206.93201 223.60001 244.60001 265.60001 286.23199 299.73199 315.48401 327.73599">in GDS (e.g., counts):</tspan></text>
+             x="0">in GDS (e.g., counts):</tspan></text>
 </g><g
          transform="matrix(0.5,0,0,0.5,414.0675,-53)"
          id="g218"><text
@@ -319,7 +283,7 @@
            transform="matrix(1,0,0,-1,0,790)"><tspan
              id="tspan220"
              y="0"
-             x="0 18.2484 27.244801 35.485199 54.489601 73.494003 92.498398 105.9228 123.9192 135.8316 154.836 163.0764 182.0808 201.08521 229.8456 248.85001 266.84641 278.72281 292.72321 300.96359 318.20401 330.2244 348.22079 356.46121 370.06561 381.72601 400.73041 412.75079 430.74719 449.75159 457.992 475.23239 494.23679 513.24121 521.48163 536.41803 555.42242 584.1828 603.18719 615.20758 633.20398 647.20441 661.20477 679.20117 698.20563">1. nonzero numbers are stored and compressed </tspan></text>
+             x="0">1. nonzero numbers are stored and compressed </tspan></text>
 </g><g
          transform="matrix(0.5,0,0,0.5,414.0675,-74)"
          id="g224"><text
@@ -328,25 +292,7 @@
            transform="matrix(1,0,0,-1,0,790)"><tspan
              id="tspan226"
              y="0"
-             x="0 14.0004 31.996799 51.001202 70.0056 88.001999 106.6824 118.6668 126.9072 144.1476 152.388 160.6284 176.8968 185.13721 196.1496 211.086 230.09039 238.3308 257.33521 286.09561">sequentially (column</tspan></text>
-</g><g
-         transform="matrix(0.5,0,0,0.5,566.6275,-74)"
-         id="g230"><text
-           id="text234"
-           style="font-variant:normal;font-weight:normal;font-size:36px;font-family:Calibri;-inkscape-font-specification:Calibri;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-           transform="matrix(1,0,0,-1,0,790)"><tspan
-             id="tspan232"
-             y="0"
-             x="0">-</tspan></text>
-</g><g
-         transform="matrix(0.5,0,0,0.5,572.1275,-74)"
-         id="g236"><text
-           id="text240"
-           style="font-variant:normal;font-weight:normal;font-size:36px;font-family:Calibri;-inkscape-font-specification:Calibri;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-           transform="matrix(1,0,0,-1,0,790)"><tspan
-             id="tspan238"
-             y="0"
-             x="0 28.749599 46.015202 54.496799 73.490402 86.003998 94.2696 113.2632 125.2728 144.2664 162.252 174.76559">major order)</tspan></text>
+             x="0">sequentially (column-major order)</tspan></text>
 </g><g
          transform="matrix(0.5,0,0,0.5,414.0675,-96)"
          id="g242"><text
@@ -355,25 +301,7 @@
            transform="matrix(1,0,0,-1,0,790)"><tspan
              id="tspan244"
              y="0"
-             x="0 18.2484 27.244801 35.485199 54.309601 70.218002 88.214401 100.7028 113.1912 121.4316 140.436 158.4324 166.67281 178.58521 197.4456">2. override row</tspan></text>
-</g><g
-         transform="matrix(0.5,0,0,0.5,525.3224,-96)"
-         id="g248"><text
-           id="text252"
-           style="font-variant:normal;font-weight:normal;font-size:36px;font-family:Calibri;-inkscape-font-specification:Calibri;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-           transform="matrix(1,0,0,-1,0,790)"><tspan
-             id="tspan250"
-             y="0"
-             x="0">-</tspan></text>
-</g><g
-         transform="matrix(0.5,0,0,0.5,530.8224,-96)"
-         id="g254"><text
-           id="text258"
-           style="font-variant:normal;font-weight:normal;font-size:36px;font-family:Calibri;-inkscape-font-specification:Calibri;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-           transform="matrix(1,0,0,-1,0,790)"><tspan
-             id="tspan256"
-             y="0"
-             x="0 14.0004 33.004799 51.001202 66.261597 74.501999 85.514397 93.754799 109.0152 117.2556 128.26801 147.2724 166.27679 181.5372 193.52161 201.76199 220.7664 239.7708 253.77119 262.0116 270.25201 289.25641">specific functions in </tspan></text>
+             x="0">2. override row-specific functions in</tspan></text>
 </g><g
          transform="matrix(0.5,0,0,0.5,679.5724,-96)"
          id="g260"><text
@@ -382,7 +310,7 @@
            transform="matrix(1,0,0,-1,0,790)"><tspan
              id="tspan262"
              y="0"
-             x="0 22.2516 39.499199 47.746799 66.254402 82.241997 99.489601 117.9972 148.7448 167.2524 179.244 191.48759 199.7352 215.2188 231.4584 242.98199 261.48959 273.4812">DelayedMatrixStats</tspan></text>
+             x="0">DelayedMatrixStats</tspan></text>
 </g><g
          transform="matrix(0.5,0,0,0.5,414.0675,-118)"
          id="g266"><text
@@ -391,25 +319,7 @@
            transform="matrix(1,0,0,-1,0,790)"><tspan
              id="tspan268"
              y="0"
-             x="0 11.0016 29.0016 38.3904 55.389599 64.389603 73.389603">(e.g., </tspan></text>
-</g><g
-         transform="matrix(0.5,0,0,0.5,454.8875,-118)"
-         id="g272"><text
-           id="text276"
-           style="font-variant:normal;font-weight:normal;font-size:36px;font-family:Calibri;-inkscape-font-specification:Calibri;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-           transform="matrix(1,0,0,-1,0,790)"><tspan
-             id="tspan274"
-             y="0"
-             x="0 11.9196 30.787201 56.5308 75.038399 92.286003 104.1696">rowVars</tspan></text>
-</g><g
-         transform="matrix(0.5,0,0,0.5,513.9675,-118)"
-         id="g278"><text
-           id="text282"
-           style="font-variant:normal;font-weight:normal;font-size:36px;font-family:Calibri;-inkscape-font-specification:Calibri;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-           transform="matrix(1,0,0,-1,0,790)"><tspan
-             id="tspan280"
-             y="0"
-             x="0 11.0016 19.2672 29.5128 48.506401 61.02 69.285599 79.5672 96.832802 110.4264 122.04 140.0256 152.5392 160.80479 169.0704 197.82001 216.8136 225.07919 243.0648 271.81439 289.79999 308.4696 320.0112 336.91681 348.92639 357.19199 376.18561">) for faster implementation</tspan></text>
+             x="0 11.0016 29.0016 38.3904 55.389599 64.389603 73.389603">(e.g., rowVars) for faster implementation</tspan></text>
 </g><path
          id="path284"
          style="fill:#a9d18e;fill-opacity:1;fill-rule:nonzero;stroke:none"
@@ -441,11 +351,11 @@
          transform="matrix(0.5,0,0,0.5,421.2744,-336.5)"
          id="g304"><text
            id="text308"
-           style="font-variant:normal;font-weight:normal;font-size:36px;font-family:Calibri;-inkscape-font-specification:Calibri;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           style="font-variant:normal;font-weight:normal;font-size:32px;font-family:Calibri;-inkscape-font-specification:Calibri;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
            transform="matrix(1,0,0,-1,0,790)"><tspan
              id="tspan306"
              y="0"
-             x="0 18.871201 36.878399 54.129601 73.144798 81.396004 100.4112 117.3384 128.9016 146.1528 154.40401 172.0872 182.7504 193.73759 201.9888 217.224 225.4752 243.48241 262.1376 274.13281 282.384">Read data efficiently</tspan></text>
+             x="0">Read data efficiently</tspan></text>
 </g><g
          transform="matrix(0.5,0,0,0.5,486.8344,-357.5)"
          id="g310"><text
@@ -454,7 +364,7 @@
            transform="matrix(1,0,0,-1,0,790)"><tspan
              id="tspan312"
              y="0"
-             x="0 11.0016 29.995199">(b)</tspan></text>
+             x="0">(b)</tspan></text>
 </g><path
          id="path316"
          style="fill:#a9d18e;fill-opacity:1;fill-rule:nonzero;stroke:none"
@@ -486,11 +396,11 @@
          transform="matrix(0.5,0,0,0.5,650.7513,-335)"
          id="g336"><text
            id="text340"
-           style="font-variant:normal;font-weight:normal;font-size:36px;font-family:Calibri;-inkscape-font-specification:Calibri;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           style="font-variant:normal;font-weight:normal;font-size:32px;font-family:Calibri;-inkscape-font-specification:Calibri;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
            transform="matrix(1,0,0,-1,0,790)"><tspan
              id="tspan338"
              y="0"
-             x="0 9 28.007999 45.683998 56.34 67.356003 75.599998 90.863998 99.108002 117.108 135.79201 147.78 156.024">Inefficiently</tspan></text>
+             x="0">Inefficiently</tspan></text>
 </g><g
          transform="matrix(0.5,0,0,0.5,684.5013,-356)"
          id="g342"><text
@@ -499,7 +409,7 @@
            transform="matrix(1,0,0,-1,0,790)"><tspan
              id="tspan344"
              y="0"
-             x="0 11.0016 26.2512">(c)</tspan></text>
+             x="0">(c)</tspan></text>
 </g><path
          id="path348"
          style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
@@ -514,7 +424,7 @@
            transform="matrix(1,0,0,-1,0,790)"><tspan
              id="tspan354"
              y="0"
-             x="0 10.0512 22.7904 28.281601 40.7808 60.023998 72.523201 78.014397 85.257599 95.500801 107.496 112.9872 118.4784 127.9776">column (cells)</tspan></text>
+             x="0">column (cells)</tspan></text>
 </g><g
          transform="matrix(0,0.5,-0.5,0,812.7799,159)"
          id="g358"><text
@@ -523,7 +433,7 @@
            transform="matrix(1,0,0,-1,0,790)"><tspan
              id="tspan360"
              y="0"
-             x="0 7.8600001 20.52 37.764 43.271999 50.652 61.703999 73.716003 86.208 98.220001 107.712">row (genes)</tspan></text>
+             x="0">row (genes)</tspan></text>
 </g><g
          transform="matrix(0.5,0,0,0.5,626.3361,-170)"
          id="g364"><text
@@ -532,7 +442,7 @@
            transform="matrix(1,0,0,-1,0,790)"><tspan
              id="tspan366"
              y="0"
-             x="0 10.0512 22.7904 28.281601 40.7808 60.023998 72.523201 78.014397 85.257599 95.500801 107.496 112.9872 118.4784 127.9776">column (cells)</tspan></text>
+             x="0">column (cells)</tspan></text>
 </g><g
          transform="matrix(0,0.5,-0.5,0,1001.112,159)"
          id="g370"><text
@@ -541,7 +451,7 @@
            transform="matrix(1,0,0,-1,0,790)"><tspan
              id="tspan372"
              y="0"
-             x="0 7.8600001 20.52 37.764 43.271999 50.652 61.703999 73.716003 86.208 98.220001 107.712">row (genes)</tspan></text>
+             x="0">row (genes)</tspan></text>
 </g><g
          transform="matrix(0.5,0,0,0.5,115.2006,-378.5)"
          id="g376"><text
@@ -550,5 +460,5 @@
            transform="matrix(1,0,0,-1,0,790)"><tspan
              id="tspan378"
              y="0"
-             x="0 11.0016 28.2672">(a)</tspan></text>
+             x="0">(a)</tspan></text>
 </g></g></g></svg>

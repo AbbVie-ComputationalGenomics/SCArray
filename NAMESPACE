@@ -1,6 +1,6 @@
 # Native routines that are to be used in R via .Call
 useDynLib(SCArray,
-    c_init_block, c_add_update,
+    c_add, c_get_split,
     c_rowSums, c_colSums, c_rowProds, c_colProds,
     c_rowMeans, c_rowMeans_final, c_colMeans,
     c_rowWMeans, c_rowWMeans_final, c_colWMeans,
@@ -8,8 +8,11 @@ useDynLib(SCArray,
     c_rowWVars, c_rowWVars_final, c_colWVars,
     c_rowMeanVar_final, c_colMeanVar,
     c_rowMins, c_colMins, c_rowMaxs, c_colMaxs, c_rowRanges, c_colRanges,
+    c_row_sum_grp, c_col_sum_grp, c_row_nnzero, c_col_nnzero,
+    c_row_anyNA, c_col_anyNA,
     c_rowCollapse_init, c_rowCollapse_done, c_rowCollapse,
-    c_colCollapse_init, c_colCollapse)
+    c_colCollapse_init, c_colCollapse,
+    c_sparse_blocksize)
 
 # Export the following names
 exportPattern("^sc*")
@@ -21,7 +24,9 @@ exportMethods(
     rowVars, colVars, rowSds, colSds,
     rowWeightedVars, colWeightedVars, rowWeightedSds, colWeightedSds,
     rowMins, colMins, rowMaxs, colMaxs, rowRanges, colRanges,
-    rowCollapse, colCollapse
+    rowAnyNAs, colAnyNAs, rowCollapse, colCollapse,
+    row_nnzero, col_nnzero,
+    colsum, rowsum, scale, pmin2, pmax2
 )
 
 
@@ -35,7 +40,8 @@ importFrom(utils, head, object.size, packageVersion, read.delim, str,
 importFrom(Matrix, crossprod, tcrossprod, nnzero, readMM)
 importFrom(S4Vectors, DataFrame, metadata, new2)
 importFrom(BiocSingular, bsparam, runPCA)
-importFrom(BiocParallel, SerialParam, bpstart, bpstop, bpisup)
+importFrom(BiocParallel,
+    bplapply, bpnworkers, bpstart, bpstop, bpisup, SerialParam)
 importFrom(SummarizedExperiment, SummarizedExperiment, colData, rowData,
     assays, "assays<-", assay, "assay<-")
 importFrom(SingleCellExperiment, SingleCellExperiment, altExp,

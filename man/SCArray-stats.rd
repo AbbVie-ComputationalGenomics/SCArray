@@ -68,6 +68,16 @@
 \alias{scColMeanVar,Matrix-method}
 \alias{scColMeanVar,SC_GDSMatrix-method}
 
+\alias{rowsum}
+\alias{rowsum,SC_GDSMatrix-method}
+\alias{colsum}
+\alias{colsum,SC_GDSMatrix-method}
+
+\alias{rowAnyNAs}
+\alias{rowAnyNAs,SC_GDSMatrix-method}
+\alias{colAnyNAs}
+\alias{colAnyNAs,SC_GDSMatrix-method}
+
 \alias{rowCollapse}
 \alias{rowCollapse,SC_GDSMatrix-method}
 \alias{colCollapse}
@@ -121,6 +131,14 @@ scColMeanVar(x, na.rm=FALSE, useNames=FALSE, ...)
 \S4method{scRowMeanVar}{SC_GDSMatrix}(x, na.rm=FALSE, useNames=FALSE, ...)
 \S4method{scColMeanVar}{SC_GDSMatrix}(x, na.rm=FALSE, useNames=FALSE, ...)
 
+# Compute column sums across rows
+\S4method{rowsum}{SC_GDSMatrix}(x, group, reorder=TRUE, na.rm=FALSE, ...)
+# Compute row sums across columns
+\S4method{colsum}{SC_GDSMatrix}(x, group, reorder=TRUE, na.rm=FALSE, ...)
+
+\S4method{rowAnyNAs}{SC_GDSMatrix}(x, rows=NULL, cols=NULL, ..., useNames=NA)
+\S4method{colAnyNAs}{SC_GDSMatrix}(x, rows=NULL, cols=NULL, ..., useNames=NA)
+
 \S4method{rowCollapse}{SC_GDSMatrix}(x, idxs, rows=NULL, ..., useNames=NA)
 \S4method{colCollapse}{SC_GDSMatrix}(x, idxs, cols=NULL, ..., useNames=NA)
 }
@@ -134,10 +152,16 @@ scColMeanVar(x, na.rm=FALSE, useNames=FALSE, ...)
     \item{w}{\code{NULL} or a numeric vector for weights}
     \item{center}{\code{NULL}, or a vector of pre-calculated row (column) means}
     \item{useNames}{if \code{TRUE}, the name attributes of result are set}
+    \item{group}{a vector for grouping the rows or columns}
+    \item{reorder}{if \code{TRUE}, order the resulting matrix as
+        \code{sort(unique(group))}; otherwise, it will be in the order that
+        groups were encountered}
     \item{idxs}{An index vector specifying the columns (rows) to be extracted;
         the vector will be reused if the length is less than the number of
         columns or rows}
-    \item{...}{additional arguments passed to specific methods}
+    \item{...}{additional arguments passed to specific methods: \code{BPPARAM}
+        can be specified (if not specified, \code{getAutoBPPARAM()} is used
+        instead)}
 }
 
 \details{
@@ -154,6 +178,8 @@ the GDS file.
             \link{DelayedMatrix} objects.
         \item \link{DelayedMatrix} objects.
         \item \link[base]{matrix} objects in base R.
+        \item \link{getAutoBPPARAM}, \link{BiocParallelParam} for parallel
+            processing,
     }
 }
 

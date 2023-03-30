@@ -12,18 +12,27 @@
 
 ################
 
-.x_row_sums <- function(x, na.rm, ...)
+.double_nrow  <- function(x, ...) double(nrow(x))
+.double_nrow2 <- function(x, ...) double(nrow(x)*2L)
+.double_nrow3 <- function(x, ...) double(nrow(x)*3L)
+.double_nrow4 <- function(x, ...) double(nrow(x)*4L)
+
+
+################
+
+.x_row_sums <- function(x, na.rm, BPPARAM=getAutoBPPARAM())
 {
-    blockReduce(function(bk, v, na.rm) {
-        .Call(c_rowSums, bk, v, na.rm)
-    }, x, double(nrow(x)), grid=colAutoGrid(x), as.sparse=NA, na.rm=na.rm, ...)
+    .parallel_col_reduce(x, BPPARAM,
+        Fun = function(bk, v, na.rm) .Call(c_rowSums, bk, v, na.rm),
+        InitFun = .double_nrow,
+        ReduceFun=`+`, na.rm=na.rm)
 }
 
-.x_col_sums <- function(x, na.rm, ...)
+.x_col_sums <- function(x, na.rm, BPPARAM=getAutoBPPARAM())
 {
-    unlist(blockApply(x, function(bk, na.rm) {
-        .Call(c_colSums, bk, na.rm)
-    }, grid=colAutoGrid(x), as.sparse=NA, na.rm=na.rm, ...))
+    .parallel_col_apply(x, BPPARAM,
+        Fun = function(bk, na.rm) .Call(c_colSums, bk, na.rm),
+        na.rm=na.rm)
 }
 
 x_rowSums <- function(x, na.rm=FALSE, dims=1)
@@ -66,7 +75,7 @@ x_rowSums2 <- function(x, rows=NULL, cols=NULL, na.rm=FALSE, ..., useNames=NA)
     if (k < 3L)
     {
         x <- x_subset(x, rows, cols)
-        if (k  == 1L)
+        if (k == 1L)
             v <- .x_row_sums(x, na.rm, ...)
         else
             v <- .x_col_sums(t(x), na.rm, ...)
@@ -86,7 +95,7 @@ x_colSums2 <- function(x, rows=NULL, cols=NULL, na.rm=FALSE, ..., useNames=NA)
     if (k < 3L)
     {
         x <- x_subset(x, rows, cols)
-        if (k  == 1L)
+        if (k == 1L)
             v <- .x_col_sums(x, na.rm, ...)
         else
             v <- .x_row_sums(t(x), na.rm, ...)
@@ -106,18 +115,101 @@ setMethod("colSums2", SMatrix, x_colSums2)
 
 ################
 
-.x_row_prods <- function(x, na.rm, ...)
+# row grouping, ii starts from ZERO
+.x_row_sum_grp <- function(x, ii, n_grp, na.rm, BPPARAM=getAutoBPPARAM())
 {
-    blockReduce(function(bk, v, na.rm) {
-        .Call(c_rowProds, bk, v, na.rm)
-    }, x, init=rep(1, nrow(x)), grid=colAutoGrid(x), na.rm=na.rm, ...)
+    # block read
+    lst <- .parallel_col_apply(x, BPPARAM,
+        Fun = function(bk, ii, n_grp, na.rm)
+            .Call(c_row_sum_grp, bk, ii, n_grp, na.rm),
+        .flatten=FALSE, ii=ii, n_grp=n_grp, na.rm=na.rm)
+    # merge
+    do.call(cbind, lst)
 }
 
-.x_col_prods <- function(x, na.rm, ...)
+# column grouping, ii starts from ZERO
+.x_col_sum_grp <- function(x, ii, n_grp, na.rm, BPPARAM=getAutoBPPARAM())
 {
-    unlist(blockApply(x, function(bk, na.rm) {
-        .Call(c_colProds, bk, na.rm)
-    }, grid=colAutoGrid(x), na.rm=na.rm, ...))
+    # block read
+    blockReduce(function(bk, v, ii, n_grp, na.rm)
+    {
+        st <- start(currentViewport())
+        .Call(c_col_sum_grp, bk, v, ii, st, n_grp, na.rm)
+    }, x, matrix(0, nrow(x), n_grp), grid=colAutoGrid(x), as.sparse=NA,
+        ii=ii, n_grp=n_grp, na.rm=na.rm)
+}
+
+x_rowsum_grp <- function(x, group, reorder=TRUE, na.rm=FALSE, ...)
+{
+    # check
+    x_check(x, "Calling SCArray:::x_rowsum_grp() with %s ...")
+    stopifnot(length(group) == nrow(x))
+    stopifnot(is.logical(reorder), length(reorder)==1L)
+    stopifnot(is.logical(na.rm), length(na.rm)==1L)
+    # grouping
+    grp <- unique(group)
+    grp <- grp[!is.na(grp)]
+    if (length(grp) == 0L) stop("No group value!")
+    if (isTRUE(reorder)) grp <- sort(grp)
+    ii <- match(group, grp) - 1L  # start from ZERO
+    # output
+    if (x_type(x) == 2L)
+    {
+        ans <- .x_col_sum_grp(t(x), ii, length(grp), na.rm, ...)
+        ans <- t(ans)
+    } else {
+        ans <- .x_row_sum_grp(x, ii, length(grp), na.rm, ...)
+    }
+    colnames(ans) <- colnames(x)
+    rownames(ans) <- grp
+    ans
+}
+
+x_colsum_grp <- function(x, group, reorder=TRUE, na.rm=FALSE, ...)
+{
+    # check
+    x_check(x, "Calling SCArray:::x_colsum_grp() with %s ...")
+    stopifnot(length(group) == ncol(x))
+    stopifnot(is.logical(reorder), length(reorder)==1L)
+    stopifnot(is.logical(na.rm), length(na.rm)==1L)
+    # grouping
+    grp <- unique(group)
+    grp <- grp[!is.na(grp)]
+    if (length(grp) == 0L) stop("No group value!")
+    if (isTRUE(reorder)) grp <- sort(grp)
+    ii <- match(group, grp) - 1L  # start from ZERO
+    # output
+    if (x_type(x) == 2L)
+    {
+        ans <- .x_row_sum_grp(t(x), ii, length(grp), na.rm, ...)
+        ans <- t(ans)
+    } else {
+        ans <- .x_col_sum_grp(x, ii, length(grp), na.rm, ...)
+    }
+    rownames(ans) <- rownames(x)
+    colnames(ans) <- grp
+    ans
+}
+
+setMethod("rowsum", SMatrix, x_rowsum_grp)
+setMethod("colsum", SMatrix, x_colsum_grp)
+
+
+################
+
+.x_row_prods <- function(x, na.rm, BPPARAM=getAutoBPPARAM())
+{
+    .parallel_col_reduce(x, BPPARAM,
+        Fun = function(bk, v, na.rm) .Call(c_rowProds, bk, v, na.rm),
+        InitFun = function(x, ...) rep(1, nrow(x)),
+        ReduceFun=`*`, as.sparse=FALSE, na.rm=na.rm)
+}
+
+.x_col_prods <- function(x, na.rm, BPPARAM=getAutoBPPARAM())
+{
+    .parallel_col_apply(x, BPPARAM,
+        Fun = function(bk, na.rm) .Call(c_colProds, bk, na.rm),
+        as.sparse=FALSE, na.rm=na.rm)
 }
 
 x_rowProds <- function(x, rows=NULL, cols=NULL, na.rm=FALSE, ..., useNames=NA)
@@ -159,21 +251,21 @@ setMethod("colProds", SMatrix, x_colProds)
 
 ################
 
-.x_row_means <- function(x, na.rm, ...)
+.x_row_means <- function(x, na.rm, BPPARAM=getAutoBPPARAM())
 {
-    # block read
-    rv <- blockReduce(function(bk, v, na.rm) {
-        .Call(c_rowMeans, bk, v, na.rm)
-    }, x, double(nrow(x)*2L), grid=colAutoGrid(x), as.sparse=NA, na.rm=na.rm, ...)
+    rv <- .parallel_col_reduce(x, BPPARAM,
+        Fun = function(bk, v, na.rm) .Call(c_rowMeans, bk, v, na.rm),
+        InitFun = .double_nrow2,
+        ReduceFun=`+`, na.rm=na.rm)
     # finally
     .Call(c_rowMeans_final, rv)
 }
 
-.x_col_means <- function(x, na.rm, ...)
+.x_col_means <- function(x, na.rm, BPPARAM=getAutoBPPARAM())
 {
-    unlist(blockApply(x, function(bk, na.rm) {
-        .Call(c_colMeans, bk, na.rm)
-    }, grid=colAutoGrid(x), as.sparse=NA, na.rm=na.rm, ...))
+    .parallel_col_apply(x, BPPARAM,
+        Fun = function(bk, na.rm) .Call(c_colMeans, bk, na.rm),
+        na.rm=na.rm)
 }
 
 x_rowMeans <- function(x, na.rm=FALSE, dims=1)
@@ -255,28 +347,32 @@ setMethod("colMeans2", SMatrix, x_colMeans2)
 
 ################
 
-.x_row_w_means <- function(x, w, na.rm, ...)
+.x_row_w_means <- function(x, w, na.rm, BPPARAM=getAutoBPPARAM())
 {
     # initialize
     stopifnot(is.numeric(w), length(w)==ncol(x))
     if (is.integer(w)) w <- as.double(w)
-    .Call(c_init_block)
     # block read
-    rv <- blockReduce(function(bk, v, w, na.rm) {
-        .Call(c_rowWMeans, bk, v, w, na.rm)
-    }, x, double(nrow(x)*2L), grid=colAutoGrid(x), as.sparse=NA, w=w, na.rm=na.rm)
+    rv <- .parallel_col_reduce2(x, BPPARAM,
+        Fun = function(bk, v, split, w, na.rm)
+        {
+            .Call(c_rowWMeans, bk, v, split, w,
+                start(currentViewport(parent.frame(2L))), na.rm)
+        },
+        InitFun = .double_nrow2,
+        ReduceFun=`+`, w=w, na.rm=na.rm)
     # finally
     .Call(c_rowWMeans_final, rv)
 }
 
-.x_col_w_means <- function(x, w, na.rm, ...)
+.x_col_w_means <- function(x, w, na.rm, BPPARAM=getAutoBPPARAM())
 {
     stopifnot(is.numeric(w), length(w)==nrow(x))
     if (is.integer(w)) w <- as.double(w)
     # block read
-    unlist(blockApply(x, function(bk, w, na.rm) {
-        .Call(c_colMeans, bk, w, na.rm)
-    }, grid=colAutoGrid(x), as.sparse=NA, w=w, na.rm=na.rm, ...))
+    .parallel_col_apply(x, BPPARAM,
+        Fun = function(bk, w, na.rm) .Call(c_colMeans, bk, w, na.rm),
+        w=w, na.rm=na.rm)
 }
 
 x_rowWeightedMeans <- function(x, w=NULL, rows=NULL, cols=NULL, na.rm=FALSE,
@@ -331,7 +427,7 @@ setMethod("colWeightedMeans", SMatrix, x_colWeightedMeans)
 
 ################
 
-.x_row_vars <- function(x, na.rm, center, ...)
+.x_row_vars <- function(x, na.rm, center, BPPARAM=getAutoBPPARAM())
 {
     # check
     if (length(center))
@@ -341,15 +437,16 @@ setMethod("colWeightedMeans", SMatrix, x_colWeightedMeans)
         if (is.integer(center)) center <- as.double(center)
     }
     # block read
-    v <- blockReduce(function(bk, v, na.rm, center) {
-        .Call(c_rowVars, bk, v, na.rm, center)
-    }, x, init=double(nrow(x)*3L), grid=colAutoGrid(x), as.sparse=NA,
-        na.rm=na.rm, center=center, ...)
+    rv <- .parallel_col_reduce(x, BPPARAM,
+        Fun = function(bk, v, na.rm, center)
+            .Call(c_rowVars, bk, v, na.rm, center),
+        InitFun = .double_nrow3,
+        ReduceFun=`+`, na.rm=na.rm, center=center)
     # finally
-    .Call(c_rowVars_final, v, center)
+    .Call(c_rowVars_final, rv, center)
 }
 
-.x_col_vars <- function(x, na.rm, center, ...)
+.x_col_vars <- function(x, na.rm, center, BPPARAM=getAutoBPPARAM())
 {
     # check
     if (length(center))
@@ -359,9 +456,9 @@ setMethod("colWeightedMeans", SMatrix, x_colWeightedMeans)
         if (is.integer(center)) center <- as.double(center)
     }
     # block read
-    unlist(blockApply(x, function(bk, na.rm, center) {
-        .Call(c_colVars, bk, na.rm, center)
-    }, grid=colAutoGrid(x), as.sparse=NA, na.rm=na.rm, center=center, ...))
+    .parallel_col_apply(x, BPPARAM,
+        Fun = function(bk, na.rm, center) .Call(c_colVars, bk, na.rm, center),
+        na.rm=na.rm, center=center)
 }
 
 x_rowVars <- function(x, rows=NULL, cols=NULL, na.rm=FALSE, center=NULL, ...,
@@ -466,30 +563,33 @@ setMethod("colSds", SMatrix, x_colSds)
 
 ################
 
-.x_row_w_vars <- function(x, w, na.rm, ...)
+.x_row_w_vars <- function(x, w, na.rm, BPPARAM=getAutoBPPARAM())
 {
     # initialize
     stopifnot(is.numeric(w), length(w)==ncol(x))
     if (is.integer(w)) w <- as.double(w)
-    .Call(c_init_block)
     # block read
-    v <- blockReduce(function(bk, v, w, na.rm) {
-        .Call(c_rowWVars, bk, v, w, na.rm)
-    }, x, init=matrix(0.0, nrow=nrow(x), ncol=4L), grid=colAutoGrid(x),
-        as.sparse=NA, w=w, na.rm=na.rm)
+    rv <- .parallel_col_reduce2(x, BPPARAM,
+        Fun = function(bk, v, split, w, na.rm)
+        {
+            .Call(c_rowWVars, bk, v, split, w,
+                start(currentViewport(parent.frame(2L))), na.rm)
+        },
+        InitFun = .double_nrow4,
+        ReduceFun=`+`, w=w, na.rm=na.rm)
     # finally
-    .Call(c_rowWVars_final, v)
+    .Call(c_rowWVars_final, rv)
 }
 
-.x_col_w_vars <- function(x, w, na.rm, ...)
+.x_col_w_vars <- function(x, w, na.rm, BPPARAM=getAutoBPPARAM())
 {
     # initialize
     stopifnot(is.numeric(w), length(w)==nrow(x))
     if (is.integer(w)) w <- as.double(w)
     # block read
-    unlist(blockApply(x, function(bk, w, na.rm) {
-        .Call(c_colWVars, bk, w, na.rm)
-    }, grid=colAutoGrid(x), as.sparse=NA, w=w, na.rm=na.rm, ...))
+    .parallel_col_apply(x, BPPARAM,
+        Fun = function(bk, w, na.rm) .Call(c_colWVars, bk, w, na.rm),
+        w=w, na.rm=na.rm)
 }
 
 x_rowWeightedVars <- function(x, w=NULL, rows=NULL, cols=NULL, na.rm=FALSE,
@@ -611,18 +711,19 @@ setMethod("colWeightedSds", SMatrix, x_colWeightedSds)
 
 ################
 
-.x_row_mins <- function(x, na.rm, ...)
+.x_row_mins <- function(x, na.rm, BPPARAM=getAutoBPPARAM())
 {
-    blockReduce(function(bk, v, na.rm) {
-        .Call(c_rowMins, bk, v, na.rm)
-    }, x, rep(Inf, nrow(x)), grid=colAutoGrid(x), as.sparse=NA, na.rm=na.rm, ...)
+    .parallel_col_reduce(x, BPPARAM,
+        Fun = function(bk, v, na.rm) .Call(c_rowMins, bk, v, na.rm),
+        InitFun = function(x, ...) rep(Inf, nrow(x)),
+        ReduceFun=base::pmin, na.rm=na.rm)
 }
 
-.x_col_mins <- function(x, na.rm, ...)
+.x_col_mins <- function(x, na.rm, BPPARAM=getAutoBPPARAM())
 {
-    unlist(blockApply(x, function(bk, na.rm) {
-        .Call(c_colMins, bk, na.rm)
-    }, grid=colAutoGrid(x), as.sparse=NA, na.rm=na.rm, ...))
+    .parallel_col_apply(x, BPPARAM,
+        Fun = function(bk, na.rm) .Call(c_colMins, bk, na.rm),
+        na.rm=na.rm)
 }
 
 x_rowMins <- function(x, rows=NULL, cols=NULL, na.rm=FALSE)
@@ -657,18 +758,19 @@ setMethod("colMins", SMatrix, x_colMins)
 
 ################
 
-.x_row_maxs <- function(x, na.rm, ...)
+.x_row_maxs <- function(x, na.rm, BPPARAM=getAutoBPPARAM())
 {
-    blockReduce(function(bk, v, na.rm) {
-        .Call(c_rowMaxs, bk, v, na.rm)
-    }, x, rep(-Inf, nrow(x)), grid=colAutoGrid(x), as.sparse=NA, na.rm=na.rm, ...)
+    .parallel_col_reduce(x, BPPARAM,
+        Fun = function(bk, v, na.rm) .Call(c_rowMaxs, bk, v, na.rm),
+        InitFun = function(x, ...) rep(-Inf, nrow(x)),
+        ReduceFun=base::pmax, na.rm=na.rm)
 }
 
-.x_col_maxs <- function(x, na.rm, ...)
+.x_col_maxs <- function(x, na.rm, BPPARAM=getAutoBPPARAM())
 {
-    unlist(blockApply(x, function(bk, na.rm) {
-        .Call(c_colMaxs, bk, na.rm)
-    }, grid=colAutoGrid(x), as.sparse=NA, na.rm=na.rm, ...))
+    .parallel_col_apply(x, BPPARAM,
+        Fun = function(bk, na.rm) .Call(c_colMaxs, bk, na.rm),
+        na.rm=na.rm)
 }
 
 x_rowMaxs <- function(x, rows=NULL, cols=NULL, na.rm=FALSE)
@@ -703,19 +805,23 @@ setMethod("colMaxs", SMatrix, x_colMaxs)
 
 ################
 
-.x_row_ranges <- function(x, na.rm, ...)
+.x_row_ranges <- function(x, na.rm, BPPARAM=getAutoBPPARAM())
 {
-    blockReduce(function(bk, v, na.rm) {
-        .Call(c_rowRanges, bk, v, na.rm)
-    }, x, init=t(matrix(c(Inf, -Inf), nrow=2L, ncol=nrow(x))),
-        grid=colAutoGrid(x), as.sparse=NA, na.rm=na.rm, ...)
+    .parallel_col_reduce(x, BPPARAM,
+        Fun = function(bk, v, na.rm) .Call(c_rowRanges, bk, v, na.rm),
+        InitFun = function(x, ...)
+            t(matrix(c(Inf, -Inf), nrow=2L, ncol=nrow(x))),
+        ReduceFun = function(v1, v2)
+            cbind(base::pmin(v1[,1L], v2[,1L]), base::pmax(v1[,2L], v2[,2L])),
+        na.rm=na.rm)
 }
 
-.x_col_ranges <- function(x, na.rm, ...)
+.x_col_ranges <- function(x, na.rm, BPPARAM=getAutoBPPARAM())
 {
-    do.call(rbind, blockApply(x, function(bk, na.rm) {
-        .Call(c_colRanges, bk, na.rm)
-    }, grid=colAutoGrid(x), as.sparse=NA, na.rm=na.rm, ...))
+    lst <- .parallel_col_apply(x, BPPARAM,
+        Fun = function(bk, na.rm) .Call(c_colRanges, bk, na.rm),
+        .flatten=FALSE, na.rm=na.rm)
+    do.call(rbind, lst)
 }
 
 x_rowRanges <- function(x, rows=NULL, cols=NULL, na.rm=FALSE)
@@ -746,6 +852,64 @@ x_colRanges <- function(x, rows=NULL, cols=NULL, na.rm=FALSE)
 
 setMethod("rowRanges", SMatrix, x_rowRanges)
 setMethod("colRanges", SMatrix, x_colRanges)
+
+
+################
+
+.x_row_anyNA <- function(x, BPPARAM=getAutoBPPARAM())
+{
+    .parallel_col_reduce(x, BPPARAM,
+        Fun = function(bk, v) .Call(c_row_anyNA, bk, v),
+        InitFun = function(x, ...) logical(nrow(x)),
+        ReduceFun=`|`)
+}
+
+.x_col_anyNA <- function(x, BPPARAM=getAutoBPPARAM())
+{
+    .parallel_col_apply(x, BPPARAM,
+        Fun = function(bk) .Call(c_col_anyNA, bk))
+}
+
+x_row_anyNA <- function(x, rows=NULL, cols=NULL, ..., useNames=NA)
+{
+    x_check(x, "Calling SCArray:::x_row_anyNA() with %s ...")
+    k <- x_type(x)
+    if (k < 3L)
+    {
+        x <- x_subset(x, rows, cols)
+        if (k == 1L)
+            v <- .x_row_anyNA(x, ...)
+        else
+            v <- .x_col_anyNA(t(x), ...)
+        if (isTRUE(useNames)) names(v) <- rownames(x)
+        v
+    } else {  # 3
+        x_msg("Calling DelayedMatrixStats::rowAnyNAs() ...")
+        callNextMethod()
+    }
+}
+
+x_col_anyNA <- function(x, rows=NULL, cols=NULL, ..., useNames=NA)
+{
+    x_check(x, "Calling SCArray:::x_col_anyNA() with %s ...")
+    k <- x_type(x)
+    if (k < 3L)
+    {
+        x <- x_subset(x, rows, cols)
+        if (k == 1L)
+            v <- .x_col_anyNA(x, ...)
+        else
+            v <- .x_row_anyNA(t(x), ...)
+        if (isTRUE(useNames)) names(v) <- colnames(x)
+        v
+    } else {  # 3
+        x_msg("Calling DelayedMatrixStats::colAnyNAs() ...")
+        callNextMethod()
+    }
+}
+
+setMethod("rowAnyNAs", SMatrix, x_row_anyNA)
+setMethod("colAnyNAs", SMatrix, x_col_anyNA)
 
 
 ################

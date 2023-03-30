@@ -676,6 +676,25 @@ scObj <- function(obj, verbose=FALSE)
 
 #######################################################################
 
+scNumSplit <- function(num, BPPARAM=getAutoBPPARAM())
+{
+    # check
+    stopifnot(is.numeric(num), length(num)==1L)
+    # number of workers
+    if (is.null(BPPARAM))
+        nw <- 1L
+    else if (is.numeric(BPPARAM))
+        nw <- BPPARAM
+    else if (is(BPPARAM, "BiocParallelParam"))
+        nw <- bpnworkers(BPPARAM)
+    else {
+        stop(
+        "'BPPARAM' should be NULL, an integer or a BiocParallelParam object.")
+    }
+    # list
+    .Call(c_get_split, num, nw, double(nw+1L))
+}
+
 scSetMax <- function(x, vmax)
 {
     # check

@@ -1,12 +1,18 @@
-CHANGES IN VERSION 1.7.7
+CHANGES IN VERSION 1.7.13
 -------------------------
+
+    o new function `scNumSplit()`
 
     o update the vignettes
 
-    o new functions `scGetFiles()`, `scMemory()`
+    o override S4 functions colsum, rowsum, scale, pmin2, pmax2 for
+      SC_GDSMatrix
+
+    o new S4 generic functions `row_nnzero()`, `col_nnzero()`, `scGetFiles()`,
+      `scMemory()`, `scRowMeanVar()`, `scColMeanVar()`
 
     o new functions `scSetMax()`, `scSetMin()`, `scSetBounds()`,
-      `scReplaceNA()`, `scRowMeanVar()`, `scColMeanVar()`
+      `scReplaceNA()`
 
     o update S4 functions `[`, `[[`, `names<-`, `dimnames<-`, aperm, Ops, Math,
       crossprod, tcrossprod for SC_GDSArray
@@ -14,7 +20,7 @@ CHANGES IN VERSION 1.7.7
     o override S4 functions rowSums, colSums, rowSums2, colSums2, rowProds,
       colProds, rowMeans, colMeans, rowMeans2, colMeans2, rowVars, colVars,
       rowSds, colSds, rowMins, colMins, rowMaxs, colMaxs, rowRanges, colRanges,
-      rowCollapse, colCollapse for SC_GDSMatrix
+      rowAnyNAs, colAnyNAs, rowCollapse, colCollapse for SC_GDSMatrix
 
 
 CHANGES IN VERSION 1.4.0
